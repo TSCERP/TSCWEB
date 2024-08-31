@@ -17,6 +17,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Support\Assets\Js;
+use Filament\Support\Facades\FilamentAsset;
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -57,4 +59,5 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])->spa()->topNavigation();
     }
+
 }

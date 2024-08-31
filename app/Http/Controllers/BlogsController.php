@@ -36,7 +36,19 @@ class BlogsController extends Controller
      */
     public function show(blogs $blogs)
     {
-        //
+//        SEOMeta::setTitle($post->seoDetail?->title);
+//
+//        SEOMeta::setDescription($post->seoDetail?->description);
+//
+//        SEOMeta::setKeywords($post->seoDetail->keywords ?? []);
+//
+       $shareButton = null;
+//        $blogs->load(['user', 'categories', 'tags', 'comments' => fn ($query) => $query->approved(), 'comments.user']);
+        $blogs->load(['user', 'categories', 'tags']);
+        return view('blogdetail', [
+            'post' => $blogs,
+            'shareButton' => $shareButton,
+        ]);
     }
 
     /**
