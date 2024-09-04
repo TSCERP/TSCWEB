@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\Articles\ListArticlesController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,6 +19,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // blogs here
 
+});
+
+Route::prefix('/blogs')->group(function () {
+    Route::get('/', ListArticlesController::class)->name('blogs');
 });
 Route::get('/{post:slug}', [BlogsController::class, 'show'])->name('admin.post.show');
 //require __DIR__.'/auth.php';

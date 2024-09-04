@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             $table->boolean('is_published')->default(false)->after('status');
+            $table->string('type')->default('article');
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             $table->dropColumn('is_published');
+            $table->dropColumn('type');
         });
     }
 };

@@ -217,4 +217,23 @@ class blogs extends Model
     {
         return 'posts';
     }
+    public function getDataArray(): array
+    {
+
+        return [
+            'id' => $this->slug,
+            'title' => $this->title,
+            'slug' => $this->slug,
+            'publish_date' => $this->published_at->diffForHumans(),
+            'thumbnail_url' =>'storage/'. $this->cover_photo_path,
+            'author' => [
+                'name' => $this->user->name,
+                'avatar' => null,
+            ],
+            'categories' => $this->categories->pluck('slug'),
+            'type' => $this->type,
+            'versions' => $this->versions,
+            'canonical_url' => $this->canonical_url,
+        ];
+    }
 }
