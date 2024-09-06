@@ -151,25 +151,28 @@
                     About Us
                 </x-nav-link>
                 <x-nav-link
-                    class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-text-main' : '' }}"
-                    :active="request()->routeIs('blog')">
+                    :href="route('blogs')"
+                    class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
+                    :active="request()->routeIs('blogs')">
                     Blog
                 </x-nav-link>
             </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:gap-4 sm:items-center sm:ms-6">
-                <div x-data="{ activeLang: 'VI' }" class="flex gap-2 items-center">
-                    <button @click="activeLang = 'VI'"
-                        :class="activeLang === 'VI' ? 'font-semibold' : 'font-normal'">
+                <div x-data="{ activeLang: '{{ session()->get('locale', 'vi') }}' }" class="flex gap-2 items-center">
+                    <button @click="window.location.href = '/language/vi'"
+                            :class="activeLang === 'vi' ? 'font-semibold' : 'font-normal'">
                         VI
                     </button>
                     <div class="w-[1px] h-4 bg-text-primary"></div>
-                    <button @click="activeLang = 'EN'"
-                        :class="activeLang === 'EN' ? 'font-semibold' : 'font-normal'">
+                    <button @click="window.location.href = '/language/en'"
+                            :class="activeLang === 'en' ? 'font-semibold' : 'font-normal'">
                         EN
                     </button>
                 </div>
+
+
                 <button x-data @click="$dispatch('open-modal', 'contact-modal')" class="main-btn">Dùng Thử</button>
             </div>
 
