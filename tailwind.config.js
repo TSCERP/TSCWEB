@@ -15,6 +15,7 @@ export default {
                 'bg-gray': "#F8F4F9",
                 'gradient-start': 'rgba(41, 11, 80, 0)',
                 'gradient-end': '#290B50',
+                'border-gray': '#D1D5DB'
             },
             backgroundImage: {
                 'custom-gradient': 'linear-gradient(180deg, rgba(41, 11, 80, 0) 0%, #290B50 100%)',
