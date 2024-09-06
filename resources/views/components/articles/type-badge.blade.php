@@ -24,7 +24,7 @@
             'text-violet-500' => $type->color === 'violet',
         ])
     >
-        {!! $type->getIcon() !!}
+        {!! $type->icon !!}
     </div>
 
     {{-- Type Name --}}

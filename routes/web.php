@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\Articles\ListArticlesController;
+use App\Http\Controllers\Articles\ViewArticleController;
 use Illuminate\Support\Facades\App;
 
 Route::get('/', function () {
@@ -36,8 +37,13 @@ Route::middleware('auth')->group(function () {
 Route::prefix('/blogs')->group(function () {
     Route::get('/', ListArticlesController::class)->name('blogs');
 });
+Route::name('admin.')->prefix('/{blogs:slug}')->group(function () {
+    Route::get('/', ViewArticleController::class)->name('post.show');
+});
 
-//change language
-Route::get('/{post:slug}', [BlogsController::class, 'show'])->name('admin.post.show');
+//Route::name('blogs.')->prefix('/{article:slug}')->group(function () {
+//    Route::get('/', ViewArticleController::class)->name('admin.post.show');
+//});
+
 require __DIR__.'/auth.php';
 
