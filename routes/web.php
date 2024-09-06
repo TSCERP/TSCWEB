@@ -9,16 +9,18 @@ use Illuminate\Support\Facades\App;
 Route::get('/', function () {
     return view('home');
 })->name('home');
-
+Route::get('/dashboard-bi', function () {
+    return view('dashboard-bi');
+})->name('dashboard.bi');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/language/{locale}', function (string $locale) {
-    if (! in_array($locale, ['en','vn'])) {
+    if (! in_array($locale, ['en','vi'])) {
         abort(404);
     }
-    App::setLocale($locale);
+   // App::setLocale($locale);
     session()->put('locale', $locale);
     return redirect()->back();
 });
@@ -37,5 +39,5 @@ Route::prefix('/blogs')->group(function () {
 
 //change language
 Route::get('/{post:slug}', [BlogsController::class, 'show'])->name('admin.post.show');
-//require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';
 

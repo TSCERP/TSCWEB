@@ -16,7 +16,7 @@ class LanguageMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        App::setlocale(Session()->get('locale','vn'));
+        App::setlocale(Session()->get('locale','vi'));
         return $next($request);
     }
 }

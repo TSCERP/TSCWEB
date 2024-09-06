@@ -410,6 +410,7 @@
                             More</button>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -423,16 +424,17 @@
                     <h1 class="text-5xl leading-snug text-white font-bold cursour-default">Are You Ready to Boost Your
                         Business Performance?</h1>
                     <div>
-                        <button x-data @click="$dispatch('open-modal', 'contact-modal')" class="rounded-full text-nowrap bg-icon-main font-semibold px-6 py-4">Register
+                        <button x-data @click="$dispatch('open-modal', 'contact-modal')"
+                            class="rounded-full text-nowrap bg-icon-main font-semibold px-6 py-4">Register
                             Demo</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-        <button  class="bg-blue-500 text-white p-2 rounded">
-            Mở Modal
-        </button>
+    <button class="bg-blue-500 text-white p-2 rounded">
+        Mở Modal
+    </button>
 
     <!-- Gọi modal component -->
 

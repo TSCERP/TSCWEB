@@ -37,7 +37,7 @@
         }
     </style>
     @livewireStyles
-    @vite('resources/css/harry.css')
+    @vite('resources/css/app.css')
 
     <!-- Scripts -->
     @livewireScripts
@@ -46,10 +46,22 @@
 </head>
 
 <body
-    class="relative min-h-screen overflow-x-clip  font-vietnam text-midnight antialiased selection:bg-stone-500/10">
+    class="relative min-h-screen overflow-x-clip
+      font-vietnam text-midnight bg-cream antialiased selection:bg-stone-500/10
+       dark:bg-black dark:text-white/50
+      ">
 <div id="docsearch" class="hidden"></div>
-
-{{ $slot }}
+<div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <!-- Page Navigation -->
+@include('layouts.navigation')
+<main class="mt-[130px]">
+    {{ $slot }}
+</main>
+<x-contact-modal name="contact-modal" :show="false" defaultPurpose="Đăng ký dùng thử">
+    <!-- Content of the modal -->
+</x-contact-modal>
+@include('layouts.footer')
+</div>
 </body>
 
 </html>

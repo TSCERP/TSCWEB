@@ -49,7 +49,6 @@
 
     <!-- Page Footer -->
     @include('layouts.footer')
-    </div>
 </body>
 
 @stack('scripts')
