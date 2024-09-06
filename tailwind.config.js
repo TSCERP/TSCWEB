@@ -39,6 +39,7 @@ export default {
                 'bg-gray': "#F8F4F9",
                 'gradient-start': 'rgba(41, 11, 80, 0)',
                 'gradient-end': '#290B50',
+                'border-gray': '#D1D5DB'
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],

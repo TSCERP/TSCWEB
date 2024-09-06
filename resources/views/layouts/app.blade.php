@@ -20,6 +20,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -28,18 +30,12 @@
         <!-- Page Navigation -->
         @include('layouts.navigation')
 
-        <!-- @isset($header)
-    <header class="bg-white dark:bg-gray-800 shadow">
-                                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                                            {{ $header }}
-                                        </div>
-                                    </header>
-@endisset -->
-
         <!-- Page Content -->
         <main class="mt-[130px]">
             {{ $slot }}
         </main>
+
+        @include('layouts.top')
 
         <x-contact-modal name="contact-modal" :show="false" defaultPurpose="Đăng ký dùng thử">
             <!-- Content of the modal -->
