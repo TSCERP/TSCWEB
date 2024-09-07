@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="relative bg-cover bg-no-repeat" style="background-image: url({{ Vite::asset('resources/assets/images/5.png') }});">
-        <div class="container mx-auto px-4">
+    <div class="relative bg-cover bg-no-repeat" style="background-image: url({{ Vite::asset('resources/images/5.png') }});">
+        <div class="container py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="flex flex-wrap items-center">
 
                 <div class="lg:w-1/2 w-full lg:pr-10">

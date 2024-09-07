@@ -1,5 +1,5 @@
-<section>
-    <div class="relative bg-cover bg-no-repeat" style="background-image: url({{ Vite::asset('resources/assets/images/5.png') }});">
+<section style="background-image: url({{ Vite::asset('resources/images/5.png') }});">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6  relative bg-cover bg-no-repeat" >
         <div class="about-area bg-gradient-to-b from-gray-100 to-gray-300 py-12">
             <div class="container mx-auto">
                 <div class="flex flex-wrap items-center">

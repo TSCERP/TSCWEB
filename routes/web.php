@@ -41,9 +41,4 @@ Route::name('admin.')->prefix('/{blogs:slug}')->group(function () {
     Route::get('/', ViewArticleController::class)->name('post.show');
 });
 
-//Route::name('blogs.')->prefix('/{article:slug}')->group(function () {
-//    Route::get('/', ViewArticleController::class)->name('admin.post.show');
-//});
-
-require __DIR__.'/auth.php';
 
