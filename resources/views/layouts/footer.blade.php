@@ -1,6 +1,6 @@
 <footer class="bg-white dark:bg-gray-800">
-    <div class="flex flex-col max-w-7xl mx-auto">
-        <div class="grid grid-cols-[35%_1fr] gap-12 py-14 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:opacity-25 before:z-0 before:bg-no-repeat before:bg-top before:bg-[length:65%_auto] before:bg-[url('../assets/images/service-pattern.webp')]">
+    <div class="flex flex-col max-w-7xl mx-auto sm:px-0 px-4">
+        <div class="flex flex-col sm:grid sm:grid-cols-[35%_1fr] gap-8 sm:gap-12 py-6 sm:py-14 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:opacity-25 before:z-0 before:bg-no-repeat before:bg-center sm:before:bg-top before:bg-[length:85%_auto] sm:before:bg-[length:65%_auto] before:bg-[url('../assets/images/service-pattern.webp')]">
             <div class="flex flex-col gap-4 x-10">
                 <a href="{{ route('dashboard') }}">
                     <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
@@ -24,7 +24,7 @@
                     </a>
                 </div>
             </div>
-            <div class="grid grid-cols-3 gap-2 z-10">
+            <div class="flex flex-col sm:grid sm:grid-cols-3 gap-6 sm:gap-2 z-10">
                 <div class="flex flex-col gap-3">
                     <h5 class="uppercase font-semibold">Dịch vụ</h5>
                     <a href="#" class="font-medium duration-150 ease hover:text-text-main">Social Analytic</a>
@@ -53,11 +53,11 @@
                 </div>
                 </div>
             </div>
-        <div class="flex justify-between py-8 border-t border-border-main">
-            <span>Vận hành bởi TSC - Technology Solution Consulting</span>
-            <div>
-                <a>Chính Sách Bảo Mật</a>
-                <a>Điều Khoản Của Chúng Tôi</a>
+        <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row sm:justify-between py-8 border-t border-border-main">
+            <span>Vận hành bởi <b class="text-text-main ease duration-150 hover:text-text-primary">TSC - Technology Solution Consulting</b></span>
+            <div class="flex gap-4">
+                <a class="font-medium text-text-main ease duration-150 hover:text-text-primary">Chính Sách Bảo Mật</a>
+                <a class="font-medium text-text-main ease duration-150 hover:text-text-primary">Điều Khoản Của Chúng Tôi</a>
             </div>
         </div>
     </div>

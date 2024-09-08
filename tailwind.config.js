@@ -98,7 +98,10 @@ export default {
             },
             scale: {
                 '115': '1.15',
-            }
+            },
+            screens: {
+                'phone': '480px',
+            },
         },
     },
     plugins: [

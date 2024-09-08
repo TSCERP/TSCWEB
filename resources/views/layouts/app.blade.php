@@ -31,7 +31,7 @@
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="mt-[130px]">
+        <main class="mt-[130px] w-screen overflow-x-hidden">
             {{ $slot }}
         </main>
 

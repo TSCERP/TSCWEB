@@ -211,7 +211,6 @@ body {
     transition: transform 0.3s ease-in-out !important;
 }
 
-
 @layer components {
     .main-content {
         @apply p-4 h-[calc(100vh-54px)] overflow-auto w-full;
