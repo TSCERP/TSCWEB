@@ -51,11 +51,13 @@ $nextTick(() => {
                 <x-nav-link
                     class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('home') ? '!font-bold text-text-main' : '' }}"
                     :href="route('home')" :active="request()->routeIs('home')">
-                    {{ __('Home') }}
+                    {{__('layout.home')}}
                 </x-nav-link>
-
+    @php
+        $services =  __('layout.services');
+    @endphp
                 <x-nav-link class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200"
-                    :active="request()->routeIs('service')" :dropdown="true" :title="'Services'">
+                    :active="request()->routeIs('service')" :dropdown="true" :title="$services">
                     <!-- Dropdown Content -->
                     <div class="grid grid-cols-3 gap-4">
                         <div class="flex gap-4">
@@ -155,17 +157,18 @@ $nextTick(() => {
                 <x-nav-link
                     class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('solution') ? '!font-bold text-text-main' : '' }}"
                     :active="request()->routeIs('solution')">
-                    Solutions
+                    {{__('layout.solution')}}
                 </x-nav-link>
                 <x-nav-link
                     class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-text-main' : '' }}"
                     :active="request()->routeIs('about')">
-                    About Us
+                   {{__('layout.about')}}
                 </x-nav-link>
                 <x-nav-link
-                    class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-text-main' : '' }}"
-                    :active="request()->routeIs('blog')">
-                    Blog
+                    :href="route('blogs')"
+                    class="!text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
+                    :active="request()->routeIs('blogs')">
+                    {{__('layout.blogs')}}
                 </x-nav-link>
             </div>
 
@@ -177,12 +180,14 @@ $nextTick(() => {
                         VI
                     </button>
                     <div class="w-[1px] h-4 bg-text-primary"></div>
-                    <button @click="activeLang = 'EN'"
-                        :class="activeLang === 'EN' ? 'font-semibold' : 'font-normal'">
+                    <button @click="window.location.href = '/language/en'"
+                            :class="activeLang === 'en' ? 'font-semibold' : 'font-normal'">
                         EN
                     </button>
                 </div>
-                <button x-data @click="$dispatch('open-modal', 'contact-modal')" class="main-btn">Dùng Thử</button>
+
+
+                <button x-data @click="$dispatch('open-modal', 'contact-modal')" class="main-btn">{{__('layout.trial')}}</button>
             </div>
 
             <!-- Hamburger -->
