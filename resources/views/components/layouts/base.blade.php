@@ -47,7 +47,7 @@
 
 <body
     class="relative min-h-screen overflow-x-clip
-      font-vietnam text-midnight bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4] antialiased selection:bg-stone-500/10
+      font-vietnam text-midnight bg-white antialiased selection:bg-stone-500/10
        dark:bg-black dark:text-white/50
       ">
 <div id="docsearch" class="hidden"></div>
