@@ -12,17 +12,16 @@
                 <div class="flex my-auto mx-[10%]">
                     <h1 data-aos="zoom-in"
                         class="text-7xl w-fit leading-snug text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-4 after:bg-no-repeat after:bg-cover after:scale-75">
-                        Unlocking your business with management solutions</h1>
+                        {{ __('gt.text1') }}</h1>
                 </div>
-                <span data-aos="fade-up" class="text-xl font-medium">"Discover how we can faciliate your digital
-                    transformation."</span>
+                <span data-aos="fade-up" class="text-xl font-medium">"  {{ __('gt.text2') }}."</span>
                 <div class="flex gap-8">
                     <button data-aos="fade-right"
                         class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Get Started</button>
                     <button data-aos="fade-left" class="rounded-full font-semibold px-6 py-4">Demo ›</button>
                 </div>
                 <div class="mt-8">
-                    <p>Trusted by Global Companies</p>
+                    <p>{{__('Trusted by Global Companies')}}</p>
                     <div class="swiper-global-campanies"></div>
                 </div>
                 <div class="relative w-full flex justify-center pb-14 mb-8">
@@ -117,7 +116,7 @@
                         'link' => '#',
                     ],
                 ];
-                
+
                 $delay = 100;
                 foreach ($data as $item) {
                     echo '

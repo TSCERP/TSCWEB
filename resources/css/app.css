@@ -1,4 +1,5 @@
 @import 'swiper/css/bundle';
+@import 'torchlight.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -206,8 +207,8 @@ body {
 }
 
 .swiper-pagination-bullet:hover {
-    background-color: #d0a9f8 !important; 
-    transform: scale(1.4) !important; 
+    background-color: #d0a9f8 !important;
+    transform: scale(1.4) !important;
     transition: transform 0.3s ease-in-out !important;
 }
 

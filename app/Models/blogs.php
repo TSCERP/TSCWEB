@@ -140,7 +140,8 @@ class blogs extends Model
                                     TiptapEditor::make('body')
                                         ->profile('default')
                                         ->disableFloatingMenus()
-                                        ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
+                                        ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem','source_code_editor'])
+                                        ->maxContentWidth('3xl')
                                         ->required()
                                         ->columnSpanFull(),
                                 ]),

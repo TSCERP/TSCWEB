@@ -6,14 +6,14 @@
         <div class="flex flex-wrap items-center justify-between gap-5">
             <div class="flex select-none items-center justify-center gap-2 rounded-full py-2.5 pl-4 pr-5 text-xs"
                 x-bind:class="{
-                    'bg-amber-100/80 text-amber-700': types[article.type].color === 'amber',
+                    'bg-purple-100/80 text-purple-700': types[article.type].color === 'purple',
                     'bg-blue-100/80 text-blue-700': types[article.type].color === 'blue',
                     'bg-violet-100/80 text-violet-700': types[article.type].color === 'violet',
                 }">
                 {{-- Type Icon --}}
                 <div x-html="types[article.type].icon" class="-my-4"
                     x-bind:class="{
-                        'text-amber-500': types[article.type].color === 'amber',
+                        'text-purple-500': types[article.type].color === 'purple',
                         'text-blue-500': types[article.type].color === 'blue',
                         'text-violet-500': types[article.type].color === 'violet',
                     }">
