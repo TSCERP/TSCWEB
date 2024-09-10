@@ -8,14 +8,13 @@
                 <div class="flex my-auto md:mx-[10%]">
                     <h1 data-aos="zoom-in"
                         class="text-5xl lg:text-7xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-0 sm:before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-0 sm:after:right-4 after:bg-no-repeat after:bg-cover after:scale-75">
-                        {{ __('gt.text1') }}</h1>
+                        {{ __('Unlocking your business with management solutions') }}</h1>
                 </div>
-                <span data-aos="fade-up" class="text-xl font-medium text-center">"Discover how we can faciliate your digital
-                    transformation."</span>
+                <span data-aos="fade-up" class="text-xl font-medium text-center">{{ __("Discover how we can faciliate your digital transformation.") }}</span>
                 <div class="flex gap-8">
                     <button data-aos="fade-right"
-                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Get Started</button>
-                    <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left" class="rounded-full font-semibold px-6 py-4">Demo ›</button>
+                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__("Get Started")}}</button>
+                    <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left" class="rounded-full font-semibold px-6 py-4">{{__('Demo')}} ›</button>
                 </div>
                 <div class="flex flex-col sm:flex-row justify-between w-full sm:py-10 relative">
                     <div class="relative sm:static w-screen h-[480px] sm:h-auto sm:w-1/4 bottom-0 left-0 before:bg-[#C9BBEE] before:absolute before:w-2/3 before:left-1/2 before:-translate-x-1/2 sm:before:translate-x-0 sm:before:w-1/4 before:bottom-0 sm:before:left-0 before:h-2/3 sm:before:h-1/3 before:rounded-t-3xl">
@@ -24,7 +23,7 @@
                             src="{{ asset('assets/images/banner-item-human.webp') }}" alt="happy-with-advance">
                     </div>
                     <div class="mt-8 flex flex-col sm:gap-4 w-full sm:w-1/2 lg:w-2/5">
-                        <p class="text-center">Trusted by Global Companies</p>
+                        <p class="text-center">{{__('Trusted by Global Companies')}}</p>
                         <div data-aos="fade-up" class="partner-swiper-container w-full overflow-hidden">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -86,39 +85,39 @@
                 $data = [
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => 'Business Process Solution',
-                        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                        'link' => '#',
+                        'text' => __('Business Process Solution'),
+                        'description' => __("With this service, Grant Thornton can help you in increasing the company's time flexibility and direct quality control. We can help increasing the speed of..."),
+                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => 'Technology Consulting And Solution',
-                        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                        'link' => '#',
+                        'text' => __('Technology Consulting And Solution'),
+                        'description' => __("Our team of professionals and industry experts look forward to provide practical consultancies and end-to-end technology solutions to the clients."),
+                        'link' =>route('home'),
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => 'Advisory',
-                        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                        'link' => '#',
+                        'text' => __('Advisory Services'),
+                        'description' => __("Our advisory services are designed to help clients in creating value and improving their business performance. We provide a wide range of services..."),
+                        'link' =>  app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => 'Tax',
-                        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                        'link' => '#',
+                        'text' => __('Tax Services'),
+                        'description' => __("Our tax professionals are dedicated to creating distinctive, and often innovative, tax solutions. Our approach starts by developing an in-depth understanding..."),
+                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => 'Audit and Assurance',
-                        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                        'link' => '#',
+                        'text' => __('Audit and Assurance'),
+                        'description' => __("Grant Thornton's audit services focus on client service quality and building long-lasting relationships. We pride ourselves on having a Partner-led service for..."),
+                        'link' =>  app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => 'Korean and Japanese Desk',
-                        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                        'link' => '#',
+                        'text' => __('Korean and Japanese Desk'),
+                        'description' => __("Grant Thornton is one of leading service providers in international incorporations in Vietnam with experience in helping our clients navigate jurisdictions..."),
+                        'link' =>  app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                 ];
 
@@ -159,15 +158,15 @@
             <div class="flex flex-row flex-wrap justify-center gap-8 mt-8">
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
                     <h5 id="project-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
-                    <span class="text-white text-lg">Projects</span>
+                    <span class="text-white text-lg">{{__('Projects')}}</span>
                 </div>
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
                     <h5 id="country-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
-                    <span class="text-white text-lg">Countries</span>
+                    <span class="text-white text-lg">{{__('Countries')}}</span>
                 </div>
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
                     <h5 id="expert-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
-                    <span class="text-white text-lg">Experts</span>
+                    <span class="text-white text-lg">{{__('Experts')}}</span>
                 </div>
             </div>
 
@@ -185,12 +184,11 @@
             <div
                 class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
                 <div>
-                    <span class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">Feature</span>
+                    <span class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{__('Technology Solutions Consulting')}}</span>
                 </div>
                 <h3 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">"Want your
-                    business to thrive in
-                    Industry 4.0?"</h3>
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    "{{__('Want your business to thrive in Industry 4.0?')}}."</h3>
                 <p data-aos="fade-up" class="text-base leading-relaxed">Multiple accounting or ERP platforms? No
                     worries! Running
                     management
@@ -385,12 +383,8 @@
                     src="{{ asset('assets/images/banner-item-chat.webp') }}" alt="chat-with-us">
                 <img data-aos="fade-down" class="w-8 sm:w-10 absolute top-16 right-1 sm:top-24 sm:right-4"
                     src="{{ asset('assets/images/banner-item-lightning.webp') }}" alt="fast-erp">
-                <h1 data-aos="fade-down" class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 sm:mt-0">Simple Pricing</h1>
-                <p data-aos="fade-down" class="max-w-1/2 text-center text-wrap mt-8 font-medium">Lorem ipsum dolor sit
-                    amet,
-                    consectetur adipiscing
-                    elit. Ut elit tellus, luctus
-                    nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <h1 data-aos="fade-down" class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 sm:mt-0">{{__('Best Pricing')}}</h1>
+                <p data-aos="fade-down" class="max-w-1/2 text-center text-wrap mt-8 font-medium">{{__('Dashboard BI Report works for businesses of all sizes, for the lowest price')}}.</p>
                 <div class="flex flex-row flex-wrap w-full justify-center gap-8 mt-6 sm:mt-8 ">
                     <article data-aos="fade-up" data-aos-delay="200" class="md:basis-[calc(33.33%-2rem)]">
                         <div
@@ -408,13 +402,12 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-8">
-                                <h2 class="text-3xl font-bold text-center">Basic</h2>
-                                <p class="text-lg font-semibol text-center">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.</p>
+                                <h2 class="text-3xl font-bold text-center">{{__('Basic')}}</h2>
+                                <p class="text-lg font-semibol text-center">{{__('You can try for free before you commit. Contact us to get a demo')}}.</p>
                             </div>
                             <div class="flex items-center gap-2">
-                                <span class="font-bold">VNĐ</span>
-                                <span class="font-bold text-5xl">8M</span>
+                                <span class="font-bold">USD</span>
+                                <span class="font-bold text-5xl">8.0</span>
                                 <span class="font-bold">/month</span>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-4">
@@ -426,7 +419,7 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Social Branding</span>
+                                    <span class="text-sm font-medium">{{__('Fully Dashboard and Reporting')}}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -436,17 +429,28 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Audience Analytic</span>
+                                    <span class="text-sm font-medium">{{__('Connect with more information system')}}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                                        viewBox="0 0 24 24" class="text-icon-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" class="text-icon-main">
                                         <g fill="#000" stroke="#fff" stroke-width="2">
-                                            <circle cx="12" cy="12" r="9" />
-                                            <path d="m8 12l3 3l5-6" />
+                                            <circle cx="12" cy="12" r="9"></circle>
+                                            <path d="M8 8L16 16"></path>
+                                            <path d="M16 8L8 16"></path>
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Content Creation</span>
+
+                                    <span class="text-sm font-medium">{{__('Customizations')}}</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" class="text-icon-main">
+                                        <g fill="#000" stroke="#fff" stroke-width="2">
+                                            <circle cx="12" cy="12" r="9"></circle>
+                                            <path d="M8 8L16 16"></path>
+                                            <path d="M16 8L8 16"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="text-sm font-medium">{{__('Best Offer Additional Services')}}</span>
                                 </div>
                             </div>
                             <div class="block mx-auto">
@@ -466,14 +470,13 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-8">
-                                <h2 class="text-3xl font-bold text-center">Basic</h2>
-                                <p class="text-lg font-semibol text-center">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.</p>
+                                <h2 class="text-3xl font-bold text-center">{{__('Professional')}}</h2>
+                                <p class="text-lg font-semibol text-center">{{__('You can try for free before you commit. Contact us to get a demo.')}}.</p>
                             </div>
                             <div class="flex items-center gap-2">
-                                <span class="font-bold">VNĐ</span>
-                                <span class="font-bold text-5xl">8M</span>
-                                <span class="font-bold">/month</span>
+                                <span class="font-bold">USD</span>
+                                <span class="font-bold text-5xl">166.0</span>
+                                <span class="font-bold">/{{__('month')}}</span>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-4">
                                 <div class="flex items-center gap-4">
@@ -484,7 +487,7 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Social Branding</span>
+                                    <span class="text-sm font-medium">{{__('Fully Dashboard and Reporting')}}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -494,17 +497,27 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Audience Analytic</span>
+                                    <span class="text-sm font-medium">{{__('Connect with more information system')}}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                                        viewBox="0 0 24 24" class="text-icon-main">
+                                         viewBox="0 0 24 24" class="text-icon-main">
                                         <g fill="#000" stroke="#fff" stroke-width="2">
                                             <circle cx="12" cy="12" r="9" />
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Content Creation</span>
+                                    <span class="text-sm font-medium">{{__('Customizations')}}</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" class="text-icon-main">
+                                        <g fill="#000" stroke="#fff" stroke-width="2">
+                                            <circle cx="12" cy="12" r="9"></circle>
+                                            <path d="M8 8L16 16"></path>
+                                            <path d="M16 8L8 16"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="text-sm font-medium">{{__('Best Offer Additional Services')}}</span>
                                 </div>
                             </div>
                             <div class="block mx-auto">
@@ -524,14 +537,13 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-8">
-                                <h2 class="text-3xl font-bold text-center">Basic</h2>
-                                <p class="text-lg font-semibol text-center">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.</p>
+                                <h2 class="text-3xl font-bold text-center">{{__('Premium')}}</h2>
+                                <p class="text-lg font-semibol text-center">{{__('You can try for free before you commit. Contact us to get a demo.')}}</p>
                             </div>
                             <div class="flex items-center gap-2">
-                                <span class="font-bold">VNĐ</span>
-                                <span class="font-bold text-5xl">8M</span>
-                                <span class="font-bold">/month</span>
+                                <span class="font-bold">USD</span>
+                                <span class="font-bold text-5xl">416.0</span>
+                                <span class="font-bold">/{{__('month')}}}</span>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-4">
                                 <div class="flex items-center gap-4">
@@ -542,7 +554,7 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Social Branding</span>
+                                    <span class="text-sm font-medium">{{__('Fully Dashboard and Reporting')}}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -552,7 +564,7 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Audience Analytic</span>
+                                    <span class="text-sm font-medium">{{__('Connect with more information system')}}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -562,7 +574,17 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">Content Creation</span>
+                                    <span class="text-sm font-medium">{{__('Customizations')}}</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                         viewBox="0 0 24 24" class="text-icon-main">
+                                        <g fill="#000" stroke="#fff" stroke-width="2">
+                                            <circle cx="12" cy="12" r="9" />
+                                            <path d="m8 12l3 3l5-6" />
+                                        </g>
+                                    </svg>
+                                    <span class="text-sm font-medium">{{__('Best Offer Additional Services')}}</span>
                                 </div>
                             </div>
                             <div class="block mx-auto">
