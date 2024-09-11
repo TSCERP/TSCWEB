@@ -1,4 +1,4 @@
-<section class="mx-auto w-full max-w-8xl px-5 sm:px-10" x-cloak x-ref="section" x-init="() => {
+<section class="mx-auto w-full max-w-7xl px-4 sm:px-2 xl:px-0" x-cloak x-ref="section" x-init="() => {
     // Reset the page number on search input change
     $watch('search', (newValue, oldValue) => {
         if (newValue !== oldValue) {
@@ -220,7 +220,7 @@
             class="flex w-full flex-wrap items-center gap-3 min-[900px]:w-auto min-[900px]:flex-nowrap min-[900px]:justify-end">
             {{-- Search Bar --}}
             <div
-                class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.02] sm:max-w-xs">
+                class="group/search-bar relative w-full overflow-hidden rounded-full bg-white shadow-lg shadow-black/[0.01] border border-[#0000003e] transition duration-200 focus-within:shadow-xl focus-within:shadow-black/[0.02] sm:max-w-xs">
                 {{-- Magnify Icon --}}
                 <div
                     class="absolute left-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-fair-pink text-salmon">

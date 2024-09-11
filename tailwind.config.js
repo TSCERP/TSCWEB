@@ -101,6 +101,7 @@ export default {
             },
             screens: {
                 'phone': '480px',
+                'tablet2': '900px',
             },
         },
     },

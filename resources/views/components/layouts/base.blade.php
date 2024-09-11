@@ -3,7 +3,7 @@
     'docSearch' => true,
 ])
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -23,6 +23,11 @@
     <link rel="manifest" href="/favicon/site.webmanifest?v=w1dBNxT7Wg" />
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=w1dBNxT7Wg" color="#fdae4b" />
     <link rel="shortcut icon" href="/favicon/favicon.ico?v=w1dBNxT7Wg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
     <meta name="msapplication-TileColor" content="#ffc40d" />
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=w1dBNxT7Wg" />
     <meta name="theme-color" content="#ffffff" />
@@ -47,22 +52,25 @@
 
 <body
     class="relative min-h-screen overflow-x-clip
-      font-vietnam text-midnight bg-white antialiased selection:bg-stone-500/10
+       text-midnight bg-white antialiased selection:bg-stone-500/10
        dark:bg-black dark:text-white/50
-      ">
-<div id="docsearch" class="hidden"></div>
-<div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-    <!-- Page Navigation -->
-@include('layouts.navigation')
-<main class="mt-[130px]">
-    {{ $slot }}
-</main>
-<x-contact-modal name="contact-modal" :show="false" defaultPurpose="Đăng ký dùng thử">
-    <!-- Content of the modal -->
-</x-contact-modal>
-@include('layouts.footer')
-</div>
+      "
+    style="font-family: 'Quicksand', sans-serif">
+    <div id="docsearch" class="hidden"></div>
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <!-- Page Navigation -->
+        @include('layouts.navigation')
+        <main class="mt-[130px]">
+            {{ $slot }}
+        </main>
+        @include('layouts.top')
+        <x-contact-modal name="contact-modal" :show="false" defaultPurpose="Đăng ký dùng thử">
+            <!-- Content of the modal -->
+        </x-contact-modal>
+        @include('layouts.footer')
+    </div>
 </body>
+@stack('scripts')
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 <script>
@@ -92,7 +100,9 @@
 
             // Add a copy icon (you can replace this path with another icon)
             let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            path.setAttribute("d", "M8 2H16C16.55 2 17 2.45 17 3V15C17 15.55 16.55 16 16 16H8C7.45 16 7 15.55 7 15V3C7 2.45 7.45 2 8 2ZM5 5H3C2.45 5 2 5.45 2 6V20C2 20.55 2.45 21 3 21H13C13.55 21 14 20.55 14 20V18");
+            path.setAttribute("d",
+                "M8 2H16C16.55 2 17 2.45 17 3V15C17 15.55 16.55 16 16 16H8C7.45 16 7 15.55 7 15V3C7 2.45 7.45 2 8 2ZM5 5H3C2.45 5 2 5.45 2 6V20C2 20.55 2.45 21 3 21H13C13.55 21 14 20.55 14 20V18"
+                );
             svg.appendChild(path);
 
             // Append the SVG into the button
@@ -113,12 +123,12 @@
         await navigator.clipboard.writeText(text);
 
         // visual feedback that task is completed
-        button.querySelector("svg").style.fill = "green";  // Change color of SVG
+        button.querySelector("svg").style.fill = "green"; // Change color of SVG
 
         setTimeout(() => {
-            button.querySelector("svg").style.fill = "";  // Reset to original color
+            button.querySelector("svg").style.fill = ""; // Reset to original color
         }, 700);
     }
-
 </script>
+
 </html>

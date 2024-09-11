@@ -1,9 +1,9 @@
 <footer class="bg-white dark:bg-gray-800">
-    <div class="flex flex-col max-w-7xl mx-auto sm:px-0 px-4">
+    <div class="flex flex-col max-w-7xl mx-auto xl:px-0 px-4 sm:px-2">
         <div class="flex flex-col sm:grid sm:grid-cols-[35%_1fr] gap-8 sm:gap-12 py-6 sm:py-14 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:opacity-25 before:z-0 before:bg-no-repeat before:bg-center sm:before:bg-top before:bg-[length:85%_auto] sm:before:bg-[length:65%_auto] before:bg-[url('../assets/images/service-pattern.webp')]">
             <div class="flex flex-col gap-4 x-10">
                 <a href="{{ route('dashboard') }}">
-                    <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                    <x-application-logo class="w-44" />
                 </a>
                 <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit eta dolore magna.</p>
                 <div class="flex gap-4">

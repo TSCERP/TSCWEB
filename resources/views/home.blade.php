@@ -65,7 +65,7 @@
     </section>
     <section
         class="relative bg-bg-dark bg-no-repeat bg-bottom bg-[length:60%_auto bg-[url('../assets/images/service-pattern.webp')] before:bg-bg-dark before:opacity-95 before:absolute before:w-full before:h-full">
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-2 lg:px-0 py-12 sm:py-24">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col sm:flex-row gap-4 text-white">
                 <h1 data-aos="fade-up"
                     class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">Your Social
@@ -175,7 +175,7 @@
     </section>
     <section>
         <div
-            class="relative max-w-7xl mx-auto px-4 sm:px-2 lg:px-0 py-12 sm:py-16 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
+            class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
             <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
                 <img class="h-full rounded-3xl" src="{{ asset('assets/images/feature-illustration.webp') }}"
                     alt="erp-solution">
@@ -248,7 +248,7 @@
         </div>
     </section>
     <section>
-        <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 lg:px-0 py-12 sm:py-24">
+        <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex justify-center mb-4 sm:mb-2">
                 <img class="scale-75" src="{{ asset('assets/images/feature-item-square.webp') }}"
                     alt="sap-b1-pattern">
@@ -317,7 +317,7 @@
     </section>
     <section
         class="bg-bg-gray relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-bg-gray before:opacity-60 z-10 bg-no-repeat bg-center bg-[length:60%_auto] bg-[url('../assets/images/service-pattern.webp')]">
-        <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 lg:px-0 py-12 sm:py-24">
+        <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col items-center sm:flex-row gap-4">
                 <h1 data-aos="fade-up" class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">Trusted
                     By Strategic Global Partner
@@ -379,7 +379,7 @@
         </div>
     </section>
     <section>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-2 lg:px-0">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0">
             <div class="relative flex flex-col items-center py-12 sm:py-24">
                 <img data-aos="fade-down" class="w-12 absolute top-8 left-1 sm:top-24 sm:left-4"
                     src="{{ asset('assets/images/banner-item-chat.webp') }}" alt="chat-with-us">
@@ -576,7 +576,7 @@
     </section>
     <section
         class="bg-white relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:opacity-40 z-10 bg-no-repeat bg-center bg-[length:70%_auto] bg-[url('../assets/images/map.webp')]">
-        <div class="relative max-w-7xl mx-auto flex flex-col gap-8 px-4 sm:px-2 lg:px-0 py-24 ">
+        <div class="relative max-w-7xl mx-auto flex flex-col gap-8 px-4 sm:px-2 xl:px-0 py-24 ">
             <div class="flex flex-col sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
                     class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">Our
@@ -718,7 +718,7 @@
 
     </section>
     <section>
-        <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 lg:px-0 py-12 sm:py-24">
+        <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div
                 class="relative flex px-10 py-16 sm:px-16 sm:py-24 rounded-3xl bg-no-repeat bg-cover bg-[url('../assets/images/banner-bg.webp')] before:absolute before:w-full before:h-full before:rounded-3xl before:top-0 before:left-0 before:bg-bg-main before:opacity-70">
                 <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between sm:items-center z-10">
