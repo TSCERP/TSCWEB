@@ -23,6 +23,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Filament\Forms\Components\Tabs;
 use Illuminate\Support\Str;
+use Lang;
 class blogs extends Model
 {
     use HasFactory;
@@ -222,9 +223,9 @@ class blogs extends Model
     {
 
         return [
-            'id' => $this->slug,
-            'title' => $this->title,
-            'slug' => $this->slug,
+            'id' => (Lang::getLocale() == 'vi') ? $this->slug : ($this->slug_en ?? $this->slug),
+            'title' =>(Lang::getLocale() == 'vi') ? $this->title : ($this->title_en ?? $this->title),
+            'slug' => (Lang::getLocale() == 'vi') ? $this->slug : ($this->slug_en ?? $this->slug),
             'publish_date' => $this->published_at->diffForHumans(),
             'thumbnail_url' =>'storage/'. $this->cover_photo_path,
             'author' => [
@@ -237,4 +238,9 @@ class blogs extends Model
             'canonical_url' => $this->canonical_url,
         ];
     }
+    public function resolveRouteBinding($value, $field = null)
+    {
+        return $this->where('slug', $value)->orWhere('slug_en', $value)->firstOrFail();
+    }
+
 }

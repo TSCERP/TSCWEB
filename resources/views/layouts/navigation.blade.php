@@ -54,10 +54,10 @@ $nextTick(() => {
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('home') ? '!font-bold text-text-main' : '' }}"
                         :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('layout.home') }}
+                        {{ __('Home') }}
                     </x-nav-link>
                     @php
-                        $services = __('layout.services');
+                        $services = __('Services');
                     @endphp
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200"
@@ -74,11 +74,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">SAP Business One
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Business Process Solution') }}
                                     </h4>
-                                    <p class="text-gray-500 dark:text-gray-400 text-xs">Lightweight starter kit
-                                        scaffolding
-                                        for new applications with Blade or Inertia.</p>
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -91,11 +89,10 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">SAP Business One
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Technology Solutions Consulting') }}
                                     </h4>
-                                    <p class="text-gray-500 dark:text-gray-400 text-xs">Lightweight starter kit
-                                        scaffolding
-                                        for new applications with Blade or Inertia.</p>
+
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -108,11 +105,10 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">SAP Business One
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Advisory Services') }}
                                     </h4>
-                                    <p class="text-gray-500 dark:text-gray-400 text-xs">Lightweight starter kit
-                                        scaffolding
-                                        for new applications with Blade or Inertia.</p>
+
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -125,11 +121,10 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">SAP Business One
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Tax Services') }}
                                     </h4>
-                                    <p class="text-gray-500 dark:text-gray-400 text-xs">Lightweight starter kit
-                                        scaffolding
-                                        for new applications with Blade or Inertia.</p>
+
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -142,11 +137,10 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">SAP Business One
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Audit and Assurance') }}
                                     </h4>
-                                    <p class="text-gray-500 dark:text-gray-400 text-xs">Lightweight starter kit
-                                        scaffolding
-                                        for new applications with Blade or Inertia.</p>
+
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -159,11 +153,10 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">SAP Business One
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Korean and Japanese Desk') }}
                                     </h4>
-                                    <p class="text-gray-500 dark:text-gray-400 text-xs">Lightweight starter kit
-                                        scaffolding
-                                        for new applications with Blade or Inertia.</p>
+
                                 </div>
                             </div>
                             <!-- Repeat similar content for other services -->
@@ -173,30 +166,30 @@ $nextTick(() => {
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('solution') ? '!font-bold text-text-main' : '' }}"
                         :active="request()->routeIs('solution')">
-                        {{ __('layout.solution') }}
+                        {{ __('Solutions') }}
                     </x-nav-link>
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-text-main' : '' }}"
                         :active="request()->routeIs('about')">
-                        {{ __('layout.about') }}
+                        {{ __('About Us') }}
                     </x-nav-link>
                     <x-nav-link :href="route('blogs')"
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
                         :active="request()->routeIs('blogs')">
-                        {{ __('layout.blogs') }}
+                        {{ __('Blog') }}
                     </x-nav-link>
                 </div>
 
                 <!-- Settings Dropdown -->
                 <div class="hidden tablet2:flex sm:gap-4 sm:items-center sm:ms-6">
-                    <div x-data="{ activeLang: 'VI' }" class="flex gap-2 items-center">
-                        <button @click="activeLang = 'VI'"
-                            :class="[activeLang === 'VI' ? 'font-semibold' : 'font-normal']"
+                    <div x-data="{ activeLang: '{{ app()->getLocale() }}' }" class="flex gap-2 items-center">
+                        <button @click="activeLang = 'vi'; window.location.href = '/language/vi'"
+                            :class="[activeLang === 'vi' ? 'font-semibold' : 'font-normal']"
                             class="navigation-button !text-base transition-all duration-200">
                             VI
                         </button>
                         <div class="w-[1px] h-4 bg-text-primary"></div>
-                        <button @click="window.location.href = '/language/en'"
+                        <button @click="activeLang = 'en'; window.location.href = '/language/en'"
                             :class="[activeLang === 'en' ? 'font-semibold' : 'font-normal']"
                             class="navigation-button !text-base transition-all duration-200">
                             EN
@@ -205,7 +198,7 @@ $nextTick(() => {
 
 
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')"
-                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('layout.trial') }}</button>
+                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('Register Trial') }}</button>
                 </div>
 
                 <!-- Hamburger -->
@@ -255,7 +248,7 @@ $nextTick(() => {
                                 <path
                                     d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                             </svg>
-                            <span class="ms-3">{{__('Home')}}</span>
+                            <span class="ms-3">{{ __('Home') }}</span>
                         </a>
                     </li>
                     <li>
@@ -268,7 +261,8 @@ $nextTick(() => {
                                 <path
                                     d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
                             </svg>
-                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('Services')}}</span>
+                            <span
+                                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{ __('Services') }}</span>
                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -299,7 +293,7 @@ $nextTick(() => {
                                 <path
                                     d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
                             </svg>
-                            <span class="ms-3">{{__('About Us')}}</span>
+                            <span class="ms-3">{{ __('About Us') }}</span>
                         </a>
                     </li>
                     <li>
@@ -311,18 +305,18 @@ $nextTick(() => {
                                 <path
                                     d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                             </svg>
-                            <span class="ms-3">{{__('Blog')}}</span>
+                            <span class="ms-3">{{ __('Blog') }}</span>
                         </a>
                     </li>
                 </ul>
                 <div class="flex gap-4 justyfy-between items-center sm:ms-6 mt-4">
                     <div x-data="{ activeLang: '{{ app()->getLocale() }}' }" class="flex gap-2 items-center">
-                        <button  @click="activeLang = 'vi'; window.location.href = '/language/vi'"
-                                 :class="activeLang === 'vi' ? 'font-semibold' : 'font-normal'">
+                        <button @click="activeLang = 'vi'; window.location.href = '/language/vi'"
+                            :class="activeLang === 'vi' ? 'font-semibold' : 'font-normal'">
                             VI
                         </button>
                         <div class="w-[1px] h-4 bg-text-primary"></div>
-                        <button  @click="activeLang = 'en'; window.location.href = '/language/en'"
+                        <button @click="activeLang = 'en'; window.location.href = '/language/en'"
                             :class="activeLang === 'en' ? 'font-semibold' : 'font-normal'">
                             EN
                         </button>

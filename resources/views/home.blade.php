@@ -10,37 +10,43 @@
                         class="text-5xl lg:text-7xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-0 sm:before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-0 sm:after:right-4 after:bg-no-repeat after:bg-cover after:scale-75">
                         {{ __('Unlocking your business with management solutions') }}</h1>
                 </div>
-                <span data-aos="fade-up" class="text-xl font-medium text-center">{{ __("Discover how we can faciliate your digital transformation.") }}</span>
+                <span data-aos="fade-up"
+                    class="text-xl font-medium text-center">{{ __('Discover how we can faciliate your digital transformation.') }}</span>
                 <div class="flex gap-8">
                     <button data-aos="fade-right"
-                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__("Get Started")}}</button>
-                    <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left" class="rounded-full font-semibold px-6 py-4">{{__('Demo')}} ›</button>
+                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Get Started') }}</button>
+                    <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
+                        class="rounded-full font-semibold px-6 py-4">{{ __('Demo') }} ›</button>
                 </div>
                 <div class="flex flex-col sm:flex-row justify-between w-full sm:py-10 relative">
-                    <div class="relative sm:static w-screen h-[480px] sm:h-auto sm:w-1/4 bottom-0 left-0 before:bg-[#C9BBEE] before:absolute before:w-2/3 before:left-1/2 before:-translate-x-1/2 sm:before:translate-x-0 sm:before:w-1/4 before:bottom-0 sm:before:left-0 before:h-2/3 sm:before:h-1/3 before:rounded-t-3xl">
+                    <div
+                        class="relative sm:static w-screen h-[480px] sm:h-auto sm:w-1/4 bottom-0 left-0 before:bg-[#C9BBEE] before:absolute before:w-2/3 before:left-1/2 before:-translate-x-1/2 sm:before:translate-x-0 sm:before:w-1/4 before:bottom-0 sm:before:left-0 before:h-2/3 sm:before:h-1/3 before:rounded-t-3xl">
                         <img data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                             class="w-[320px] sm:w-[250px] lg:w-[320px] h-auto absolute top-0 left-[18%] sm:top-auto sm:bottom-0 sm:left-0 aspect-[2/3]"
                             src="{{ asset('assets/images/banner-item-human.webp') }}" alt="happy-with-advance">
                     </div>
                     <div class="mt-8 flex flex-col sm:gap-4 w-full sm:w-1/2 lg:w-2/5">
-                        <p class="text-center">{{__('Trusted by Global Companies')}}</p>
+                        <p class="text-center">{{ __('Trusted by Global Companies') }}</p>
                         <div data-aos="fade-up" class="partner-swiper-container w-full overflow-hidden">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <figure class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28  lg:w-52 rounded-lg p-2 inline-flex m-auto">
+                                    <figure
+                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28  lg:w-52 rounded-lg p-2 inline-flex m-auto">
                                         <img src="{{ asset('assets/images/sap-erp.webp') }}" alt="sap-b1-logo">
                                     </figure>
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <figure class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
+                                    <figure
+                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
                                         <img src="{{ asset('assets/images/oracle-netsuite-erp.webp') }}"
                                             alt="oracle-netsuite-logo">
                                     </figure>
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <figure class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
+                                    <figure
+                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
                                         <img src="{{ asset('assets/images/beas-manufacturing.webp') }}"
                                             alt="beas-boyum-logo">
                                     </figure>
@@ -48,13 +54,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-full mt-6 sm:mt-0 sm:w-1/5 flex flex-col sm:flex-row justify-center items-center gap-4 mb-4 sm:mb-0">
-                        <div data-aos="flip-right" class="static sm:absolute sm:bottom-12 lg:bottom-0 lg:-left-10 drop-shadow-md">
-                            <img class="w-72 sm:w-[250px] lg:w-[250px] h-full" src="{{ asset('assets/images/banner-item-summary.webp') }}"
+                    <div
+                        class="relative w-full mt-6 sm:mt-0 sm:w-1/5 flex flex-col sm:flex-row justify-center items-center gap-4 mb-4 sm:mb-0">
+                        <div data-aos="flip-right"
+                            class="static sm:absolute sm:bottom-12 lg:bottom-0 lg:-left-10 drop-shadow-md">
+                            <img class="w-72 sm:w-[250px] lg:w-[250px] h-full"
+                                src="{{ asset('assets/images/banner-item-summary.webp') }}"
                                 alt="grant-thornton-tsc-erp">
                         </div>
-                        <div data-aos="flip-left" class="static sm:absolute sm:-top-10 sm:-left-8 lg:top-auto lg:bottom-36 lg:left-24 drop-shadow-md">
-                            <img class="h-full w-72 sm:w-[150px] lg:w-[250px]" src="{{ asset('assets/images/banner-item-facebook.webp') }}"
+                        <div data-aos="flip-left"
+                            class="static sm:absolute sm:-top-10 sm:-left-8 lg:top-auto lg:bottom-36 lg:left-24 drop-shadow-md">
+                            <img class="h-full w-72 sm:w-[150px] lg:w-[250px]"
+                                src="{{ asset('assets/images/banner-item-facebook.webp') }}"
                                 alt="grant-thornton-tsc-erp">
                         </div>
                     </div>
@@ -67,17 +78,12 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col sm:flex-row gap-4 text-white">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">Your Social
-                    Media Journey
-                    Starts Here</h1>
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    {{ __('Explore our services') }}</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
-                    <span data-aos="fade-up" class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                        elit tellus,
-                        luctus
-                        nec
-                        ullamcorper mattis, pulvinar dapibus leo.</span>
-                    <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">Show More ›</button>
+                    <span data-aos="fade-up" class="text-lg"> {{ __('app.module1.intro') }}</span>
+                    {{-- <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
+                        type="button">Show More ›</button> --}}
                 </div>
             </div>
             <div class="flex flex-row flex-wrap justify-center gap-8 mt-12">
@@ -87,70 +93,70 @@
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Business Process Solution'),
                         'description' => __("With this service, Grant Thornton can help you in increasing the company's time flexibility and direct quality control. We can help increasing the speed of..."),
-                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
+                        'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Technology Consulting And Solution'),
-                        'description' => __("Our team of professionals and industry experts look forward to provide practical consultancies and end-to-end technology solutions to the clients."),
-                        'link' =>route('home'),
+                        'description' => __('Our team of professionals and industry experts look forward to provide practical consultancies and end-to-end technology solutions to the clients.'),
+                        'link' => route('home'),
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Advisory Services'),
-                        'description' => __("Our advisory services are designed to help clients in creating value and improving their business performance. We provide a wide range of services..."),
-                        'link' =>  app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
+                        'description' => __('Our advisory services are designed to help clients in creating value and improving their business performance. We provide a wide range of services...'),
+                        'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Tax Services'),
-                        'description' => __("Our tax professionals are dedicated to creating distinctive, and often innovative, tax solutions. Our approach starts by developing an in-depth understanding..."),
-                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
+                        'description' => __('Our tax professionals are dedicated to creating distinctive, and often innovative, tax solutions. Our approach starts by developing an in-depth understanding...'),
+                        'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Audit and Assurance'),
                         'description' => __("Grant Thornton's audit services focus on client service quality and building long-lasting relationships. We pride ourselves on having a Partner-led service for..."),
-                        'link' =>  app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
+                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Korean and Japanese Desk'),
-                        'description' => __("Grant Thornton is one of leading service providers in international incorporations in Vietnam with experience in helping our clients navigate jurisdictions..."),
-                        'link' =>  app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
+                        'description' => __('Grant Thornton is one of leading service providers in international incorporations in Vietnam with experience in helping our clients navigate jurisdictions...'),
+                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/',
                     ],
                 ];
 
                 $delay = 100;
                 foreach ($data as $item) {
                     echo '
-                                                                                                                                                                                                            <article data-aos="fade-up" data-aos-delay="' .
+                                                                                                                                                                                                                                                                                                                                                                                            <article data-aos="fade-up" data-aos-delay="' .
                         $delay .
                         '"
-                                                                                                                                                                                                                class="group flex flex-col gap-8 items-center text-white p-8 hover:bg-[#3D1473] rounded-3xl cursor-default duration-200 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
-                                                                                                                                                                                                                <div class="text-5xl text-icon-main">
-                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                                                                                                                                                                                                                        ' .
+                                                                                                                                                                                                                                                                                                                                                                                                class="group flex flex-col gap-8 items-center text-white p-8 hover:bg-[#3D1473] rounded-3xl cursor-default duration-200 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
+                                                                                                                                                                                                                                                                                                                                                                                                <div class="text-5xl text-icon-main">
+                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                                                                                                                                                                                                                                                                                                                                                                                        ' .
                         $item['svg'] .
                         '
-                                                                                                                                                                                                                    </svg>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                <h6 class="font-semibold text-xl text-center">' .
+                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                <h6 class="font-semibold text-xl text-center">' .
                         $item['text'] .
                         '</h6>
-                                                                                                                                                                                                                <p class="text-wrap text-center text-lg line-clamp-5">' .
+                                                                                                                                                                                                                                                                                                                                                                                                <p class="text-wrap text-center text-lg line-clamp-5">' .
                         $item['description'] .
                         '</p>
-                                                                                                                                                                                                                <a href="' .
+                                                                                                                                                                                                                                                                                                                                                                                                <a href="' .
                         $item['link'] .
                         '" class="opacity-0 group-hover:opacity-100 text-icon-main duration-200 ease-in">
-                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em" viewBox="0 0 16 9">
-                                                                                                                                                                                                                        <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
-                                                                                                                                                                                                                        <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
-                                                                                                                                                                                                                    </svg>
-                                                                                                                                                                                                                </a>
-                                                                                                                                                                                                            </article>
-                                                                                                                                                                                                        ';
+                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em" viewBox="0 0 16 9">
+                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
+                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
+                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                </a>
+                                                                                                                                                                                                                                                                                                                                                                                            </article>
+                                                                                                                                                                                                                                                                                                                                                                                        ';
                     $delay += 200;
                 }
                 ?>
@@ -158,15 +164,15 @@
             <div class="flex flex-row flex-wrap justify-center gap-8 mt-8">
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
                     <h5 id="project-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
-                    <span class="text-white text-lg">{{__('Projects')}}</span>
+                    <span class="text-white text-lg">{{ __('Projects') }}</span>
                 </div>
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
                     <h5 id="country-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
-                    <span class="text-white text-lg">{{__('Countries')}}</span>
+                    <span class="text-white text-lg">{{ __('Countries') }}</span>
                 </div>
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
                     <h5 id="expert-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
-                    <span class="text-white text-lg">{{__('Experts')}}</span>
+                    <span class="text-white text-lg">{{ __('Experts') }}</span>
                 </div>
             </div>
 
@@ -178,24 +184,19 @@
             <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
                 <img class="h-full rounded-3xl" src="{{ asset('assets/images/feature-illustration.webp') }}"
                     alt="erp-solution">
-                <img class="absolute w-7/12 bottom-4 right-4" src="{{ asset('assets/images/feature-statistics.webp') }}"
-                    alt="statistics-solution">
+                <img class="absolute w-7/12 bottom-4 right-4"
+                    src="{{ asset('assets/images/feature-statistics.webp') }}" alt="statistics-solution">
             </div>
             <div
                 class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
                 <div>
-                    <span class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{__('Technology Solutions Consulting')}}</span>
+                    <span
+                        class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Technology Solutions Consulting') }}</span>
                 </div>
                 <h3 data-aos="fade-up"
                     class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
-                    "{{__('Want your business to thrive in Industry 4.0?')}}."</h3>
-                <p data-aos="fade-up" class="text-base leading-relaxed">Multiple accounting or ERP platforms? No
-                    worries! Running
-                    management
-                    reports
-                    is easier now than ever. We specialize in integrating and streamlining various
-                    systems, ensuring accurate and efficient reporting. Let us simplify your reporting
-                    process and enhance your business management!</p>
+                    "{{ __('Want your business to thrive in Industry 4.0?') }}."</h3>
+                <p data-aos="fade-up" class="text-base leading-relaxed">{{ __('app.intro') }}</p>
                 <ul class="list-disc list-inside space-y-4">
                     <li data-aos="fade-up" data-aos-delay="100" class="flex items-center space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
@@ -205,7 +206,7 @@
                                 <path d="m8 12l3 3l5-6" />
                             </g>
                         </svg>
-                        <span class="text-lg font-semibold">Time-saving, immediate application</span>
+                        <span class="text-lg font-semibold">{{ __('app.key1') }}</span>
                     </li>
                     <li data-aos="fade-up" data-aos-delay="300" class="flex items-center space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
@@ -215,7 +216,7 @@
                                 <path d="m8 12l3 3l5-6" />
                             </g>
                         </svg>
-                        <span class="text-lg font-semibold">Comprehensive management information</span>
+                        <span class="text-lg font-semibold">{{ __('app.key2') }}</span>
                     </li>
                     <li data-aos="fade-up" data-aos-delay="500" class="flex items-center space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
@@ -225,7 +226,7 @@
                                 <path d="m8 12l3 3l5-6" />
                             </g>
                         </svg>
-                        <span class="text-lg font-semibold">Process optimization</span>
+                        <span class="text-lg font-semibold">{{ __('app.key3') }}</span>
                     </li>
                     <li data-aos="fade-up" data-aos-delay="700" class="flex items-center space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
@@ -235,11 +236,12 @@
                                 <path d="m8 12l3 3l5-6" />
                             </g>
                         </svg>
-                        <span class="text-lg font-semibold">For executives and chief accountants</span>
+                        <span class="text-lg font-semibold">{{ __('app.key4') }}</span>
                     </li>
                 </ul>
                 <div data-aos="fade-up" class="w-fit">
-                    <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')" class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Demo</button>
+                    <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
+                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
                 </div>
 
             </div>
@@ -252,7 +254,9 @@
                     alt="sap-b1-pattern">
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
-                <h1 data-aos="fade-up" class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">Our
+                <h1 data-aos="fade-up"
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    Our
                     Solution For Your Business</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
                     <span data-aos="fade-up" class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -317,7 +321,9 @@
         class="bg-bg-gray relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-bg-gray before:opacity-60 z-10 bg-no-repeat bg-center bg-[length:60%_auto] bg-[url('../assets/images/service-pattern.webp')]">
         <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col items-center sm:flex-row gap-4">
-                <h1 data-aos="fade-up" class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">Trusted
+                <h1 data-aos="fade-up"
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    Trusted
                     By Strategic Global Partner
                 </h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
@@ -383,8 +389,10 @@
                     src="{{ asset('assets/images/banner-item-chat.webp') }}" alt="chat-with-us">
                 <img data-aos="fade-down" class="w-8 sm:w-10 absolute top-16 right-1 sm:top-24 sm:right-4"
                     src="{{ asset('assets/images/banner-item-lightning.webp') }}" alt="fast-erp">
-                <h1 data-aos="fade-down" class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 sm:mt-0">{{__('Best Pricing')}}</h1>
-                <p data-aos="fade-down" class="max-w-1/2 text-center text-wrap mt-8 font-medium">{{__('Dashboard BI Report works for businesses of all sizes, for the lowest price')}}.</p>
+                <h1 data-aos="fade-down" class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 sm:mt-0">
+                    {{ __('Best Pricing') }}</h1>
+                <p data-aos="fade-down" class="max-w-1/2 text-center text-wrap mt-8 font-medium">
+                    {{ __('Dashboard BI Report works for businesses of all sizes, for the lowest price') }}.</p>
                 <div class="flex flex-row flex-wrap w-full justify-center gap-8 mt-6 sm:mt-8 ">
                     <article data-aos="fade-up" data-aos-delay="200" class="md:basis-[calc(33.33%-2rem)]">
                         <div
@@ -402,8 +410,9 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-8">
-                                <h2 class="text-3xl font-bold text-center">{{__('Basic')}}</h2>
-                                <p class="text-lg font-semibol text-center">{{__('You can try for free before you commit. Contact us to get a demo')}}.</p>
+                                <h2 class="text-3xl font-bold text-center">{{ __('Basic') }}</h2>
+                                <p class="text-lg font-semibol text-center">
+                                    {{ __('You can try for free before you commit. Contact us to get a demo') }}.</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="font-bold">USD</span>
@@ -419,7 +428,7 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Fully Dashboard and Reporting')}}</span>
+                                    <span class="text-sm font-medium">{{ __('Fully Dashboard and Reporting') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -429,10 +438,12 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Connect with more information system')}}</span>
+                                    <span
+                                        class="text-sm font-medium">{{ __('Connect with more information system') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" class="text-icon-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                        viewBox="0 0 24 24" class="text-icon-main">
                                         <g fill="#000" stroke="#fff" stroke-width="2">
                                             <circle cx="12" cy="12" r="9"></circle>
                                             <path d="M8 8L16 16"></path>
@@ -440,17 +451,19 @@
                                         </g>
                                     </svg>
 
-                                    <span class="text-sm font-medium">{{__('Customizations')}}</span>
+                                    <span class="text-sm font-medium">{{ __('Customizations') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" class="text-icon-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                        viewBox="0 0 24 24" class="text-icon-main">
                                         <g fill="#000" stroke="#fff" stroke-width="2">
                                             <circle cx="12" cy="12" r="9"></circle>
                                             <path d="M8 8L16 16"></path>
                                             <path d="M16 8L8 16"></path>
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Best Offer Additional Services')}}</span>
+                                    <span
+                                        class="text-sm font-medium">{{ __('Best Offer Additional Services') }}</span>
                                 </div>
                             </div>
                             <div class="block mx-auto">
@@ -470,13 +483,14 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-8">
-                                <h2 class="text-3xl font-bold text-center">{{__('Professional')}}</h2>
-                                <p class="text-lg font-semibol text-center">{{__('You can try for free before you commit. Contact us to get a demo.')}}.</p>
+                                <h2 class="text-3xl font-bold text-center">{{ __('Professional') }}</h2>
+                                <p class="text-lg font-semibol text-center">
+                                    {{ __('You can try for free before you commit. Contact us to get a demo.') }}.</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="font-bold">USD</span>
                                 <span class="font-bold text-5xl">166.0</span>
-                                <span class="font-bold">/{{__('month')}}</span>
+                                <span class="font-bold">/{{ __('month') }}</span>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-4">
                                 <div class="flex items-center gap-4">
@@ -487,7 +501,7 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Fully Dashboard and Reporting')}}</span>
+                                    <span class="text-sm font-medium">{{ __('Fully Dashboard and Reporting') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -497,27 +511,30 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Connect with more information system')}}</span>
+                                    <span
+                                        class="text-sm font-medium">{{ __('Connect with more information system') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                                         viewBox="0 0 24 24" class="text-icon-main">
+                                        viewBox="0 0 24 24" class="text-icon-main">
                                         <g fill="#000" stroke="#fff" stroke-width="2">
                                             <circle cx="12" cy="12" r="9" />
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Customizations')}}</span>
+                                    <span class="text-sm font-medium">{{ __('Customizations') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" class="text-icon-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                        viewBox="0 0 24 24" class="text-icon-main">
                                         <g fill="#000" stroke="#fff" stroke-width="2">
                                             <circle cx="12" cy="12" r="9"></circle>
                                             <path d="M8 8L16 16"></path>
                                             <path d="M16 8L8 16"></path>
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Best Offer Additional Services')}}</span>
+                                    <span
+                                        class="text-sm font-medium">{{ __('Best Offer Additional Services') }}</span>
                                 </div>
                             </div>
                             <div class="block mx-auto">
@@ -537,13 +554,14 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-8">
-                                <h2 class="text-3xl font-bold text-center">{{__('Premium')}}</h2>
-                                <p class="text-lg font-semibol text-center">{{__('You can try for free before you commit. Contact us to get a demo.')}}</p>
+                                <h2 class="text-3xl font-bold text-center">{{ __('Premium') }}</h2>
+                                <p class="text-lg font-semibol text-center">
+                                    {{ __('You can try for free before you commit. Contact us to get a demo.') }}</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="font-bold">USD</span>
                                 <span class="font-bold text-5xl">416.0</span>
-                                <span class="font-bold">/{{__('month')}}}</span>
+                                <span class="font-bold">/{{ __('month') }}</span>
                             </div>
                             <div class="flex flex-col justify-center items-center gap-4">
                                 <div class="flex items-center gap-4">
@@ -554,7 +572,7 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Fully Dashboard and Reporting')}}</span>
+                                    <span class="text-sm font-medium">{{ __('Fully Dashboard and Reporting') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -564,7 +582,8 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Connect with more information system')}}</span>
+                                    <span
+                                        class="text-sm font-medium">{{ __('Connect with more information system') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -574,17 +593,18 @@
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Customizations')}}</span>
+                                    <span class="text-sm font-medium">{{ __('Customizations') }}</span>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                                         viewBox="0 0 24 24" class="text-icon-main">
+                                        viewBox="0 0 24 24" class="text-icon-main">
                                         <g fill="#000" stroke="#fff" stroke-width="2">
                                             <circle cx="12" cy="12" r="9" />
                                             <path d="m8 12l3 3l5-6" />
                                         </g>
                                     </svg>
-                                    <span class="text-sm font-medium">{{__('Best Offer Additional Services')}}</span>
+                                    <span
+                                        class="text-sm font-medium">{{ __('Best Offer Additional Services') }}</span>
                                 </div>
                             </div>
                             <div class="block mx-auto">
@@ -601,7 +621,8 @@
         <div class="relative max-w-7xl mx-auto flex flex-col gap-8 px-4 sm:px-2 xl:px-0 py-24 ">
             <div class="flex flex-col sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">Our
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    Our
                     Customer Stories</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
                     <span data-aos="fade-up" class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -713,8 +734,9 @@
                                 <div class="flex justify-between">
                                     <div class="flex gap-4">
                                         <div class="flex">
-                                            <img class="w-16 aspect-square rounded-full !object-cover" style="aspect-ratio: 1/1"
-                                                src="{{ $testimonial['img'] }}" alt="{{ $testimonial['name'] }}">
+                                            <img class="w-16 aspect-square rounded-full !object-cover"
+                                                style="aspect-ratio: 1/1" src="{{ $testimonial['img'] }}"
+                                                alt="{{ $testimonial['name'] }}">
                                         </div>
                                         <div class="flex flex-col gap-2">
                                             <p class="uppercase font-semibold text-lg">{{ $testimonial['name'] }}</p>
@@ -745,13 +767,13 @@
                 class="relative flex px-10 py-16 sm:px-16 sm:py-24 rounded-3xl bg-no-repeat bg-cover bg-[url('../assets/images/banner-bg.webp')] before:absolute before:w-full before:h-full before:rounded-3xl before:top-0 before:left-0 before:bg-bg-main before:opacity-70">
                 <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between sm:items-center z-10">
                     <h1 data-aos="fade-up"
-                        class="text-3xl sm:text-5xl text-white font-bold cursour-default leading-snug md:leading-normal lg:leading-relaxed">Are You
+                        class="text-3xl sm:text-5xl text-white font-bold cursour-default leading-snug md:leading-normal lg:leading-relaxed">
+                        Are You
                         Ready to Boost Your
                         Business Performance?</h1>
                     <div>
                         <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                            class="rounded-full text-nowrap bg-icon-main font-semibold px-6 py-4">Register
-                            Demo</button>
+                            class="rounded-full text-nowrap bg-icon-main font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
                     </div>
                 </div>
             </div>
@@ -769,8 +791,7 @@
                 // slidesPerView: 2,
                 watchOverflow: false,
                 breakpoints: {
-                    1024: {
-                    },
+                    1024: {},
                     768: {
                         slidesPerView: 2,
                     },
