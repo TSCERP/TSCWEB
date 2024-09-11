@@ -253,7 +253,7 @@
 
     {{-- Categories --}}
     <div class="pt-5">
-        <div class="font-semibold">Categories</div>
+        <div class="font-semibold">{{ __('Categories') }}</div>
 
         {{-- List Of Categories --}}
         <div class="flex flex-wrap gap-x-2.5 gap-y-3 pt-5">
