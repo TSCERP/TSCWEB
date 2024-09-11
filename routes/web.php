@@ -21,7 +21,7 @@ Route::get('/language/{locale}', function (string $locale) {
     if (! in_array($locale, ['en','vi'])) {
         abort(404);
     }
-   // App::setLocale($locale);
+    App::setLocale($locale);
     session()->put('locale', $locale);
     return redirect()->back();
 });
