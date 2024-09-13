@@ -9,6 +9,6 @@ return
         "module1"=>[
             "intro"=>"Hãy để chúng tôi hỗ trợ bạn kết nối với chuyên gia gần nhất cùng các dịch vụ liên quan của Grant Thornton",
 
-        ]
-
+        ],
+        "footerMessage"=>"Đội ngũ chuyên gia của chúng tôi mong muốn được cộng tác và mang đến các dự án tư vấn thực tiễn bên cạnh những giải pháp toàn diện về công nghệ cho khách hàng, thúc đẩy quản lý và vận hành doanh nghiệp trong sự chuyển mình nhanh chóng công nghệ trong thời đại 4.0 ngày nay"
     ];

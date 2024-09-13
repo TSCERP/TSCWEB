@@ -130,33 +130,33 @@
                 $delay = 100;
                 foreach ($data as $item) {
                     echo '
-                                                                                                                                                                                                                                                                                                                                                                                            <article data-aos="fade-up" data-aos-delay="' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <article data-aos="fade-up" data-aos-delay="' .
                         $delay .
                         '"
-                                                                                                                                                                                                                                                                                                                                                                                                class="group flex flex-col gap-8 items-center text-white p-8 hover:bg-[#3D1473] rounded-3xl cursor-default duration-200 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
-                                                                                                                                                                                                                                                                                                                                                                                                <div class="text-5xl text-icon-main">
-                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                                                                                                                                                                                                                                                                                                                                                                                                        ' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                class="group flex flex-col gap-8 items-center text-white p-8 hover:bg-[#3D1473] rounded-3xl cursor-default duration-200 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="text-5xl text-icon-main">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ' .
                         $item['svg'] .
                         '
-                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
-                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                <h6 class="font-semibold text-xl text-center">' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <h6 class="font-semibold text-xl text-center">' .
                         $item['text'] .
                         '</h6>
-                                                                                                                                                                                                                                                                                                                                                                                                <p class="text-wrap text-center text-lg line-clamp-5">' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p class="text-wrap text-center text-lg line-clamp-5">' .
                         $item['description'] .
                         '</p>
-                                                                                                                                                                                                                                                                                                                                                                                                <a href="' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <a href="' .
                         $item['link'] .
                         '" class="opacity-0 group-hover:opacity-100 text-icon-main duration-200 ease-in">
-                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em" viewBox="0 0 16 9">
-                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
-                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
-                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
-                                                                                                                                                                                                                                                                                                                                                                                                </a>
-                                                                                                                                                                                                                                                                                                                                                                                            </article>
-                                                                                                                                                                                                                                                                                                                                                                                        ';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em" viewBox="0 0 16 9">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </article>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ';
                     $delay += 200;
                 }
                 ?>
@@ -190,7 +190,7 @@
             <div
                 class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
                 <div>
-                    <span
+                    <span id="feature"
                         class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Technology Solutions Consulting') }}</span>
                 </div>
                 <h3 data-aos="fade-up"
@@ -289,13 +289,15 @@
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">Dashboard Reporting</h6>
                         <button class="text-white duration-200 ease-in">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
-                                viewBox="0 0 16 9">
-                                <path fill="currentColor"
-                                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
-                                <path fill="currentColor"
-                                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
-                            </svg>
+                            <a href="{{ route('solution.dashboard.bi') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
+                                    viewBox="0 0 16 9">
+                                    <path fill="currentColor"
+                                        d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
+                                    <path fill="currentColor"
+                                        d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
+                                </svg>
+                            </a>
                         </button>
                     </div>
                 </div>
@@ -419,7 +421,7 @@
                                 <span class="font-bold text-5xl">8.0</span>
                                 <span class="font-bold">/month</span>
                             </div>
-                            <div class="flex flex-col justify-center items-center gap-4">
+                            <div class="flex flex-col justify-start items-start gap-4">
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                         viewBox="0 0 24 24" class="text-icon-main">
@@ -492,7 +494,7 @@
                                 <span class="font-bold text-5xl">166.0</span>
                                 <span class="font-bold">/{{ __('month') }}</span>
                             </div>
-                            <div class="flex flex-col justify-center items-center gap-4">
+                            <div class="flex flex-col justify-start items-start gap-4">
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                         viewBox="0 0 24 24" class="text-icon-main">
@@ -563,7 +565,7 @@
                                 <span class="font-bold text-5xl">416.0</span>
                                 <span class="font-bold">/{{ __('month') }}</span>
                             </div>
-                            <div class="flex flex-col justify-center items-center gap-4">
+                            <div class="flex flex-col justify-start items-start gap-4">
                                 <div class="flex items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                         viewBox="0 0 24 24" class="text-icon-main">

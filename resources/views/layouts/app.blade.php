@@ -13,7 +13,7 @@
     <meta name="yandex" content="index, follow">
     <meta name="referrer" content="no-referrer">
     <meta name="format-detection" content="telephone=no">
-    <title>Grant Thornton TSC</title>
+    <title>@yield('title', 'Grant Thornton TSC(SAP B1)')</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

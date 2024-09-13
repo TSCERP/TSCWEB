@@ -10,5 +10,5 @@ return
         "intro"=>"Whether you're interested in our services or you want to find one of our experts in your local area, we'll put you in touch with the right team",
 
     ],
-
+    "footerMessage"=>"Our team of experts looks forward to collaborating and providing practical consulting projects along with comprehensive technology solutions for customers, promoting business management and operations in the rapid technological transformation of today's 4.0 era."
 ];

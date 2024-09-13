@@ -57,21 +57,15 @@
             </div>
             <div class="flex justify-center w-full sm:w-auto">
                 <img class="aspect-[16/9] w-full sm:w-10/12 rounded-xl bg-cover bg-center bg-no-repeat ring-1 ring-dawn-pink"
-                    {{-- src="{{ $article->featurePhoto }}" alt="{{ $article->photo_alt_text }}"> --}}
-                    src="https://images.ctfassets.net/h6goo9gw1hh6/5wl7KPvpM44dPJ3kwKfwTe/0eb029cd00424d1b1934d780f57bbc34/Aspect-Ration-Image-1to1.jpg?w=1600&h=1600&fl=progressive&q=70&fm=jpg"
-                    alt="{{ $article->photo_alt_text }}">
+                    src="{{ $article->featurePhoto }}" alt="{{ $article->photo_alt_text }}">
+                {{-- src="https://images.ctfassets.net/h6goo9gw1hh6/5wl7KPvpM44dPJ3kwKfwTe/0eb029cd00424d1b1934d780f57bbc34/Aspect-Ration-Image-1to1.jpg?w=1600&h=1600&fl=progressive&q=70&fm=jpg" --}}
+                {{-- alt="{{ $article->photo_alt_text }}"> --}}
             </div>
         </div>
 
         {{-- Categories --}}
         <div class="flex flex-wrap items-center gap-3.5 pt-6 mb-5">
-            @php
-                $article->categories[] = (object) ['name' => 'New Category'];
-                $article->categories[] = (object) ['name' => 'New Category 1'];
-                $article->categories[] = (object) ['name' => 'New Category 2'];
-                $article->categories[] = (object) ['name' => 'New Category 3'];
-                $article->categories[] = (object) ['name' => 'New Category 4'];
-            @endphp
+
             @foreach ($article->categories as $category)
                 <div class="select-none rounded-full bg-stone-200/50 px-5 py-2.5 text-sm">
                     <div class="text-sm">

@@ -42,7 +42,7 @@ $nextTick(() => {
                 <!-- Logo -->
                 <div class="flex min-w-[170px] md:min-w-[150px] lg:min-w-[170px]">
                     <div class="shrink-0 flex items-center">
-                        <a href="{{ route('dashboard') }}">
+                        <a href="{{ route('solution.dashboard.bi') }}">
                             <x-application-logo
                                 class="primary-logo w-44 md:w-36 lg:w-44 transition-all duration-200 linear" />
                         </a>
@@ -58,9 +58,11 @@ $nextTick(() => {
                     </x-nav-link>
                     @php
                         $services = __('Services');
+                        $solutions = __('Solutions');
                     @endphp
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200"
+
                         :active="request()->routeIs('service')" :dropdown="true" :title="$services">
                         <!-- Dropdown Content -->
                         <div class="grid grid-cols-3 gap-4">
@@ -164,9 +166,79 @@ $nextTick(() => {
                     </x-nav-link>
 
                     <x-nav-link
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('solution') ? '!font-bold text-text-main' : '' }}"
-                        :active="request()->routeIs('solution')">
-                        {{ __('Solutions') }}
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200
+                        {{ request()->routeIs('solution*') ? '!font-bold text-text-main' : '' }}"
+                        :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('SAP Business One') }}
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Oracle NetSuite') }}
+                                    </h4>
+
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{route('solution.dashboard.bi')}}">
+                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                            {{ __('Business Intelligence') }}
+                                        </h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{route('solution.travel.expense')}}">
+                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                            {{ __('Travel & Expense') }}
+                                        </h4>
+                                    </a>
+
+
+                                </div>
+                            </div>
+                            <!-- Repeat similar content for other services -->
+                        </div>
                     </x-nav-link>
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-text-main' : '' }}"
@@ -177,6 +249,11 @@ $nextTick(() => {
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
                         :active="request()->routeIs('blogs')">
                         {{ __('Blog') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('document')"
+                                class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
+                                :active="request()->routeIs('document')">
+                        {{ __('Document') }}
                     </x-nav-link>
                 </div>
 
@@ -231,7 +308,7 @@ $nextTick(() => {
             x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" aria-label="Sidebar">
             <div class="h-full px-3 py-4 overflow-y-auto">
                 <div class="shrink-0 flex mb-4">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('solution.dashboard.bi') }}">
                         <x-application-logo
                             class="ml-2 primary-logo w-44 md:w-36 lg:w-44 transition-all duration-200 linear" />
                     </a>
@@ -370,7 +447,7 @@ $nextTick(() => {
                     });
                     navTrialButton.classList.add('!py-[0.5rem]');
                     navTrialButton.classList.add('!text-sm');
-                    console.log("Gì he: ", navTrialButton.classList)
+                    // console.log("Gì he: ", navTrialButton.classList)
                 } else {
                     primaryNav.classList.add('h-[80px]');
                     primaryNav.classList.remove('h-[50px]');

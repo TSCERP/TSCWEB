@@ -1,4 +1,8 @@
 <x-app-layout>
+    @php
+        $title = app()->getLocale() == 'vi' ? 'Bảng điều khiển' : 'Dashboard';
+    @endphp
+    @section('title', $title)
     <div class="relative bg-cover bg-no-repeat" style="background-image: url({{ Vite::asset('resources/images/5.png') }});">
         <div class="container py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="flex flex-wrap items-center">
