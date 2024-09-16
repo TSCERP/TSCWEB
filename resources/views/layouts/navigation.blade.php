@@ -180,9 +180,11 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
+                                    <a href="{{route('solution.sapb1')}}">
                                     <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('SAP Business One') }}
                                     </h4>
+                                    </a>
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -195,10 +197,11 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
+                                    <a href="{{route('solution.netsuite')}}">
                                     <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Oracle NetSuite') }}
                                     </h4>
-
+                                    </a>
                                 </div>
                             </div>
                             <div class="flex gap-4">

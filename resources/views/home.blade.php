@@ -349,8 +349,7 @@
                     <p class="text-center w-11/12">Lorem ipsum dolor sit amet, consetetur adipiscing elit test nữa nè
                     </p>
                     <div class="block mx-auto">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
-                            More</button>
+                        <button onclick="window.location.href='{{route('solution.sapb1')}}'" class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
                     </div>
                 </div>
                 <div data-aos="zoom-in-down" data-aos-delay="200"
@@ -363,8 +362,7 @@
                     <p class="text-center w-11/12">Lorem ipsum dolor sit amet, consetetur adipiscing elit test nữa nè
                     </p>
                     <div class="block mx-auto">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
-                            More</button>
+                        <button onclick="window.location.href='{{route('solution.netsuite')}}'" class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
                     </div>
                 </div>
                 <div data-aos="zoom-in-left" data-aos-delay="400"
@@ -377,8 +375,7 @@
                     <p class="text-center w-11/12">Lorem ipsum dolor sit amet, consetetur adipiscing elit test nữa nè
                     </p>
                     <div class="block mx-auto">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
-                            More</button>
+                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
                     </div>
                 </div>
             </div>

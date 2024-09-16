@@ -1,5 +1,5 @@
 <x-app-layout>
-    @section('title', 'Grant Thornton | SAP Business One')
+    @section('title', 'Grant Thornton | Oracle NetSuite')
     <section class="h-max bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
         <div class="relative max-w-7xl mx-auto">
             <div class="relative flex flex-col gap-6 sm:gap-8 justify-cener items-center pt-6 sm:pt-12">

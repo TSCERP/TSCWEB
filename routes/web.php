@@ -21,6 +21,13 @@ Route::name('solution.')->prefix('solution')->group(function () {
     Route::get('/travel-expense', function () {
         return view('solution.te');
     })->name('travel.expense');
+    Route::get('/sap-business-one', function () {
+        return view('sap');
+    })->name('sapb1');
+    Route::get('/oracle-netsuite', function () {
+        return view('netsuite');
+    })->name('netsuite');
+
 });
 Route::get('/document', function () {
     return view('document');
