@@ -1,0 +1,14 @@
+<?php
+return
+[
+    "intro"=>"Multiple accounting or ERP platforms? No worries! Running management reports is easier now than ever. We specialize in integrating and streamlining various systems, ensuring accurate and efficient reporting. Let us simplify your reporting process and enhance your business management!",
+    "key1"=>"Time-saving, immediate application",
+    "key2"=>"Comprehensive management information",
+    "key3"=>"Process optimization",
+    "key4"=>"For executives and chief accountants",
+    "module1"=>[
+        "intro"=>"Whether you're interested in our services or you want to find one of our experts in your local area, we'll put you in touch with the right team",
+
+    ],
+    "footerMessage"=>"Our team of experts looks forward to collaborating and providing practical consulting projects along with comprehensive technology solutions for customers, promoting business management and operations in the rapid technological transformation of today's 4.0 era."
+];

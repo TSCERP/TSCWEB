@@ -13,12 +13,18 @@ Route::get('/', function () {
 Route::get('/sap-business-one', function () {
     return view('sap');
 })->name('home');
-Route::get('/dashboard-bi', function () {
-    return view('dashboard-bi');
-})->name('dashboard.bi');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::name('solution.')->prefix('solution')->group(function () {
+    Route::get('/dashboard-bi', function () {
+        return view('dashboard-bi');
+    })->name('dashboard.bi');
+    Route::get('/travel-expense', function () {
+        return view('solution.te');
+    })->name('travel.expense');
+});
+Route::get('/document', function () {
+    return view('document');
+})->name('document');
 
 Route::get('/language/{locale}', function (string $locale) {
     if (! in_array($locale, ['en','vi'])) {

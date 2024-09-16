@@ -4,23 +4,25 @@ namespace App\Http\Controllers\Articles;
 
 use App\Http\Controllers\Controller;
 use App\Models\blogs;
-
+use Illuminate\Http\Request;
+use Lang;
 class ViewArticleController extends Controller
 {
     public function __invoke(blogs $blogs)
     {
+        $title=(Lang::getLocale() == 'vi') ? $blogs->title : ($blogs->title_en ?? $blogs->title);
         seo()
-            ->title("{$blogs->title} by {$blogs->user->name}")
-            ->description($blogs->title)
+            ->title("{$title} by {$blogs->user->name}")
+            ->description($title)
             ->image('https://previewlinks.io/generate/templates/1055/meta?url=' . url()->current())
             ->tag('previewlinks:overline', 'Filament')
-            ->tag('previewlinks:title', $blogs->title)
+            ->tag('previewlinks:title', $title)
             ->tag('previewlinks:subtitle', "By {$blogs->user->name}")
             ->tag('previewlinks:image', 'https://filamentphp.com/images/icon.png')
             ->tag('previewlinks:repository', 'filament/filament')
             ->withUrl()
-            ->url($article->canonical_url ?? request()->url())
-            ->rawTag('<meta name="description" content="'. $blogs->title.'">')
+            ->url($blogs->canonical_url ?? request()->url())
+            ->rawTag('<meta name="description" content="'. $title.'">')
             ->rawTag('fb_url', '<meta property="fb:url" content="bar" />');
         $types= collect([
             'article' => [
