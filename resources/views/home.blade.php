@@ -414,12 +414,12 @@
                             <div class="flex flex-col justify-center items-center gap-8">
                                 <h2 class="text-3xl font-bold text-center">{{ __('Basic') }}</h2>
                                 <p class="text-lg font-semibol text-center">
-                                    {{ __('You can try for free before you commit. Contact us to get a demo') }}.</p>
+                                    {{ __('You can try for free before you commit. Contact us to get a demo.') }}</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="font-bold">USD</span>
                                 <span class="font-bold text-5xl">8.0</span>
-                                <span class="font-bold">/month</span>
+                                <span class="font-bold">/{{ __('month') }}</span>
                             </div>
                             <div class="flex flex-col justify-start items-start gap-4">
                                 <div class="flex items-center gap-4">
@@ -487,7 +487,7 @@
                             <div class="flex flex-col justify-center items-center gap-8">
                                 <h2 class="text-3xl font-bold text-center">{{ __('Professional') }}</h2>
                                 <p class="text-lg font-semibol text-center">
-                                    {{ __('You can try for free before you commit. Contact us to get a demo.') }}.</p>
+                                    {{ __('You can try for free before you commit. Contact us to get a demo.') }}</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="font-bold">USD</span>
