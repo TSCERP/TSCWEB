@@ -1,9 +1,12 @@
 <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="py-8 mx-auto max-w-screen-xl lg:py-16 px-4 sm:px-2 xl:px-0">
         <div class="mb-12 relative text-center pt-2.5">
-            <h6 class="rounded-[30px] shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 inline-block text-[14px] font-medium mb-4 tracking-wide relative">
-                Price plans
-            </h6>
+            <div>
+                <h6
+                    class="rounded-[30px] w-fit mx-auto shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-2">
+                    PRICE PLANS
+                </h6>
+            </div>
         </div>
         <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for business teams like yours</h2>

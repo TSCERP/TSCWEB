@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="h-max bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
+    <section class="h-max pt-[130px] bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
         <div class="relative max-w-7xl mx-auto">
             <div class="relative flex flex-col gap-6 sm:gap-8 justify-cener items-center pt-6 sm:pt-12">
                 <div>
@@ -11,7 +11,7 @@
                         {{ __('Unlocking your business with management solutions') }}</h1>
                 </div>
                 <span data-aos="fade-up"
-                    class="text-xl font-medium text-center">{{ __('Discover how we can faciliate your digital transformation.') }}</span>
+                    class="text-xl font-medium text-center">{{ __('Discover how we can facilitate your digital transformation.') }}</span>
                 <div class="flex gap-8">
                     <button data-aos="fade-right"
                         class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Get Started') }}</button>
@@ -26,7 +26,7 @@
                             src="{{ asset('assets/images/banner-item-human.webp') }}" alt="happy-with-advance">
                     </div>
                     <div class="mt-8 flex flex-col sm:gap-4 w-full sm:w-1/2 lg:w-2/5">
-                        <p class="text-center">{{ __('Trusted by Global Companies') }}</p>
+                        <p class="text-center">{{ __('Collaborating with Global Technology Partners') }}</p>
                         <div data-aos="fade-up" class="partner-swiper-container w-full overflow-hidden">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -78,7 +78,7 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col sm:flex-row gap-4 text-white">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed min-w-[25%]">
                     {{ __('Explore our services') }}</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
                     <span data-aos="fade-up" class="text-lg"> {{ __('app.module1.intro') }}</span>
@@ -97,14 +97,14 @@
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => __('Technology Consulting And Solution'),
+                        'text' => __('Technology Solutions Consulting'),
                         'description' => __('Our team of professionals and industry experts look forward to provide practical consultancies and end-to-end technology solutions to the clients.'),
                         'link' => route('home'),
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Advisory Services'),
-                        'description' => __('Our advisory services are designed to help clients in creating value and improving their business performance. We provide a wide range of services...'),
+                        'description' => __('If you are seeking to acquire or merge, divest or dispose, restructure or raise capital, equitise or list, or you are looking at identifying and mitigating...'),
                         'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/',
                     ],
                     [
@@ -255,7 +255,7 @@
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed min-w-[25%]">
                     Our
                     Solution For Your Business</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
@@ -324,18 +324,12 @@
         <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col items-center sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
-                    Trusted
-                    By Strategic Global Partner
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">{{ __('Our Featured Solutions') }}
                 </h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
-                    <span data-aos="fade-up" class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Ut elit tellus,
-                        luctus
-                        nec
-                        ullamcorper mattis, pulvinar dapibus leo.</span>
-                    <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">Show More ›</button>
+                    <span data-aos="fade-up" class="text-lg">{{ __('Discover our key solutions that streamline processes, boost efficiency, and drive growth.') }}.</span>
+                    {{-- <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
+                        type="button">Show More ›</button> --}}
                 </div>
             </div>
             <div class="flex flex-row flex-wrap justify-between gap-8 mt-12 items-end rounded-full bg-">
@@ -346,8 +340,7 @@
                             src="{{ asset('assets/images/connecting-img-1.webp') }}" alt="sap-b1-pattern">
                     </figure>
                     <h6 class="text-center font-semibold text-2xl">SAP Business One</h6>
-                    <p class="text-center w-11/12">Lorem ipsum dolor sit amet, consetetur adipiscing elit test nữa nè
-                    </p>
+                    <p class="text-center w-11/12">{{ __('A comprehensive solution for effective management of finance, sales, and production operations.') }}</p>
                     <div class="block mx-auto">
                         <button onclick="window.location.href='{{route('solution.sapb1')}}'" class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
                     </div>
@@ -359,8 +352,7 @@
                             src="{{ asset('assets/images/connecting-img-2.webp') }}" alt="sap-b1-pattern">
                     </figure>
                     <h6 class="text-center font-semibold text-2xl">Oracle Netsuite</h6>
-                    <p class="text-center w-11/12">Lorem ipsum dolor sit amet, consetetur adipiscing elit test nữa nè
-                    </p>
+                    <p class="text-center w-11/12">{{ __('Integrate and automate processes for enhanced operational efficiency.') }}</p>
                     <div class="block mx-auto">
                         <button onclick="window.location.href='{{route('solution.netsuite')}}'" class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
                     </div>
@@ -372,8 +364,7 @@
                             src="{{ asset('assets/images/connecting-img-3.webp') }}" alt="sap-b1-pattern">
                     </figure>
                     <h6 class="text-center font-semibold text-2xl">Boyum IT - Beas Manufacturing</h6>
-                    <p class="text-center w-11/12">Lorem ipsum dolor sit amet, consetetur adipiscing elit test nữa nè
-                    </p>
+                    <p class="text-center w-11/12">{{ __('Streamline manufacturing processes and project management to increase productivity and reduce costs.') }}</p>
                     <div class="block mx-auto">
                         <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
                     </div>
@@ -391,7 +382,7 @@
                 <h1 data-aos="fade-down" class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 sm:mt-0">
                     {{ __('Best Pricing') }}</h1>
                 <p data-aos="fade-down" class="max-w-1/2 text-center text-wrap mt-8 font-medium">
-                    {{ __('Dashboard BI Report works for businesses of all sizes, for the lowest price') }}.</p>
+                    {{ __('Dashboard BI Report works for businesses of all sizes, for the lowest price.') }}.</p>
                 <div class="flex flex-row flex-wrap w-full justify-center gap-8 mt-6 sm:mt-8 ">
                     <article data-aos="fade-up" data-aos-delay="200" class="md:basis-[calc(33.33%-2rem)]">
                         <div
@@ -415,7 +406,7 @@
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="font-bold">USD</span>
-                                <span class="font-bold text-5xl">8.0</span>
+                                <span class="font-bold text-5xl">83.0</span>
                                 <span class="font-bold">/{{ __('month') }}</span>
                             </div>
                             <div class="flex flex-col justify-start items-start gap-4">
@@ -466,8 +457,7 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Choose
-                                    Plan</button>
+                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                             </div>
                         </div>
                     </article>
@@ -537,8 +527,7 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full bg-white text-text-primary font-semibold px-6 py-4">Choose
-                                    Plan</button>
+                                <button class="rounded-full bg-white text-text-primary font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                             </div>
                         </div>
                     </article>
@@ -607,8 +596,7 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Choose
-                                    Plan</button>
+                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                             </div>
                     </article>
                 </div>
@@ -767,9 +755,7 @@
                 <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between sm:items-center z-10">
                     <h1 data-aos="fade-up"
                         class="text-3xl sm:text-5xl text-white font-bold cursour-default leading-snug md:leading-normal lg:leading-relaxed">
-                        Are You
-                        Ready to Boost Your
-                        Business Performance?</h1>
+                        {{ __('Are You Ready to Boost Your Business Performance?') }}</h1>
                     <div>
                         <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
                             class="rounded-full text-nowrap bg-icon-main font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
@@ -790,7 +776,6 @@
                 // slidesPerView: 2,
                 watchOverflow: false,
                 breakpoints: {
-                    1024: {},
                     768: {
                         slidesPerView: 2,
                     },
@@ -828,7 +813,7 @@
 
             AOS.init({
                 once: true,
-                duration: 1000,
+                duration: 700,
                 easing: 'ease-in-out',
                 delay: 100,
             });

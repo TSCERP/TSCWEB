@@ -1,6 +1,6 @@
 <x-app-layout>
     @section('title', 'Grant Thornton | SAP Business One')
-    <section class="h-max bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
+    <section class="pt-[130px] h-max bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
         <div class="relative max-w-7xl mx-auto">
             <div class="relative flex flex-col gap-6 sm:gap-8 justify-cener items-center pt-6 sm:pt-12">
                 <div>
@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <div class="bg-bg-main w-full h-24" style="clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0% 100%);">
+    <div class="bg-bg-main w-full h-24 -mb-2" style="clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0% 100%);">
     </div>
     <section class="bg-bg-main w-full">
         <div
@@ -129,7 +129,7 @@
             </div>
         </div>
     </section>
-    <div class="bg-bg-main w-full h-24 rotate-180"
+    <div class="bg-bg-main w-full h-24 rotate-180 -mt-2"
         style="clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0% 100%);">
     </div>
 

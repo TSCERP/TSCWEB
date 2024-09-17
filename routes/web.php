@@ -10,10 +10,6 @@ use Illuminate\Support\Facades\App;
 Route::get('/', function () {
     return view('home');
 })->name('home');
-Route::get('/sap-business-one', function () {
-    return view('sap');
-})->name('home');
-
 Route::name('solution.')->prefix('solution')->group(function () {
     Route::get('/dashboard-bi', function () {
         return view('dashboard-bi');

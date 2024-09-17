@@ -3,16 +3,18 @@
         $title = app()->getLocale() == 'vi' ? 'Bảng điều khiển' : 'Dashboard';
     @endphp
     @section('title', $title)
-    <div class="relative bg-cover bg-no-repeat" style="background-image: url({{ Vite::asset('resources/images/5.png') }});">
-        <div class="container py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="relative bg-cover bg-no-repeat pt-[130px]" style="background-image: url({{ Vite::asset('resources/images/5.png') }});">
+        <div class="container py-8 mx-auto max-w-screen-xl px-4 sm:px-2 xl:px-0">
             <div class="flex flex-wrap items-center">
 
                 <div class="lg:w-1/2 w-full lg:pr-10">
                     <div class="banner-inner">
-                        <h6 class="rounded-[30px] w-1/3 shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-2 animate__animated animate__fadeInLeft animate__duration-[1.5s] animate__delay-[0.3s]">
-                            DESIGNING FOR THE FUTURE
-                        </h6>
-                        <h2 class="text-7xl  mb-4 animate__animated animate__fadeInLeft font-bold" style="animation-duration: 1.5s; animation-delay: 0.4s;">
+                        <div>
+                            <h6 class="rounded-[30px] w-fit shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-2 animate__animated animate__fadeInLeft animate__duration-[1.5s] animate__delay-[0.3s]">
+                                DESIGNING FOR THE FUTURE
+                            </h6>
+                        </div>
+                        <h2 class="text-5xl lg:text-6xl leading-snug md:!leading-tight mb-4 animate__animated animate__fadeInLeft font-bold" style="animation-duration: 1.5s; animation-delay: 0.4s;">
                             Empowering Your <span class="text-blue-600">Financial</span> Freedom
                         </h2>
                         <p class="text-lg text-gray-700 mb-6 animate__animated animate__fadeInLeft" style="animation-duration: 1.5s; animation-delay: 0.5s;">

@@ -1,28 +1,19 @@
-<nav x-data="{ open: false, openService: false, showNotification: true, navTop: '80px' }" x-init="open = window.innerWidth < 768 ? false : open;
+<nav x-data="{ open: false, openService: false, openSolution: false, showNotification: true, navTop: '80px' }" x-init="open = window.innerWidth < 768 ? false : open;
 const mediaQuery = window.matchMedia('(min-width: 768px)');
 mediaQuery.addEventListener('change', (e) => {
     if (e.matches) {
         open = false;
     }
 });
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-        showNotification = false;
-        navTop = '0px';
-    } else {
-        navTop = Math.min(80, 80 - window.scrollY) + 'px';
-        showNotification = true;
-    }
-});
 $nextTick(() => {
     document.getElementById('sidebar').classList.remove('hidden');
 });"
-    class="bg-white dark:bg-gray-800 fixed top-0 left-0 w-full z-30 transition-all duration-300 ease-linear">
+    class="bg-transparent dark:bg-gray-800 fixed top-0 left-0 w-full z-30 transition-all duration-300 ease-linear">
     <!-- Notification about discount campaign/announcement -->
-    <div x-show="showNotification" x-transition:enter="transform transition ease-in-out duration-500"
+    <div {{-- x-show="showNotification" x-transition:enter="transform transition ease-in-out duration-500"
         x-transition:enter-start="-translate-y-full" x-transition:enter-end="translate-y-0"
         x-transition:leave="transform transition ease-in-out duration-500" x-transition:leave-start="translate-y-0"
-        x-transition:leave-end="-translate-y-full"
+        x-transition:leave-end="-translate-y-full" --}}
         class="notification-nav relative flex items-center justify-center px-4 py-[0.9375rem] space-x-4 bg-no-repeat bg-center bg-cover z-0 before:absolute before:inset-0 before:opacity-[0.85] before:bg-bg-main before:z-10"
         style="background-image: url('{{ asset('assets/images/banner-bg.webp') }}');">
         <div class="relative flex items-center space-x-2 z-10">
@@ -34,7 +25,7 @@ $nextTick(() => {
     </div>
 
     <!-- Primary Navigation Menu -->
-    <div class="primary-nav shadow-md">
+    <div class="primary-nav shadow-md bg-white">
         <div :style="{ top: navTop }" class="max-w-7xl mx-auto px-4 sm:px-2 xl:px-0">
             <!-- Nội dung menu điều hướng chính ở đây -->
             <div
@@ -62,7 +53,6 @@ $nextTick(() => {
                     @endphp
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200"
-
                         :active="request()->routeIs('service')" :dropdown="true" :title="$services">
                         <!-- Dropdown Content -->
                         <div class="grid grid-cols-3 gap-4">
@@ -174,16 +164,16 @@ $nextTick(() => {
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{route('solution.sapb1')}}">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('SAP Business One') }}
-                                    </h4>
+                                    <a href="{{ route('solution.sapb1') }}">
+                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                            {{ __('SAP Business One') }}
+                                        </h4>
                                     </a>
                                 </div>
                             </div>
@@ -191,16 +181,16 @@ $nextTick(() => {
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{route('solution.netsuite')}}">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('Oracle NetSuite') }}
-                                    </h4>
+                                    <a href="{{ route('solution.netsuite') }}">
+                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                            {{ __('Oracle NetSuite') }}
+                                        </h4>
                                     </a>
                                 </div>
                             </div>
@@ -208,13 +198,13 @@ $nextTick(() => {
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{route('solution.dashboard.bi')}}">
+                                    <a href="{{ route('solution.dashboard.bi') }}">
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Business Intelligence') }}
                                         </h4>
@@ -225,13 +215,13 @@ $nextTick(() => {
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{route('solution.travel.expense')}}">
+                                    <a href="{{ route('solution.travel.expense') }}">
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Travel & Expense') }}
                                         </h4>
@@ -254,8 +244,8 @@ $nextTick(() => {
                         {{ __('Blog') }}
                     </x-nav-link>
                     <x-nav-link :href="route('document')"
-                                class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
-                                :active="request()->routeIs('document')">
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
+                        :active="request()->routeIs('document')">
                         {{ __('Document') }}
                     </x-nav-link>
                 </div>
@@ -319,31 +309,23 @@ $nextTick(() => {
                 <ul class="space-y-2 font-medium">
                     <li>
                         <a href="{{ route('home') }}"
-                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 22 21">
-                                <path
-                                    d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                                <path
-                                    d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z" />
                             </svg>
-                            <span class="ms-3">{{ __('Home') }}</span>
+                            <span class="ms-3 text-text-primary">{{ __('Home') }}</span>
                         </a>
                     </li>
                     <li>
                         <button @click="openService = !openService"
-                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                             aria-controls="ecommerce-menu">
-                            <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 18 21">
-                                <path
-                                    d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm6-16h4V4h-4zm1 9v2q0 .425.288.713T12 18t.713-.288T13 17v-2h2q.425 0 .713-.288T16 14t-.288-.712T15 13h-2v-2q0-.425-.288-.712T12 10t-.712.288T11 11v2H9q-.425 0-.712.288T8 14t.288.713T9 15z" />
                             </svg>
                             <span
-                                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{ __('Services') }}</span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-text-primary">{{ __('Services') }}</span>
+                            <svg class="w-3 h-3 text-text-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m1 1 4 4 4-4" />
@@ -352,45 +334,100 @@ $nextTick(() => {
                         <ul id="ecommerce-menu" x-show="openService" class="py-2 space-y-2">
                             <li>
                                 <a href="#"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Process Solution') }}</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Technology Solutions Consulting') }}</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Advisory Services') }}</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Tax Services') }}</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Audit and Assurance') }}</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Korean and Japanese Desk') }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button @click="openSolution = !openSolution"
+                            class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            aria-controls="ecommerce-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                    <path fill="currentColor" d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-6h6a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm7 9V5H5v7z" />
+                                </g>
+                            </svg>
+                            <span
+                                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-text-primary">{{ __('Solutions') }}</span>
+                            <svg class="w-3 h-3 text-text-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <ul id="ecommerce-menu" x-show="openSolution" class="py-2 space-y-2">
+                            <li>
+                                <a href="{{ route('solution.sapb1') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SAP Business One') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.netsuite') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Oracle NetSuite') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.dashboard.bi') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Intelligence') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.travel.expense') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Travel & Expense') }}</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 18 18">
-                                <path
-                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />
                             </svg>
-                            <span class="ms-3">{{ __('About Us') }}</span>
+                            <span class="ms-3 text-text-primary">{{ __('About Us') }}</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('blogs') }}"
-                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 20 18">
-                                <path
-                                    d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 100 100">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M74.121 14H25.88C19.351 14 14 19.351 14 25.88v48.24C14 80.65 19.351 86 25.88 86h48.241C80.65 86 86 80.65 86 74.12V25.88C86 19.351 80.65 14 74.121 14m-2.3 43.982c-.044 7.649-6.264 13.913-13.928 13.913H41.886c-7.664 0-13.928-6.264-13.928-13.913V41.725c0-7.665 6.264-13.943 13.928-13.943h9.743c3.596.428 8.829 3.508 10.759 7.605c.531 1.149.81 1.326 1.253 4.73c.236 1.754.354 3.051 1.135 3.773c1.105 1.002 5.203.324 6.014.958l.619.486l.368.767l.133.619z" />
+                                    <path d="M42.063 44.495h7.724a2.677 2.677 0 0 0 2.668-2.668a2.664 2.664 0 0 0-2.668-2.653h-7.724a2.663 2.663 0 0 0-2.667 2.653a2.676 2.676 0 0 0 2.667 2.668M57.76 55.122H42.063a2.663 2.663 0 0 0-2.667 2.653c0 1.443 1.194 2.652 2.667 2.652H57.76a2.67 2.67 0 0 0 2.653-2.652a2.66 2.66 0 0 0-2.653-2.653" />
+                                </g>
                             </svg>
-                            <span class="ms-3">{{ __('Blog') }}</span>
+                            <span class="ms-3 text-text-primary">{{ __('Blog') }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('document') }}"
+                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M4.172 3.172C3 4.343 3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172S21 17.771 21 14v-4c0-3.771 0-5.657-1.172-6.828S16.771 2 13 2h-2C7.229 2 5.343 2 4.172 3.172M8 9.25a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5zm0 4a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="ms-3 text-text-primary">{{ __('Document') }}</span>
                         </a>
                     </li>
                 </ul>
-                <div class="flex gap-4 justyfy-between items-center sm:ms-6 mt-4">
-                    <div x-data="{ activeLang: '{{ app()->getLocale() }}' }" class="flex gap-2 items-center">
+                <div class="flex gap-4 items-center sm:ms-6 mt-4">
+                    <div x-data="{ activeLang: '{{ app()->getLocale() }}' }" class="flex gap-2 items-center ml-4">
                         <button @click="activeLang = 'vi'; window.location.href = '/language/vi'"
                             :class="activeLang === 'vi' ? 'font-semibold' : 'font-normal'">
                             VI
@@ -406,13 +443,16 @@ $nextTick(() => {
                         <span class="ms-3">Dùng Thử</span>
                     </button> --}}
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')"
-                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('layout.trial') }}</button>
+                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('Register Trial') }}</button>
                 </div>
             </div>
         </aside>
     </div>
 
     @push('scripts')
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
         <script>
             const primaryNav = document.querySelector('.primary-container');
             const logo = document.querySelector('.primary-logo');
@@ -422,6 +462,44 @@ $nextTick(() => {
 
             let lastScrollTop = 0;
             let scrollTimeout;
+            let showNotification;
+
+            gsap.to(".notification-nav", {
+                y: -51, 
+                ease: "power2.out", 
+                scrollTrigger: {
+                    trigger: ".primary-nav",
+                    start: "top top", 
+                    end: "+=50", 
+                    scrub: 0.5, 
+                    markers: false 
+                }
+            });
+
+            gsap.to(".primary-nav", {
+                y: -51, 
+                ease: "power2.out", 
+                scrollTrigger: {
+                    trigger: ".primary-nav",
+                    start: "top top",
+                    end: "+=50", 
+                    scrub: 0.5,
+                    markers: false
+                }
+            });
+
+            gsap.to(".primary-container", {
+                // y: -51, 
+                height: "50px",
+                ease: "power2.out", 
+                scrollTrigger: {
+                    trigger: ".primary-nav",
+                    start: "top top",
+                    end: "+=50", 
+                    scrub: 0.5,
+                    markers: false
+                }
+            });
 
             window.addEventListener('scroll', () => {
                 clearTimeout(scrollTimeout);
@@ -431,9 +509,9 @@ $nextTick(() => {
                 // Determine scroll direction
                 let scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
 
-                if (scrollTop > 60) {
-                    primaryNav.classList.remove('h-[80px]');
-                    primaryNav.classList.add('h-[50px]');
+                if (scrollTop > 50) {
+                    // primaryNav.classList.remove('h-[80px]');
+                    // primaryNav.classList.add('h-[50px]');
                     logo.classList.remove('w-44');
                     logo.classList.add('w-32');
                     logo.classList.remove('md:w-36');
@@ -452,8 +530,8 @@ $nextTick(() => {
                     navTrialButton.classList.add('!text-sm');
                     // console.log("Gì he: ", navTrialButton.classList)
                 } else {
-                    primaryNav.classList.add('h-[80px]');
-                    primaryNav.classList.remove('h-[50px]');
+                    // primaryNav.classList.add('h-[80px]');
+                    // primaryNav.classList.remove('h-[50px]');
                     logo.classList.add('md:w-36');
                     logo.classList.remove('md:w-32');
                     logo.classList.add('lg:w-44');

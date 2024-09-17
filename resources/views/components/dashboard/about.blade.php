@@ -1,8 +1,7 @@
 <section style="background-image: url({{ Vite::asset('resources/images/5.png') }});">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6  relative bg-cover bg-no-repeat" >
+    <div class="py-8 mx-auto max-w-screen-xl lg:py-16 px-4 sm:px-2 xl:px-0 relative bg-cover bg-no-repeat" >
         <div class="about-area bg-gradient-to-b from-gray-100 to-gray-300 py-12">
-            <div class="container mx-auto">
-                <div class="flex flex-wrap items-center">
+            <div class="flex flex-col md:flex-row gap-4 items-center">
                     <div class="lg:w-1/2 w-full wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
                         <div class="mb-4 lg:mb-0">
                             <img class="w-full" src="assets/img/about/11.png" alt="img">
@@ -10,8 +9,14 @@
                     </div>
                     <div class="lg:w-1/2 w-full wow animate__animated animate__fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
                         <div class="section-title mb-0">
-                            <h6 class="text-base font-semibold text-gray-500 uppercase mb-2">ABOUT US</h6>
-                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Advancing <span class="text-blue-600">Beyond</span> Your Expectations</h2>
+                            <div>
+                                <h6
+                                    class="rounded-[30px] w-fit shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-2">
+                                    ABOUT US
+                                </h6>
+                            </div>
+                            {{-- <h6 class="text-base font-semibold text-gray-500 uppercase mb-2">ABOUT US</h6> --}}
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4 leading-normal">Advancing <span class="text-blue-600">Beyond</span> Your Expectations</h2>
                             <p class="text-lg text-gray-700 mb-6">You can access SaaS applications through a web browser or mobile app, as long as you have an internet connection.</p>
                             <div class="flex flex-wrap -mx-4">
                                 <div class="md:w-1/2 w-full px-4">
@@ -48,7 +53,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
