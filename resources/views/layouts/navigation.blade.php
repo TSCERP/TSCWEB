@@ -233,7 +233,7 @@ $nextTick(() => {
                             <!-- Repeat similar content for other services -->
                         </div>
                     </x-nav-link>
-                    <x-nav-link
+                    <x-nav-link :href="route('about')"
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-text-main' : '' }}"
                         :active="request()->routeIs('about')">
                         {{ __('About Us') }}
@@ -396,7 +396,7 @@ $nextTick(() => {
                         </ul>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="{{ route('about') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />
@@ -496,7 +496,7 @@ $nextTick(() => {
                     trigger: ".primary-nav",
                     start: "top top",
                     end: "+=50", 
-                    scrub: 0.5,
+                    scrub: 0.2,
                     markers: false
                 }
             });

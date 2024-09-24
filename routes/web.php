@@ -25,6 +25,9 @@ Route::name('solution.')->prefix('solution')->group(function () {
     })->name('netsuite');
 
 });
+Route::get('/about-us', function () {
+    return view('contact-us');
+})->name('about');
 Route::get('/document', function () {
     return view('document');
 })->name('document');
