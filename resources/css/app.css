@@ -212,6 +212,37 @@ body {
     transition: transform 0.3s ease-in-out !important;
 }
 
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeOutRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.toast-fadein {
+    animation: fadeInRight 0.25s forwards; 
+}
+
+.toast-fadeout {
+    animation: fadeOutRight 0.25s forwards;
+}
+
 @layer components {
     .main-content {
         @apply p-4 h-[calc(100vh-54px)] overflow-auto w-full;

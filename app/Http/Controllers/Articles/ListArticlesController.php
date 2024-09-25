@@ -11,11 +11,10 @@ class ListArticlesController extends Controller
 {
     public function __invoke()
     {
-
         // clear cache
         cache()->forget('articles');
         seo()
-            ->title('bài viết')
+            ->title(__('Blog'))
             ->description('chia sẻ về các bài viết công nghệ, lập trình, ERP, SAP B1, NETSUITE, Misa.')
             ->image('https://previewlinks.io/generate/templates/1055/meta?url=' . url()->current())
             ->tag('previewlinks:overline', 'SAP B1')

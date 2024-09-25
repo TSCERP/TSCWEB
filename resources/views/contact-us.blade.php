@@ -1,7 +1,9 @@
 <x-app-layout>
     <section class="pt-[130px]">
         <div
-            class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
+            class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16">
+            <h1 class="pb-10 text-5xl font-bold text-center">{{ __('About Us') }}</h3>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
             <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
                 <img class="h-full rounded-3xl" src="{{ asset('assets/images/feature-illustration.webp') }}"
                     alt="erp-solution">
@@ -66,6 +68,7 @@
                 </div>
 
             </div>
+            </div>
         </div>
     </section>
     <section class="h-max bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
@@ -80,10 +83,10 @@
                     <div class="flex my-auto">
                         <h1
                             class="text-5xl lg:text-6xl w-full sm:w-fit leading-snug md:!leading-tight font-bold relative">
-                            Contact Us</h1>
+                            {{ __('Contact Us') }}</h1>
                     </div>
-                    <span class="text-xl font-medium">Email, call or complete the form to get how we
-                        can solve your business problem.</span>
+                    <span
+                        class="text-xl font-medium">{{ __('Email, call or complete the form to get how we can solve your business problem') }}.</span>
                     <div>
                         <div class="rounded-lg border border-border-main px-3 py-4 bg-white flex gap-4">
                             <div class="flex items-center gap-4">
@@ -97,7 +100,7 @@
                             </div>
                             <div>
                                 <p class="font-semibold text-lg">Email</p>
-                                <a class="" href="">tscteam@vn.gt.com</a>
+                                <a class="" href="mailto:tscteam@vn.gt.com">tscteam@vn.gt.com</a>
                             </div>
                         </div>
                         <div class="rounded-lg border border-border-main px-3 py-4 bg-white flex gap-4">
@@ -111,8 +114,8 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="font-semibold text-lg">Phone Number</p>
-                                <a class="" href="">tscteam@vn.gt.com</a>
+                                <p class="font-semibold text-lg">{{ __('Phone Number') }}</p>
+                                <a class="" href="tel:+84982232343">(+84) 982 232 343</a>
                             </div>
                         </div>
                         <div class="rounded-lg border border-border-main px-3 py-4 bg-white flex gap-4">
@@ -126,9 +129,10 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="font-semibold text-lg">Office Address</p>
-                                <p class="" href="">TP.HCM: Tầng 14, toà nhà Pearl Plaza, 561A đường Điện
-                                    Biên Phủ, phường 25, quận Bình Thạnh, TP.HCM</p>
+                                <p class="font-semibold text-lg">{{ __('Office Address') }}</p>
+                                <p class="" >
+                                    {{ __('HCMC: 14th Floor, Pearl Plaza Building, 561A Dien Bien Phu Street, Ward 25, Binh Thanh District, HCMC') }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -139,42 +143,51 @@
                 <div class="relative w-full transition-transform duration-300 ease-in-out"
                     :class="{ '-translate-x-full': !showForm, 'translate-x-0': showForm }">
                     <!-- Form Content -->
-                    <div class="bg-white py-6 px-4 rounded-lg gap-4 flex flex-col shadow">
-                        <h3 class="font-bold text-3xl">Get In Touch With Us</h3>
-                        <p>Feel free to send a message, just fill the form below and we will reply shortly! 👍</p>
+                    <form id="contact-form-2" class="bg-white py-6 px-4 rounded-lg gap-4 flex flex-col shadow">
+                        <h3 class="font-bold text-3xl">{{ __('Get In Touch With Us') }}</h3>
+                        <p>{{ __('Feel free to send a message, just fill the form below and we will reply shortly') }}!
+                            👍</p>
                         <div class="flex flex-col gap-4">
                             <div class="flex flex-col gap-3">
-                                <label class="font-semibold">Full name <span class="text-red-500">*</span></label>
-                                <input type="text"
+                                <label class="font-semibold">{{ __('Full name') }} <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" name="fullname"
                                     class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="flex flex-col gap-3">
-                                <label class="font-semibold">Your email <span class="text-red-500">*</span></label>
-                                <input type="email"
+                                <label class="font-semibold">Email <span class="text-red-500">*</span></label>
+                                <input type="email" name="email"
                                     class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="flex flex-col gap-3">
-                                <label class="font-semibold">Phone number</label>
-                                <input type="text"
+                                <label class="font-semibold">{{ __('Phone number') }}</label>
+                                <input type="text" name="phone_number"
                                     class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="flex flex-col gap-3">
-                                <label class="font-semibold">Message</label>
-                                <textarea rows="3"
+                                <label class="font-semibold">{{ __('Message') }}</label>
+                                <textarea rows="3" name="message"
                                     class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                             </div>
-                            <button type="submit"
-                                class="text-white bg-text-main px-4 py-2 w-full rounded font-bold">Submit</button>
+                            <button type="submit" id="contact-form-btn"
+                                class="text-white bg-text-main px-4 py-2 w-full h-8 rounded font-bold flex justify-center items-center">
+                                <span class="normal-text">{{ __('Submit') }}</span>
+                                <div class="loader hidden flex space-x-1">
+                                    <span
+                                        class="block h-2 w-2 bg-white rounded-full animate-bounce [animation-delay:-0.2s]"></span>
+                                    <span
+                                        class="block h-2 w-2 bg-white rounded-full animate-bounce [animation-delay:-0.1s]"></span>
+                                    <span class="block h-2 w-2 bg-white rounded-full animate-bounce"></span>
+                                </div>
+                            </button>
                             <p class="text-sm">
-                                By contacting us, you agree to our
-                                <span class="text-blue-500 cursor-pointer" @click="showForm = false">Terms of
-                                    Service</span>
-                                and
-                                <span class="text-blue-500 cursor-pointer" @click="showForm = false">Privacy
-                                    Policy</span>.
+                                {{ __('By contacting us, you agree to our') }}
+                                <span class="text-blue-500 cursor-pointer" @click="showForm = false">{{ __('Terms of Service') }}</span>
+                                {{ __('and') }}
+                                <span class="text-blue-500 cursor-pointer" @click="showForm = false">{{ __('Privacy Policy') }}</span>.
                             </p>
                         </div>
-                    </div>
+                    </form>
                 </div>
 
                 <div class="absolute top-0 left-full w-full h-full transition-transform duration-300 ease-in-out"
@@ -240,7 +253,7 @@
     <section>
         <div class="relative max-w-7xl mx-auto flex py-8 bg-white rounded-xl">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.296392179153!2d106.71598807485726!3d10.799959589350214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529d7845738f3%3A0x6fd8270abc8b4947!2sPearl%20Plaza!5e0!3m2!1svi!2sus!4v1727080142967!5m2!1svi!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.296392179153!2d106.71598807485726!3d10.799959589350214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529d7845738f3%3A0x6fd8270abc8b4947!2sPearl%20Plaza!5e0!3m2!1svi!2sus!4v1727080142967!5m2!1svi!2sus&language={{ app()->getLocale() }}"
                 height="450" class="border-0 w-full rounded-2xl" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -289,6 +302,87 @@
                     end: "bottom 5%",
                     // scrub: true         // Đồng bộ hóa hiệu ứng với vị trí cuộn
                 }
+            });
+
+            document.getElementById('contact-form-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const button = this;
+                const loader = button.querySelector('.loader');
+                const normalText = button.querySelector('.normal-text');
+
+                loader.classList.remove('hidden');
+                normalText.classList.add('hidden');
+                button.disabled = true;
+
+                let data = {
+                    fullname: document.querySelector('input[name="fullname"]').value,
+                    email: document.querySelector('input[name="email"]').value,
+                    phone_number: document.querySelector('input[name="phone_number"]').value,
+                    message: document.querySelector('textarea[name="message"]').value,
+                };
+
+                function validateInput(data) {
+                    if (!data.fullname) {
+                        return '{{ __('Please enter your full name') }}';
+                    }
+                    if (!data.email) {
+                        return '{{ __('Please enter your email') }}';
+                    }
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(data.email)) {
+                        return '{{ __('Email is not in correct format') }}';
+                    }
+                    return null;
+                }
+
+                const validationError = validateInput(data);
+                if (validationError) {
+                    showToast('warning', validationError);
+                    loader.classList.add('hidden');
+                    normalText.classList.remove('hidden');
+                    button.disabled = false;
+                    return;
+                }
+                const locale = document.documentElement.lang || 'en';
+
+                fetch('/api/contact/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'X-Locale': locale,
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(errorData => {
+                                throw new Error(errorData.message ||
+                                    '{{ __('An error occurred, please try again later') }}');
+                            });
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        showToast('success', data.message);
+                        document.getElementById('contact-form-2').reset();
+                    })
+                    .catch(error => {
+                        if (error.message) {
+                            showToast('error', '{{ __('An error occurred, please try again later') }}');
+                            console.error('Lỗi: ' + error.message);
+                        } else {
+                            showToast('error', '{{ __('An error occurred, please try again later') }}');
+                            console.error('Error:', error);
+                        }
+                    })
+                    .finally(() => {
+                        loader.classList.add('hidden');
+                        normalText.classList.remove('hidden');
+                        button.disabled = false;
+                    });
             });
         </script>
     @endpush

@@ -32,14 +32,14 @@
                                 <div class="swiper-slide">
                                     <figure
                                         class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28  lg:w-52 rounded-lg p-2 inline-flex m-auto">
-                                        <img src="{{ asset('assets/images/sap-erp.webp') }}" alt="sap-b1-logo">
+                                        <img src="{{ asset('assets/images/logo-sap-business-one.png') }}" alt="sap-business-one-logo">
                                     </figure>
                                 </div>
 
                                 <div class="swiper-slide">
                                     <figure
                                         class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
-                                        <img src="{{ asset('assets/images/oracle-netsuite-erp.webp') }}"
+                                        <img src="{{ asset('assets/images/logo-oracle-netsuite.png') }}"
                                             alt="oracle-netsuite-logo">
                                     </figure>
                                 </div>
@@ -47,8 +47,8 @@
                                 <div class="swiper-slide">
                                     <figure
                                         class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
-                                        <img src="{{ asset('assets/images/beas-manufacturing.webp') }}"
-                                            alt="beas-boyum-logo">
+                                        <img src="{{ asset('assets/images/logo-boyum-IT.png') }}"
+                                            alt="beas-boyum-IT-logo">
                                     </figure>
                                 </div>
                             </div>
@@ -184,8 +184,8 @@
             <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
                 <img class="h-full rounded-3xl" src="{{ asset('assets/images/feature-illustration.webp') }}"
                     alt="erp-solution">
-                <img class="absolute w-7/12 bottom-4 right-4"
-                    src="{{ asset('assets/images/feature-statistics.webp') }}" alt="statistics-solution">
+                <img class="absolute w-5/6 bottom-4 right-3 p-4 rounded-3xl"
+                    src="{{ asset('assets/images/feature-statistics.png') }}" alt="statistics-solution">
             </div>
             <div
                 class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">

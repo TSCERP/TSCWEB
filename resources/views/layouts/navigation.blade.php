@@ -17,10 +17,9 @@ $nextTick(() => {
         class="notification-nav relative flex items-center justify-center px-4 py-[0.9375rem] space-x-4 bg-no-repeat bg-center bg-cover z-0 before:absolute before:inset-0 before:opacity-[0.85] before:bg-bg-main before:z-10"
         style="background-image: url('{{ asset('assets/images/banner-bg.webp') }}');">
         <div class="relative flex items-center space-x-2 z-10">
-            <span class="text-white text-sm font-light">Bắt đầu <a href="#"
-                    class="pb-[0.05rem] border-b border-[#ffffff9d]">phiên bản dùng thử</a> để có cái nhìn tổng
-                quan</span>
-            <a class="hidden sm:block text-white font-medium text-sm">Tìm Hiểu Thêm</a>
+            <span class="text-white text-sm font-light">{{ __('Start') }} <a href="#"
+                    class="pb-[0.05rem] border-b border-[#ffffff9d]">{{ __('a trial session') }}</a> {{ __('to get an overview') }}</span>
+            <a class="hidden sm:block text-white font-medium text-sm">{{ __('Learn More') }}</a>
         </div>
     </div>
 
@@ -223,7 +222,7 @@ $nextTick(() => {
                                 <div class="flex flex-col">
                                     <a href="{{ route('solution.travel.expense') }}">
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                            {{ __('Travel & Expense') }}
+                                            {{ __('Travel & Expense Management') }}
                                         </h4>
                                     </a>
 
@@ -243,9 +242,9 @@ $nextTick(() => {
                         :active="request()->routeIs('blogs')">
                         {{ __('Blog') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('document')"
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
-                        :active="request()->routeIs('document')">
+                    <x-nav-link :href="route('documents')"
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('documents') ? '!font-bold text-text-main' : '' }}"
+                        :active="request()->routeIs('documents')">
                         {{ __('Document') }}
                     </x-nav-link>
                 </div>
@@ -391,7 +390,7 @@ $nextTick(() => {
                             </li>
                             <li>
                                 <a href="{{ route('solution.travel.expense') }}"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Travel & Expense') }}</a>
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Travel & Expense Management') }}</a>
                             </li>
                         </ul>
                     </li>
@@ -417,7 +416,7 @@ $nextTick(() => {
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('document') }}"
+                        <a href="{{ route('documents') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
                                 <path fill="currentColor" fill-rule="evenodd" d="M4.172 3.172C3 4.343 3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172S21 17.771 21 14v-4c0-3.771 0-5.657-1.172-6.828S16.771 2 13 2h-2C7.229 2 5.343 2 4.172 3.172M8 9.25a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5zm0 4a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5z" clip-rule="evenodd" />

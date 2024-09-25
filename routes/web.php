@@ -28,9 +28,9 @@ Route::name('solution.')->prefix('solution')->group(function () {
 Route::get('/about-us', function () {
     return view('contact-us');
 })->name('about');
-Route::get('/document', function () {
+Route::get('/documents', function () {
     return view('document');
-})->name('document');
+})->name('documents');
 
 Route::get('/language/{locale}', function (string $locale) {
     if (! in_array($locale, ['en','vi'])) {
