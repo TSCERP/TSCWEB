@@ -54,7 +54,7 @@ $nextTick(() => {
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200"
                         :active="request()->routeIs('service')" :dropdown="true" :title="$services">
                         <!-- Dropdown Content -->
-                        <div class="grid grid-cols-3 gap-4">
+                        <div class="grid grid-cols-3 gap-x-4 gap-y-6">
                             <div class="flex gap-4">
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">

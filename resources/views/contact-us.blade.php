@@ -17,7 +17,7 @@
                         class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Technology Solutions Consulting') }}</span>
                 </div>
                 <h3 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
                     "{{ __('Want your business to thrive in Industry 4.0?') }}."</h3>
                 <p data-aos="fade-up" class="text-base leading-relaxed">{{ __('app.intro') }}</p>
                 <ul class="list-disc list-inside space-y-4">
@@ -82,7 +82,7 @@
                     </div>
                     <div class="flex my-auto">
                         <h1
-                            class="text-5xl lg:text-6xl w-full sm:w-fit leading-snug md:!leading-tight font-bold relative">
+                            class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight font-bold relative">
                             {{ __('Contact Us') }}</h1>
                     </div>
                     <span

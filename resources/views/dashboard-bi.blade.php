@@ -14,7 +14,7 @@
                                 DESIGNING FOR THE FUTURE
                             </h6>
                         </div>
-                        <h2 class="text-5xl lg:text-6xl leading-snug md:!leading-tight mb-4 animate__animated animate__fadeInLeft font-bold" style="animation-duration: 1.5s; animation-delay: 0.4s;">
+                        <h2 class="text-5xl leading-snug md:!leading-tight mb-4 animate__animated animate__fadeInLeft font-bold" style="animation-duration: 1.5s; animation-delay: 0.4s;">
                             Empowering Your <span class="text-blue-600">Financial</span> Freedom
                         </h2>
                         <p class="text-lg text-gray-700 mb-6 animate__animated animate__fadeInLeft" style="animation-duration: 1.5s; animation-delay: 0.5s;">

@@ -7,7 +7,7 @@
                 </div>
                 <div class="flex my-auto md:mx-[10%]">
                     <h1 data-aos="zoom-in"
-                        class="text-5xl lg:text-6xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-0 sm:before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-0 sm:after:right-4 after:bg-no-repeat after:bg-cover after:scale-75">
+                        class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-0 sm:before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-0 sm:after:right-4 after:bg-no-repeat after:bg-cover after:scale-75">
                         {{ __('Unlocking your business with management solutions') }}</h1>
                 </div>
                 <span data-aos="fade-up"
@@ -18,13 +18,14 @@
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
                         class="rounded-full font-semibold px-6 py-4">{{ __('Demo') }} ›</button>
                 </div>
-                <div class="flex flex-col sm:flex-row justify-between w-full sm:py-10 relative">
-                    <div
+                {{-- <div class="flex flex-col sm:flex-row justify-between w-full sm:py-10 relative"> --}}
+                <div class="flex flex-col sm:flex-row justify-center w-full sm:py-10 relative">
+                    {{-- <div
                         class="relative sm:static w-screen h-[480px] sm:h-auto sm:w-1/4 bottom-0 left-0 before:bg-[#C9BBEE] before:absolute before:w-2/3 before:left-1/2 before:-translate-x-1/2 sm:before:translate-x-0 sm:before:w-1/4 before:bottom-0 sm:before:left-0 before:h-2/3 sm:before:h-1/3 before:rounded-t-3xl">
                         <img data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                             class="w-[320px] sm:w-[250px] lg:w-[320px] h-auto absolute top-0 left-[18%] sm:top-auto sm:bottom-0 sm:left-0 aspect-[2/3]"
                             src="{{ asset('assets/images/banner-item-human.webp') }}" alt="happy-with-advance">
-                    </div>
+                    </div> --}}
                     <div class="mt-8 flex flex-col sm:gap-4 w-full sm:w-1/2 lg:w-2/5">
                         <p class="text-center">{{ __('Collaborating with Global Technology Partners') }}</p>
                         <div data-aos="fade-up" class="partner-swiper-container w-full overflow-hidden">
@@ -54,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div
+                    {{-- <div
                         class="relative w-full mt-6 sm:mt-0 sm:w-1/5 flex flex-col sm:flex-row justify-center items-center gap-4 mb-4 sm:mb-0">
                         <div data-aos="flip-right"
                             class="static sm:absolute sm:bottom-12 lg:bottom-0 lg:-left-10 drop-shadow-md">
@@ -68,7 +69,7 @@
                                 src="{{ asset('assets/images/banner-item-facebook.webp') }}"
                                 alt="grant-thornton-tsc-erp">
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -78,12 +79,12 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col sm:flex-row gap-4 text-white">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed min-w-[25%]">
+                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed min-w-[25%]">
                     {{ __('Explore our services') }}</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
                     <span data-aos="fade-up" class="text-lg"> {{ __('app.module1.intro') }}</span>
                     {{-- <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">Show More ›</button> --}}
+                        type="button">{{__('Show More')}} ›</button> --}}
                 </div>
             </div>
             <div class="flex flex-row flex-wrap justify-center gap-8 mt-12">
@@ -163,15 +164,15 @@
             </div>
             <div class="flex flex-row flex-wrap justify-center gap-8 mt-8">
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
-                    <h5 id="project-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
+                    <h5 id="project-quantity" class="count-up text-icon-main font-semibold text-5xl">1</h5>
                     <span class="text-white text-lg">{{ __('Projects') }}</span>
                 </div>
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
-                    <h5 id="country-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
+                    <h5 id="country-quantity" class="count-up text-icon-main font-semibold text-5xl">1</h5>
                     <span class="text-white text-lg">{{ __('Countries') }}</span>
                 </div>
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
-                    <h5 id="expert-quantity" class="count-up text-icon-main font-semibold text-6xl">1</h5>
+                    <h5 id="expert-quantity" class="count-up text-icon-main font-semibold text-5xl">1</h5>
                     <span class="text-white text-lg">{{ __('Experts') }}</span>
                 </div>
             </div>
@@ -182,7 +183,7 @@
         <div
             class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
             <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
-                <img class="h-full rounded-3xl" src="{{ asset('assets/images/feature-illustration.webp') }}"
+                <img class="h-full rounded-3xl" src="{{ asset('assets/images/tu-van-giai-phap-cong-nghe.png') }}"
                     alt="erp-solution">
                 <img class="absolute w-5/6 bottom-4 right-3 p-4 rounded-3xl"
                     src="{{ asset('assets/images/feature-statistics.png') }}" alt="statistics-solution">
@@ -194,7 +195,7 @@
                         class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Technology Solutions Consulting') }}</span>
                 </div>
                 <h3 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
                     "{{ __('Want your business to thrive in Industry 4.0?') }}."</h3>
                 <p data-aos="fade-up" class="text-base leading-relaxed">{{ __('app.intro') }}</p>
                 <ul class="list-disc list-inside space-y-4">
@@ -255,24 +256,19 @@
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed min-w-[25%]">
-                    Our
-                    Solution For Your Business</h1>
+                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed min-w-[25%]">
+                    {{__('Our Service For Your Business')}}</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
-                    <span data-aos="fade-up" class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Ut elit tellus,
-                        luctus
-                        nec
-                        ullamcorper mattis, pulvinar dapibus leo.</span>
+                    <span data-aos="fade-up" class="text-lg">{{__('We provide comprehensive ERP solutions, dashboard reporting and specialized business solutions to support businesses in efficient management and sustainable development')}}</span>
                     <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">Show More ›</button>
+                        type="button">{{__('Show More')}} ›</button>
                 </div>
             </div>
             <div class="flex flex-row flex-wrap justify-between gap-4 mt-12 items-end rounded-full bg-">
                 <div data-aos="zoom-in-up" data-aos-delay="0"
-                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-1.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
+                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-1.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
-                        <h6 class="text-white text-2xl font-semibold">Enterprise Resource Planning</h6>
+                        <h6 class="text-white text-2xl font-semibold">{{__('Enterprise Resource Planning')}}</h6>
                         <button class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
@@ -287,7 +283,7 @@
                 <div data-aos="zoom-in-up" data-aos-delay="200"
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-2.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
-                        <h6 class="text-white text-2xl font-semibold">Dashboard Reporting</h6>
+                        <h6 class="text-white text-2xl font-semibold">{{__('Dashboard Reporting')}}</h6>
                         <button class="text-white duration-200 ease-in">
                             <a href="{{ route('solution.dashboard.bi') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
@@ -302,9 +298,9 @@
                     </div>
                 </div>
                 <div data-aos="zoom-in-up" data-aos-delay="400"
-                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-3.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
+                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-3.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
-                        <h6 class="text-white text-2xl font-semibold">Business Process Solution</h6>
+                        <h6 class="text-white text-2xl font-semibold">{{__('Business Process Solution')}}</h6>
                         <button class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
@@ -324,12 +320,12 @@
         <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col items-center sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">{{ __('Our Featured Solutions') }}
+                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">{{ __('Our Featured Solutions') }}
                 </h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
                     <span data-aos="fade-up" class="text-lg">{{ __('Discover our key solutions that streamline processes, boost efficiency, and drive growth.') }}.</span>
                     {{-- <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">Show More ›</button> --}}
+                        type="button">{{__('Show More')}} ›</button> --}}
                 </div>
             </div>
             <div class="flex flex-row flex-wrap justify-between gap-8 mt-12 items-end rounded-full bg-">
@@ -379,7 +375,7 @@
                     src="{{ asset('assets/images/banner-item-chat.webp') }}" alt="chat-with-us">
                 <img data-aos="fade-down" class="w-8 sm:w-10 absolute top-16 right-1 sm:top-24 sm:right-4"
                     src="{{ asset('assets/images/banner-item-lightning.webp') }}" alt="fast-erp">
-                <h1 data-aos="fade-down" class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 sm:mt-0">
+                <h1 data-aos="fade-down" class="text-4xl md:text-5xl font-bold mt-4 sm:mt-0">
                     {{ __('Best Pricing') }}</h1>
                 <p data-aos="fade-down" class="max-w-1/2 text-center text-wrap mt-8 font-medium">
                     {{ __('Dashboard BI Report works for businesses of all sizes, for the lowest price.') }}.</p>
@@ -608,7 +604,7 @@
         <div class="relative max-w-7xl mx-auto flex flex-col gap-8 px-4 sm:px-2 xl:px-0 py-24 ">
             <div class="flex flex-col sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
                     Our
                     Customer Stories</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
@@ -618,7 +614,7 @@
                         nec
                         ullamcorper mattis, pulvinar dapibus leo.</span>
                     <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">Show More ›</button>
+                        type="button">{{__('Show More')}} ›</button>
                 </div>
             </div>
             {{-- <div class="flex flex-row flex-wrap justify-between gap-8 mt-12 items-end rounded-full bg-"> --}}
