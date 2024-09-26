@@ -91,6 +91,7 @@
     "Information is used for product contact purposes": "Thông tin được sử dụng cho mục đích liên hệ cho sản phẩm.",
     "Please do not send multiple requests, the system will block if spam messages are detected": "Vui lòng không gửi nhiều yêu cầu, hệ thống sẽ chặn nếu phát hiện hành vi spam tin nhắn",
     "Submit": "Gửi",
+    "Back to form": "Trở lại",
     "Please enter your full name": "Vui lòng nhập họ và tên",
     "Please enter your email": "Vui lòng nhập đia chỉ email",
     "Email is not in correct format": "Địa chỉ email không đúng, vui lòng kiểm tra lại",
@@ -103,5 +104,6 @@
     "Terms of Service": "Điều khoản dịch vụ",
     "and": "và",
     "Privacy Policy": "Chính sách bảo mật",
-    "We have received your request – Thank you for reaching out!": "Chúng tôi đã nhận được yêu cầu của bạn – Cảm ơn vì đã liên hệ!"
+    "We have received your request – Thank you for reaching out!": "Chúng tôi đã nhận được yêu cầu của bạn – Cảm ơn vì đã liên hệ!",
+    "You have exceeded the maximum number of requests. Please try again in :minutes minutes": "Bạn đã vượt quá số lượng yêu cầu tối đa. Vui lòng thử lại sau :minutes phút"
 }

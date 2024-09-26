@@ -9,14 +9,31 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Str;
 
 class ContactController extends Controller
 {
     public function submitContact(Request $request)
     {
         $locale = $request->header('X-Locale', App::getLocale());
+
         App::setLocale($locale); 
-        
+
+        $ipAddress = $request->ip();
+    
+        $key = Str::lower($ipAddress);
+
+        if (RateLimiter::tooManyAttempts($key, 5)) {
+            $secondsRemaining = RateLimiter::availableIn($key);
+            $minutesRemaining = ceil($secondsRemaining / 60); 
+    
+            return response()->json([
+                'message' => __('You have exceeded the maximum number of requests. Please try again in :minutes minutes', ['minutes' => $minutesRemaining]),
+                'retry_after' => $minutesRemaining,
+            ], 429); 
+        }
+
         $validator = Validator::make($request->all(), [
             'fullname' => 'required|string|max:255',
             'email' => 'required|email',
@@ -32,6 +49,8 @@ class ContactController extends Controller
             ], 422);
         }
 
+        RateLimiter::hit($key, 60 * 15);
+
         $contactInfo = ContactInfo::create([
             'fullname' => $request->fullname,
             'email' => $request->email,
@@ -44,7 +63,6 @@ class ContactController extends Controller
         Mail::to($contactInfo->email)->send(new ContactThankYou($contactInfo));
 
         return response()->json([
-            'language' =>  $locale,
             'message' => __('Your information has been sent successfully.')
         ], 200);
     }

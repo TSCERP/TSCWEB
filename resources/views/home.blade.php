@@ -775,6 +775,9 @@
                 loop: true,
                 // slidesPerView: 2,
                 watchOverflow: false,
+                autoplay: {
+                    delay: 2000,
+                },
                 breakpoints: {
                     768: {
                         slidesPerView: 2,

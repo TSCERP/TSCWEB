@@ -243,8 +243,7 @@
                                 lúc nào.
                             </p>
                         </div>
-                        <button @click="showForm = true" class="mt-4 text-blue-500 hover:underline">← Back to
-                            Form</button>
+                        <button @click="showForm = true" class="mt-4 text-blue-500 hover:underline">← {{ __('Back to form') }}</button>
                     </div>
                 </div>
             </div>
@@ -371,7 +370,7 @@
                     })
                     .catch(error => {
                         if (error.message) {
-                            showToast('error', '{{ __('An error occurred, please try again later') }}');
+                            showToast('error', error.message);
                             console.error('Lỗi: ' + error.message);
                         } else {
                             showToast('error', '{{ __('An error occurred, please try again later') }}');

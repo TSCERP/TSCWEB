@@ -37,7 +37,7 @@
         this.fetchPurposeOptions();
     }
 }" x-init="init()">
-    <label class="block text-sm leading-5 font-medium text-gray-700">{{ $label }}</label>
+    <label class="block text-sm leading-5 font-medium text-gray-700 mb-2">{{ $label }}</label>
     <div class="relative">
         <span class="inline-block w-full rounded-md shadow-sm">
             <button x-ref="button" @click="onButtonClick()" type="button" aria-haspopup="listbox" :aria-expanded="open"
@@ -73,8 +73,11 @@
                                 class="font-normal block truncate" x-text="option.description"></span>
                         </div>
                         <span x-show="value === option.id"
-                            :class="{ 'text-white': selectedPurpose === option.id, 'text-indigo-600': !(selectedPurpose ===
-                                    option.id) }"
+                            :class="{
+                                'text-white': selectedPurpose === option.id,
+                                'text-indigo-600': !(selectedPurpose ===
+                                    option.id)
+                            }"
                             class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"

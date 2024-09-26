@@ -109,6 +109,9 @@
             .catch(error => {
                 console.error('Error:', error.message);
                 showToast('error', error.message || '{{ __('An error occurred, please try again later') }}');
+            })
+            .finally(() => {
+                this.isLoading = false;
             });
     }
 }" x-init="fetchPurposeOptions();
@@ -192,7 +195,7 @@ $watch('show', value => {
                     </div>
                 </div>
                 <div class="mb-4 flex flex-col gap-2">
-                    <x-basic-select label='{{ __('Select solution') }}:' x-model="selectedPurpose" :value="1" />
+                    <x-basic-select label="{{ __('Select solution') }}:" :value="1" />
                 </div>
                 <div class="mb-4 flex flex-col gap-2">
                     <label for="message-input"
