@@ -46,6 +46,10 @@ body {
     background-color: --scrollbar-hover-color;
 }
 
+::selection {
+    @apply bg-slate-300 text-text-primary;
+}
+
 .blok:nth-of-type(odd) {
     @apply bg-white;
 }
@@ -142,7 +146,7 @@ body {
 }
 
 .progress-wrap svg.progress-circle path {
-    stroke: #d0a9f8;
+    stroke: #5C3C97;
     /* --- Lijn progres kleur --- */
     stroke-width: 5;
     box-sizing: border-box;
@@ -194,20 +198,20 @@ body {
 }
 
 .swiper-pagination-bullet {
-    background-color: #d0a9f8 !important;
+    background-color: #5C3C97 !important;
     border-radius: 9999px !important;
     opacity: 1 !important;
     transform: scale(0.8) !important;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #d0a9f8 !important;
+    background-color: #5C3C97 !important;
     transform: scale(1.4) !important;
     transition: transform 0.3s ease-in-out !important;
 }
 
 .swiper-pagination-bullet:hover {
-    background-color: #d0a9f8 !important;
+    background-color: #5C3C97 !important;
     transform: scale(1.4) !important;
     transition: transform 0.3s ease-in-out !important;
 }
@@ -249,7 +253,7 @@ body {
     }
 
     .main-btn {
-        @apply p-3 rounded-full border-2 border-text-main bg-white text-sm text-black font-semibold;
+        @apply p-3 rounded-full border-2 border-border-main bg-white text-sm text-black font-semibold ease-in duration-300 transition-all hover:text-white hover:bg-bg-btn;
     }
 
     .swiper-slide {

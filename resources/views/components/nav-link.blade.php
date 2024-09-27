@@ -10,7 +10,7 @@ $classes = ($active ?? false)
     {{ $slot }}
 </a> --}}
 
-@props(['active', 'dropdown' => false, 'title'])
+@props(['active', 'dropdown' => false, 'title', 'width'])
 
 @php
     $classes =
@@ -26,10 +26,12 @@ $classes = ($active ?? false)
             {{ $attributes->merge(['class' => 'flex items-center h-full ' . $classes]) }}>
             {{ $title }}
             <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                <path fill="none" :stroke="open ? '#d0a9f8' : '#000'" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 10l5 5l5-5" />
+                <path fill="none" :stroke="open ? '#5C3C97' : '#000'" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.5" d="m7 10l5 5l5-5" />
             </svg>
             <svg x-show="open" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                <path fill="none" stroke="#d0a9f8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m17 14l-5-5l-5 5" />
+                <path fill="none" stroke="#5C3C97" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="m17 14l-5-5l-5 5" />
             </svg>
         </a>
 
@@ -39,9 +41,9 @@ $classes = ($active ?? false)
             x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-75"
             x-transition:leave-start="opacity-100 transform scale-100"
             x-transition:leave-end="opacity-0 transform scale-95"
-            class="absolute flex left-0 top-full translate-x-neg-45 w-[700px] p-4 rounded-lg shadow-lg z-50 bg-white dark:bg-gray-800"
-            style="display: none;">
-                {{ $slot }}
+            class="absolute flex left-0 top-full translate-x-neg-45 p-4 rounded-lg shadow-lg z-50 bg-white dark:bg-gray-800"
+            style="display: none; width: {{ $width ?? '700' }}px">
+            {{ $slot }}
         </div>
     </div>
 @else

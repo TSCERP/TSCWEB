@@ -1,5 +1,6 @@
 <x-app-layout>
-    <section class="h-max pt-[130px] bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
+    {{-- <section class="h-max pt-[130px] bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]"> --}}
+    <section class="h-max pt-[130px] bg-white">
         <div class="relative max-w-7xl mx-auto">
             <div class="relative flex flex-col gap-6 sm:gap-8 justify-cener items-center pt-6 sm:pt-12">
                 <div>
@@ -7,39 +8,42 @@
                 </div>
                 <div class="flex my-auto md:mx-[10%]">
                     <h1 data-aos="zoom-in"
-                        class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-0 sm:before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-0 sm:after:right-4 after:bg-no-repeat after:bg-cover after:scale-75">
+                        class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-0 sm:before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 before:z-0 z-10 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-0 sm:after:right-4 after:bg-no-repeat after:bg-cover after:scale-75 after:-z-1">
                         {{ __('Unlocking your business with management solutions') }}</h1>
                 </div>
                 <span data-aos="fade-up"
                     class="text-xl font-medium text-center">{{ __('Discover how we can facilitate your digital transformation.') }}</span>
                 <div class="flex gap-8">
                     <button data-aos="fade-right"
-                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Get Started') }}</button>
+                        onclick="document.getElementById('service-section').scrollIntoView({ behavior: 'smooth' });"
+                        class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Get Started') }}</button>
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                        class="rounded-full font-semibold px-6 py-4">{{ __('Demo') }} ›</button>
+                        class="rounded-full font-semibold px-6 py-4 border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200">{{ __('Demo') }} ›</button>
                 </div>
                 {{-- <div class="flex flex-col sm:flex-row justify-between w-full sm:py-10 relative"> --}}
-                <div class="flex flex-col sm:flex-row justify-center w-full sm:py-10 relative">
+                <div class="flex flex-col sm:flex-row justify-center w-full sm:pb-10 relative">
                     {{-- <div
                         class="relative sm:static w-screen h-[480px] sm:h-auto sm:w-1/4 bottom-0 left-0 before:bg-[#C9BBEE] before:absolute before:w-2/3 before:left-1/2 before:-translate-x-1/2 sm:before:translate-x-0 sm:before:w-1/4 before:bottom-0 sm:before:left-0 before:h-2/3 sm:before:h-1/3 before:rounded-t-3xl">
                         <img data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                             class="w-[320px] sm:w-[250px] lg:w-[320px] h-auto absolute top-0 left-[18%] sm:top-auto sm:bottom-0 sm:left-0 aspect-[2/3]"
                             src="{{ asset('assets/images/banner-item-human.webp') }}" alt="happy-with-advance">
                     </div> --}}
-                    <div class="mt-8 flex flex-col sm:gap-4 w-full sm:w-1/2 lg:w-2/5">
+                    {{-- <div class="mt-8 flex flex-col sm:gap-4 w-full sm:w-1/2 lg:w-2/5"> --}}
+                    <div class="flex flex-col sm:gap-4 w-full sm:w-1/2 lg:w-2/5">
                         <p class="text-center">{{ __('Collaborating with Global Technology Partners') }}</p>
                         <div data-aos="fade-up" class="partner-swiper-container w-full overflow-hidden">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <figure
-                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28  lg:w-52 rounded-lg p-2 inline-flex m-auto">
-                                        <img src="{{ asset('assets/images/logo-sap-business-one.png') }}" alt="sap-business-one-logo">
+                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28  lg:w-52 rounded-lg p-2 inline-flex m-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+                                        <img src="{{ asset('assets/images/logo-sap-business-one.png') }}"
+                                            alt="sap-business-one-logo">
                                     </figure>
                                 </div>
 
                                 <div class="swiper-slide">
                                     <figure
-                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
+                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
                                         <img src="{{ asset('assets/images/logo-oracle-netsuite.png') }}"
                                             alt="oracle-netsuite-logo">
                                     </figure>
@@ -47,7 +51,7 @@
 
                                 <div class="swiper-slide">
                                     <figure
-                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto">
+                                        class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
                                         <img src="{{ asset('assets/images/logo-boyum-IT.png') }}"
                                             alt="beas-boyum-IT-logo">
                                     </figure>
@@ -74,7 +78,7 @@
             </div>
         </div>
     </section>
-    <section
+    <section id="service-section"
         class="relative bg-bg-dark bg-no-repeat bg-bottom bg-[length:60%_auto bg-[url('../assets/images/service-pattern.webp')] before:bg-bg-dark before:opacity-95 before:absolute before:w-full before:h-full">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col sm:flex-row gap-4 text-white">
@@ -92,25 +96,25 @@
                 $data = [
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => __('Business Process Solution'),
+                        'text' => __('Business process solution'),
                         'description' => __("With this service, Grant Thornton can help you in increasing the company's time flexibility and direct quality control. We can help increasing the speed of..."),
                         'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => __('Technology Solutions Consulting'),
+                        'text' => __('Technology solutions consulting'),
                         'description' => __('Our team of professionals and industry experts look forward to provide practical consultancies and end-to-end technology solutions to the clients.'),
                         'link' => route('home'),
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => __('Advisory Services'),
+                        'text' => __('Advisory services'),
                         'description' => __('If you are seeking to acquire or merge, divest or dispose, restructure or raise capital, equitise or list, or you are looking at identifying and mitigating...'),
                         'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => __('Tax Services'),
+                        'text' => __('Tax services'),
                         'description' => __('Our tax professionals are dedicated to creating distinctive, and often innovative, tax solutions. Our approach starts by developing an in-depth understanding...'),
                         'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/',
                     ],
@@ -122,42 +126,42 @@
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => __('Korean and Japanese Desk'),
+                        'text' => __('Korean Desk'),
                         'description' => __('Grant Thornton is one of leading service providers in international incorporations in Vietnam with experience in helping our clients navigate jurisdictions...'),
                         'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/',
                     ],
                 ];
-
+                
                 $delay = 100;
                 foreach ($data as $item) {
                     echo '
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <article data-aos="fade-up" data-aos-delay="' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <article data-aos="fade-up" data-aos-delay="' .
                         $delay .
                         '"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                class="group flex flex-col gap-8 items-center text-white p-8 hover:bg-[#3D1473] rounded-3xl cursor-default duration-200 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="text-5xl text-icon-main">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                class="group flex flex-col gap-8 items-center text-white p-8 hover:bg-[#3D1473] rounded-3xl cursor-default duration-200 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="text-5xl text-icon-main">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ' .
                         $item['svg'] .
                         '
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <h6 class="font-semibold text-xl text-center">' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <h6 class="font-semibold text-xl text-center">' .
                         $item['text'] .
                         '</h6>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p class="text-wrap text-center text-lg line-clamp-5">' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p class="text-wrap text-center text-lg line-clamp-5">' .
                         $item['description'] .
                         '</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <a href="' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <a href="' .
                         $item['link'] .
                         '" class="opacity-0 group-hover:opacity-100 text-icon-main duration-200 ease-in">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em" viewBox="0 0 16 9">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </article>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em" viewBox="0 0 16 9">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </article>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ';
                     $delay += 200;
                 }
                 ?>
@@ -257,18 +261,19 @@
             <div class="flex flex-col sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
                     class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed min-w-[25%]">
-                    {{__('Our Service For Your Business')}}</h1>
+                    {{ __('Our Service For Your Business') }}</h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
-                    <span data-aos="fade-up" class="text-lg">{{__('We provide comprehensive ERP solutions, dashboard reporting and specialized business solutions to support businesses in efficient management and sustainable development')}}</span>
+                    <span data-aos="fade-up"
+                        class="text-lg">{{ __('We provide comprehensive ERP solutions, dashboard reporting and specialized business solutions to support businesses in efficient management and sustainable development') }}</span>
                     <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">{{__('Show More')}} ›</button>
+                        type="button">{{ __('Show More') }} ›</button>
                 </div>
             </div>
             <div class="flex flex-row flex-wrap justify-between gap-4 mt-12 items-end rounded-full bg-">
                 <div data-aos="zoom-in-up" data-aos-delay="0"
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-1.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
-                        <h6 class="text-white text-2xl font-semibold">{{__('Enterprise Resource Planning')}}</h6>
+                        <h6 class="text-white text-2xl font-semibold">{{ __('Enterprise Resource Planning') }}</h6>
                         <button class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
@@ -283,7 +288,7 @@
                 <div data-aos="zoom-in-up" data-aos-delay="200"
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-2.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
-                        <h6 class="text-white text-2xl font-semibold">{{__('Dashboard Reporting')}}</h6>
+                        <h6 class="text-white text-2xl font-semibold">{{ __('Dashboard Reporting') }}</h6>
                         <button class="text-white duration-200 ease-in">
                             <a href="{{ route('solution.dashboard.bi') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
@@ -300,7 +305,7 @@
                 <div data-aos="zoom-in-up" data-aos-delay="400"
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-3.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
-                        <h6 class="text-white text-2xl font-semibold">{{__('Business Process Solution')}}</h6>
+                        <h6 class="text-white text-2xl font-semibold">{{ __('Business Process Solution') }}</h6>
                         <button class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
@@ -320,10 +325,12 @@
         <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div class="flex flex-col items-center sm:flex-row gap-4">
                 <h1 data-aos="fade-up"
-                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">{{ __('Our Featured Solutions') }}
+                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                    {{ __('Our Featured Solutions') }}
                 </h1>
                 <div class="flex flex-col flex-start justify-evenly gap-4">
-                    <span data-aos="fade-up" class="text-lg">{{ __('Discover our key solutions that streamline processes, boost efficiency, and drive growth.') }}.</span>
+                    <span data-aos="fade-up"
+                        class="text-lg">{{ __('Discover our key solutions that streamline processes, boost efficiency, and drive growth.') }}.</span>
                     {{-- <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
                         type="button">{{__('Show More')}} ›</button> --}}
                 </div>
@@ -332,37 +339,45 @@
                 <div data-aos="zoom-in-right" data-aos-delay="0"
                     class="group flex flex-col gap-8 justify-end cursor-default duration-300 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
                     <figure class="rounded-3xl overflow-hidden">
-                        <img class="group-hover:scale-115 ease-linear duration-300"
-                            src="{{ asset('assets/images/connecting-img-1.webp') }}" alt="sap-b1-pattern">
+                        <img class="group-hover:scale-90 scale-75 ease-linear duration-300"
+                            src="{{ asset('assets/images/logo-sap-business-one.png') }}" alt="ap-business-one-illustration">
                     </figure>
                     <h6 class="text-center font-semibold text-2xl">SAP Business One</h6>
-                    <p class="text-center w-11/12">{{ __('A comprehensive solution for effective management of finance, sales, and production operations.') }}</p>
+                    <p class="text-center w-11/12">
+                        {{ __('A comprehensive solution for effective management of finance, sales, and production operations.') }}
+                    </p>
                     <div class="block mx-auto">
-                        <button onclick="window.location.href='{{route('solution.sapb1')}}'" class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
+                        <button onclick="window.location.href='{{ route('solution.sapb1') }}'"
+                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
                 <div data-aos="zoom-in-down" data-aos-delay="200"
                     class="group flex flex-col gap-8 justify-end cursor-default duration-300 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
                     <figure class="rounded-3xl overflow-hidden">
-                        <img class="group-hover:scale-115 ease-linear duration-300"
-                            src="{{ asset('assets/images/connecting-img-2.webp') }}" alt="sap-b1-pattern">
+                        <img class="group-hover:scale-90 scale-75 ease-linear duration-300"
+                            src="{{ asset('assets/images/logo-oracle-netsuite.png') }}" alt="oracle-netsuite-illustration">
                     </figure>
                     <h6 class="text-center font-semibold text-2xl">Oracle Netsuite</h6>
-                    <p class="text-center w-11/12">{{ __('Integrate and automate processes for enhanced operational efficiency.') }}</p>
+                    <p class="text-center w-11/12">
+                        {{ __('Integrate and automate business processes to streamline operations, enhance efficiency, and support sustainable growth.') }}</p>
                     <div class="block mx-auto">
-                        <button onclick="window.location.href='{{route('solution.netsuite')}}'" class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
+                        <button onclick="window.location.href='{{ route('solution.netsuite') }}'"
+                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
                 <div data-aos="zoom-in-left" data-aos-delay="400"
                     class="group flex flex-col gap-8 justify-end cursor-default duration-300 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
                     <figure class="rounded-3xl overflow-hidden">
-                        <img class="group-hover:scale-115 ease-linear duration-300"
-                            src="{{ asset('assets/images/connecting-img-3.webp') }}" alt="sap-b1-pattern">
+                        <img class="group-hover:scale-90 scale-75 ease-linear duration-300"
+                            src="{{ asset('assets/images/logo-boyum-IT.png') }}" alt="boyum-it-illustration">
                     </figure>
                     <h6 class="text-center font-semibold text-2xl">Boyum IT - Beas Manufacturing</h6>
-                    <p class="text-center w-11/12">{{ __('Streamline manufacturing processes and project management to increase productivity and reduce costs.') }}</p>
+                    <p class="text-center w-11/12">
+                        {{ __('Streamline manufacturing processes and project management to increase productivity and reduce costs.') }}
+                    </p>
                     <div class="block mx-auto">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{__('Learn More')}}</button>
+                        <button
+                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
             </div>
@@ -382,7 +397,7 @@
                 <div class="flex flex-row flex-wrap w-full justify-center gap-8 mt-6 sm:mt-8 ">
                     <article data-aos="fade-up" data-aos-delay="200" class="md:basis-[calc(33.33%-2rem)]">
                         <div
-                            class="group flex flex-col gap-8 items-center p-8 bg-border-main rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
+                            class="group flex flex-col gap-8 items-center p-8 bg-white shadow-[rgba(92,_60,_151,_0.1)_0px_5px_20px] rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem"
                                     viewBox="0 0 24 24">
@@ -453,13 +468,14 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
+                                <button
+                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                             </div>
                         </div>
                     </article>
                     <article data-aos="fade-up" data-aos-delay="400" class="md:basis-[calc(33.33%-2rem)]">
                         <div
-                            class="group flex flex-col gap-8 items-center p-8 text-white bg-text-primary rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
+                            class="group flex flex-col gap-8 items-center p-8 text-white bg-text-primary shadow rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                             <div class="w-auto h-16 flex items-center text-text-main">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem"
                                     viewBox="0 0 1024 1024">
@@ -523,13 +539,14 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full bg-white text-text-primary font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
+                                <button
+                                    class="rounded-full bg-white text-text-primary font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                             </div>
                         </div>
                     </article>
                     <article data-aos="fade-up" data-aos-delay="600" class="md:basis-[calc(33.33%-2rem)]">
                         <div
-                            class="group flex flex-col gap-8 items-center p-8 bg-border-main rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
+                            class="group flex flex-col gap-8 items-center p-8 bg-white shadow-[rgba(92,_60,_151,_0.1)_0px_5px_20px] rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem"
                                     viewBox="0 0 24 24">
@@ -592,7 +609,8 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
+                                <button
+                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                             </div>
                     </article>
                 </div>
@@ -614,7 +632,7 @@
                         nec
                         ullamcorper mattis, pulvinar dapibus leo.</span>
                     <button class="font-semibold w-fit" onclick="location.href='http://www.example.com'"
-                        type="button">{{__('Show More')}} ›</button>
+                        type="button">{{ __('Show More') }} ›</button>
                 </div>
             </div>
             {{-- <div class="flex flex-row flex-wrap justify-between gap-8 mt-12 items-end rounded-full bg-"> --}}
@@ -705,7 +723,7 @@
                         @endphp
                         <div class="swiper-slide flex-shrink-0 w-full !h-auto">
                             <div
-                                class="group w-full h-full bg-{{ $index % 3 == 0 ? 'bg-secondary' : ($index % 3 == 1 ? 'border-main' : 'bg-gray') }} rounded-3xl p-6 flex flex-col gap-8 justify-end cursor-default duration-300 ease-in">
+                                class="group w-full h-full bg-{{ $index % 3 == 0 ? 'bg-secondary' : ($index % 3 == 1 ? 'border-main text-white' : 'bg-gray') }} rounded-3xl p-6 flex flex-col gap-8 justify-end cursor-default duration-300 ease-in">
                                 <div><x-rate-stars :rate="$testimonial['rate']" /></div>
 
                                 <p class="w-11/12 overflow-hidden text-ellipsis group-hover:tooltip"
@@ -748,7 +766,7 @@
         <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div
                 class="relative flex px-10 py-16 sm:px-16 sm:py-24 rounded-3xl bg-no-repeat bg-cover bg-[url('../assets/images/banner-bg.webp')] before:absolute before:w-full before:h-full before:rounded-3xl before:top-0 before:left-0 before:bg-bg-main before:opacity-70">
-                <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between sm:items-center z-10">
+                <div class="flex flex-col gap-4 sm:gap-2 sm:flex-row justify-between sm:items-center z-10">
                     <h1 data-aos="fade-up"
                         class="text-3xl sm:text-5xl text-white font-bold cursour-default leading-snug md:leading-normal lg:leading-relaxed">
                         {{ __('Are You Ready to Boost Your Business Performance?') }}</h1>

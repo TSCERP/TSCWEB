@@ -171,13 +171,13 @@ $watch('show', value => {
                             class="block text-gray-700 text-sm font-medium">{{ __('Full name') }}:
                             <span class="text-red-500">*</span></label>
                         <input type="text" id="fullname-input" name="name" x-ref="name"
-                            class="w-full px-3 py-2 border rounded text-sm border-border-gray">
+                            class="w-full px-3 py-2 border rounded-md text-sm border-border-gray focus:border-border-main rounded-lg focus:outline-none">
                     </div>
                     <div class="mb-4 flex flex-col gap-2">
                         <label for="phone-number-input"
                             class="block text-gray-700 text-sm font-medium">{{ __('Phone number') }}:</label>
                         <input type="text" id="phone-number-input" name="phone" x-ref="phone"
-                            class="w-full px-3 py-2 border rounded text-sm border-border-gray">
+                            class="w-full px-3 py-2 border rounded-md text-sm border-border-gray focus:border-border-main rounded-lg focus:outline-none">
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
@@ -185,13 +185,13 @@ $watch('show', value => {
                         <label for="company-name-input"
                             class="block text-gray-700 text-sm font-medium">{{ __('Company name') }}:</label>
                         <input type="text" id="company-name-input" name="company" x-ref="company_name"
-                            class="w-full px-3 py-2 border rounded text-sm border-border-gray">
+                            class="w-full px-3 py-2 border rounded-md text-sm border-border-gray focus:border-border-main rounded-lg focus:outline-none">
                     </div>
                     <div class="mb-4 flex flex-col gap-2">
                         <label for="email-input" class="block text-gray-700 text-sm font-medium">Email:
                             <span class="text-red-500">*</span></label>
                         <input type="email" id="email-input" name="email" x-ref="email"
-                            class="w-full px-3 py-2 border rounded text-sm border-border-gray">
+                            class="w-full px-3 py-2 border rounded-md text-sm border-border-gray focus:border-border-main rounded-lg focus:outline-none">
                     </div>
                 </div>
                 <div class="mb-4 flex flex-col gap-2">
@@ -200,7 +200,7 @@ $watch('show', value => {
                 <div class="mb-4 flex flex-col gap-2">
                     <label for="message-input"
                         class="block text-gray-700 text-sm font-medium">{{ __('Message') }}:</label>
-                    <textarea id="message-input" name="message" x-ref="message" class="w-full px-3 py-2 border rounded border-border-gray"></textarea>
+                    <textarea id="message-input" name="message" x-ref="message" class="w-full px-3 py-2 border rounded-md border-border-gray focus:border-border-main rounded-lg focus:outline-none"></textarea>
                 </div>
                 <div class="mt-3 mb-4">
                     <p class="font-semibold text-sm">{{ __('Policy') }}:</p>
@@ -216,7 +216,7 @@ $watch('show', value => {
         </div>
         <div class="fixed bottom-0 left-0 flex justify-between items-center w-full h-fit bg-white px-4 py-2 z-10">
             <button type="submit"
-                class="text-white bg-text-main px-4 py-2 w-full h-8 rounded font-bold flex justify-center items-center"
+                class="text-white bg-bg-btn px-4 py-2 w-full h-8 rounded font-bold flex justify-center items-center"
                 :disabled="isLoading" x-bind:class="isLoading ? 'opacity-50 cursor-not-allowed' : ''"
                 form="contact-form">
                 <span x-show="!isLoading">{{ __('Submit') }}</span>

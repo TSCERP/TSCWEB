@@ -58,11 +58,11 @@
             </div>
         </div>
         <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row sm:justify-between py-8 border-t border-border-main">
-            <span>{{__('Operated by')}} <b class="text-text-main ease duration-150 hover:text-text-primary">TSC - Technology
+            <span>{{__('Operated by')}} <b class="text-border-main ease duration-150 hover:text-text-primary">TSC - Technology
                     Solution Consulting</b></span>
             <div class="flex gap-4">
-                <a class="font-medium text-text-main ease duration-150 hover:text-text-primary">{{__('Privacy Policy')}}</a>
-                <a class="font-medium text-text-main ease duration-150 hover:text-text-primary">{{__('Terms of Use')}}</a>
+                <a class="font-medium text-border-main ease duration-150 hover:text-text-primary">{{__('Privacy Policy')}}</a>
+                <a class="font-medium text-border-main ease duration-150 hover:text-text-primary">{{__('Terms of Use')}}</a>
             </div>
         </div>
     </div>

@@ -32,14 +32,16 @@ export default {
                 'bg-main': '#290b50',
                 "bg-secondary": "#F2F0F4",
                 'text-main': '#D0A9F8',
-                "border-main": "#E9DDF4",
+                // "border-main": "#E9DDF4",
+                "border-main": "#5C3C97",
                 "text-primary": "#29282D",
                 "bg-dark": "#290B50",
                 "icon-main": "#D0A9F8",
                 'bg-gray': "#F8F4F9",
                 'gradient-start': 'rgba(41, 11, 80, 0)',
                 'gradient-end': '#290B50',
-                'border-gray': '#D1D5DB'
+                'border-gray': '#D1D5DB',
+                'bg-btn': '#6E409D'
             },
             fontFamily: {
                 cursive: ['Kalam', ...fontFamily.serif],

@@ -1,77 +1,115 @@
 <x-app-layout>
     <section class="pt-[130px]">
-        <div
-            class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16">
             <h1 class="pb-10 text-5xl font-bold text-center">{{ __('About Us') }}</h3>
-            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
-            <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
-                <img class="h-full rounded-3xl" src="{{ asset('assets/images/feature-illustration.webp') }}"
-                    alt="erp-solution">
-                <img class="absolute w-7/12 bottom-4 right-4" src="{{ asset('assets/images/feature-statistics.webp') }}"
-                    alt="statistics-solution">
-            </div>
-            <div
-                class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
-                <div>
-                    <span id="feature"
-                        class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Technology Solutions Consulting') }}</span>
-                </div>
-                <h3 data-aos="fade-up"
-                    class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
-                    "{{ __('Want your business to thrive in Industry 4.0?') }}."</h3>
-                <p data-aos="fade-up" class="text-base leading-relaxed">{{ __('app.intro') }}</p>
-                <ul class="list-disc list-inside space-y-4">
-                    <li data-aos="fade-up" data-aos-delay="100" class="flex items-center space-x-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                            class="text-icon-main">
-                            <g fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="m8 12l3 3l5-6" />
-                            </g>
-                        </svg>
-                        <span class="text-lg font-semibold">{{ __('app.key1') }}</span>
-                    </li>
-                    <li data-aos="fade-up" data-aos-delay="300" class="flex items-center space-x-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                            class="text-icon-main">
-                            <g fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="m8 12l3 3l5-6" />
-                            </g>
-                        </svg>
-                        <span class="text-lg font-semibold">{{ __('app.key2') }}</span>
-                    </li>
-                    <li data-aos="fade-up" data-aos-delay="500" class="flex items-center space-x-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                            class="text-icon-main">
-                            <g fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="m8 12l3 3l5-6" />
-                            </g>
-                        </svg>
-                        <span class="text-lg font-semibold">{{ __('app.key3') }}</span>
-                    </li>
-                    <li data-aos="fade-up" data-aos-delay="700" class="flex items-center space-x-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                            class="text-icon-main">
-                            <g fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="m8 12l3 3l5-6" />
-                            </g>
-                        </svg>
-                        <span class="text-lg font-semibold">{{ __('app.key4') }}</span>
-                    </li>
-                </ul>
-                <div data-aos="fade-up" class="w-fit">
-                    <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
-                </div>
+                {{-- <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
+                    <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
+                        <img class="h-full rounded-3xl" src="{{ asset('assets/images/feature-illustration.webp') }}"
+                            alt="erp-solution">
+                        <img class="absolute w-7/12 bottom-4 right-4"
+                            src="{{ asset('assets/images/feature-statistics.webp') }}" alt="statistics-solution">
+                    </div>
+                    <div
+                        class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
+                        <div>
+                            <span id="feature"
+                                class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Technology Solutions Consulting') }}</span>
+                        </div>
+                        <h3 data-aos="fade-up"
+                            class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
+                            "{{ __('Want your business to thrive in Industry 4.0?') }}."</h3>
+                        <p data-aos="fade-up" class="text-base leading-relaxed">{{ __('app.intro') }}</p>
+                        <ul class="list-disc list-inside space-y-4">
+                            <li data-aos="fade-up" data-aos-delay="100" class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                                <span class="text-lg font-semibold">{{ __('app.key1') }}</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300" class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                                <span class="text-lg font-semibold">{{ __('app.key2') }}</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="500" class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                                <span class="text-lg font-semibold">{{ __('app.key3') }}</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="700" class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                                <span class="text-lg font-semibold">{{ __('app.key4') }}</span>
+                            </li>
+                        </ul>
+                        <div data-aos="fade-up" class="w-fit">
+                            <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
+                                class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
+                        </div>
 
-            </div>
-            </div>
+                    </div>
+                </div> --}}
+                <div class="relative mb-12 md:mt-0 sm:hidden">
+                    <img src="{{ asset('assets/images/chain-mobius-contact.png') }}" alt="Illustration" class="max-w-sm md:max-w-md mx-auto md:mx-0 transform rotate-0 hover:scale-105 transition duration-500 ease-in-out" />
+                </div>
+                <div class="flex flex-col lg:flex-row items-center justify-between pb-8 md:pb-10 relative before:absolute before:w-4/5 before:h-4/5 before:opacity-20 before:bg-no-repeat before:bg-contain before:bg-[url('../assets/images/mobius-contact.png')] before:top-1/2 before:-translate-y-1/2 before:left-0">
+                    <!-- Left Text Section -->
+                    <div class="w-full lg:w-2/3">
+                        {{-- <h3 class="text-sm text-indigo-600 font-semibold uppercase mb-4">About Us</h3> --}}
+                        {{-- <h1 class="text-4xl font-bold mb-6 leading-tight">
+                            {{__('Get to know Grant Thornton Vietnam')}}
+                        </h1> --}}
+                        <p class="text-lg text-gray-600 mb-4">
+                            <b>{{__('Grant Thornton Vietnam')}}</b> {{__('was established in 1993 and became a 100% foreign-owned enterprise in 1997, with a branch in Ho Chi Minh City')}}.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-4">
+                            <b>In 1998</b>, we officially became a full member of Grant Thornton International. The firm's name
+                            was changed to Grant Thornton (Vietnam) Limited in 1999.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-4">
+                            <b>In 2014</b>, Grant Thornton Vietnam merged with Nexia ACPA, creating a professional team of 14
+                            partners and over 220 staff in Hanoi and Ho Chi Minh City.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-4">
+                            <b>In 2018</b>, we are very excited to celebrate our 25 years anniversary in Vietnam.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-8">
+                            <b>In 2019</b>, management board welcomed a female Partner; this aligned with the Grant Thornton
+                            global strategy in diversity in leadership.
+                        </p>
+                        <div class="w-fit">
+                            <button data-aos="fade-up" onclick="document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' });"
+                                class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Contact Us') }}</button>
+                        </div>
+                    </div>
+
+                    <!-- Right Image Section -->
+                    <div class="relative mt-12 md:mt-0 hidden sm:block">
+                        <img src="{{ asset('assets/images/chain-mobius-contact.png') }}" alt="Illustration" class="max-w-sm md:max-w-md mx-auto md:mx-0 transform rotate-0 hover:scale-105 transition duration-500 ease-in-out" />
+                    </div>
+                </div>
         </div>
     </section>
-    <section class="h-max bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
+    <section id="contact-us-section" class="h-max bg-gradient-to-b from-[#f2f0f4] to-[#E9DDF4]">
         <div
             class="relative max-w-7xl mx-auto flex flex-col lg:flex-row sm:gap-8 py-6 sm:py-12 px-4 sm:px-2 xl:px-0 gap-8 ">
             <div>
@@ -81,14 +119,13 @@
                             alt="chat-with-us">
                     </div>
                     <div class="flex my-auto">
-                        <h1
-                            class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight font-bold relative">
+                        <h1 class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight font-bold relative">
                             {{ __('Contact Us') }}</h1>
                     </div>
                     <span
                         class="text-xl font-medium">{{ __('Email, call or complete the form to get how we can solve your business problem') }}.</span>
                     <div>
-                        <div class="rounded-lg border border-border-main px-3 py-4 bg-white flex gap-4">
+                        <div class="rounded-t-lg shadow px-3 py-4 bg-white flex gap-4">
                             <div class="flex items-center gap-4">
                                 <div class="text-text-main">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em"
@@ -100,10 +137,10 @@
                             </div>
                             <div>
                                 <p class="font-semibold text-lg">Email</p>
-                                <a class="" href="mailto:tscteam@vn.gt.com">tscteam@vn.gt.com</a>
+                                <a class="" href="mailto:Grant.Thornton@vn.gt.com">Grant.Thornton@vn.gt.com</a>
                             </div>
                         </div>
-                        <div class="rounded-lg border border-border-main px-3 py-4 bg-white flex gap-4">
+                        <div class="shadow px-3 py-4 bg-white flex gap-4">
                             <div class="flex items-center gap-4">
                                 <div class="text-text-main">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em"
@@ -115,10 +152,10 @@
                             </div>
                             <div>
                                 <p class="font-semibold text-lg">{{ __('Phone Number') }}</p>
-                                <a class="" href="tel:+84982232343">(+84) 982 232 343</a>
+                                <a class="" href="tel:+84982232343">(+84) 24 3850 1686</a>
                             </div>
                         </div>
-                        <div class="rounded-lg border border-border-main px-3 py-4 bg-white flex gap-4">
+                        <div class="rounded-b-lg shadow px-3 py-4 bg-white flex gap-4">
                             <div class="flex items-center gap-4">
                                 <div class="text-text-main">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em"
@@ -130,8 +167,11 @@
                             </div>
                             <div>
                                 <p class="font-semibold text-lg">{{ __('Office Address') }}</p>
-                                <p class="" >
+                                <p class="">
                                     {{ __('HCMC: 14th Floor, Pearl Plaza Building, 561A Dien Bien Phu Street, Ward 25, Binh Thanh District, HCMC') }}
+                                </p>
+                                <p>
+                                    {{ __('HN: 18th Floor, Hoa Binh International Office Building, 106 Hoang Quoc Viet Street, Nghia Do Ward, Cau Giay District, Hanoi') }}
                                 </p>
                             </div>
                         </div>
@@ -143,7 +183,7 @@
                 <div class="relative w-full transition-transform duration-300 ease-in-out"
                     :class="{ '-translate-x-full': !showForm, 'translate-x-0': showForm }">
                     <!-- Form Content -->
-                    <form id="contact-form-2" class="bg-white py-6 px-4 rounded-lg gap-4 flex flex-col shadow">
+                    <form id="contact-form-2" class="bg-white pb-6 px-4 py-4 rounded-lg gap-4 flex flex-col shadow">
                         <h3 class="font-bold text-3xl">{{ __('Get In Touch With Us') }}</h3>
                         <p>{{ __('Feel free to send a message, just fill the form below and we will reply shortly') }}!
                             👍</p>
@@ -152,25 +192,25 @@
                                 <label class="font-semibold">{{ __('Full name') }} <span
                                         class="text-red-500">*</span></label>
                                 <input type="text" name="fullname"
-                                    class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    class="w-full px-4 py-2 border border-border-gray focus:border-border-main rounded-lg focus:outline-none">
                             </div>
                             <div class="flex flex-col gap-3">
                                 <label class="font-semibold">Email <span class="text-red-500">*</span></label>
                                 <input type="email" name="email"
-                                    class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    class="w-full px-4 py-2 border border-border-gray focus:border-border-main rounded-lg focus:outline-none">
                             </div>
                             <div class="flex flex-col gap-3">
                                 <label class="font-semibold">{{ __('Phone number') }}</label>
                                 <input type="text" name="phone_number"
-                                    class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    class="w-full px-4 py-2 border border-border-gray focus:border-border-main rounded-lg focus:outline-none">
                             </div>
                             <div class="flex flex-col gap-3">
                                 <label class="font-semibold">{{ __('Message') }}</label>
                                 <textarea rows="3" name="message"
-                                    class="w-full px-4 py-2 border-2 border-border-main rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                                    class="w-full px-4 py-2 border border-border-gray focus:border-border-main rounded-lg focus:outline-none"></textarea>
                             </div>
                             <button type="submit" id="contact-form-btn"
-                                class="text-white bg-text-main px-4 py-2 w-full h-8 rounded font-bold flex justify-center items-center">
+                                class="text-white bg-bg-btn px-4 py-2 w-full h-8 rounded font-bold flex justify-center items-center">
                                 <span class="normal-text">{{ __('Submit') }}</span>
                                 <div class="loader hidden flex space-x-1">
                                     <span
@@ -182,9 +222,11 @@
                             </button>
                             <p class="text-sm">
                                 {{ __('By contacting us, you agree to our') }}
-                                <span class="text-blue-500 cursor-pointer" @click="showForm = false">{{ __('Terms of Service') }}</span>
+                                <span class="text-blue-500 cursor-pointer"
+                                    @click="showForm = false">{{ __('Terms of Service') }}</span>
                                 {{ __('and') }}
-                                <span class="text-blue-500 cursor-pointer" @click="showForm = false">{{ __('Privacy Policy') }}</span>.
+                                <span class="text-blue-500 cursor-pointer"
+                                    @click="showForm = false">{{ __('Privacy Policy') }}</span>.
                             </p>
                         </div>
                     </form>
@@ -243,7 +285,8 @@
                                 lúc nào.
                             </p>
                         </div>
-                        <button @click="showForm = true" class="mt-4 text-blue-500 hover:underline">← {{ __('Back to form') }}</button>
+                        <button @click="showForm = true" class="mt-4 text-blue-500 hover:underline">←
+                            {{ __('Back to form') }}</button>
                     </div>
                 </div>
             </div>

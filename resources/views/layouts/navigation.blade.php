@@ -42,7 +42,7 @@ $nextTick(() => {
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px md:ms-2 lg:ms-10 tablet2:flex">
                     <x-nav-link
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('home') ? '!font-bold text-text-main' : '' }}"
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('home') ? '!font-bold text-border-main' : '' }}"
                         :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
@@ -51,8 +51,8 @@ $nextTick(() => {
                         $solutions = __('Solutions');
                     @endphp
                     <x-nav-link
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200"
-                        :active="request()->routeIs('service')" :dropdown="true" :title="$services">
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200"
+                        :active="request()->routeIs('service')" :dropdown="true" :title="$services" :width="700">
                         <!-- Dropdown Content -->
                         <div class="grid grid-cols-3 gap-x-4 gap-y-6">
                             <div class="flex gap-4">
@@ -65,9 +65,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Business Process Solution') }}
-                                    </h4>
+                                    </a>
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -80,9 +80,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Technology Solutions Consulting') }}
-                                    </h4>
+                                    </a>
 
                                 </div>
                             </div>
@@ -96,9 +96,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Advisory Services') }}
-                                    </h4>
+                                    </a>
 
                                 </div>
                             </div>
@@ -112,9 +112,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Tax Services') }}
-                                    </h4>
+                                    </a>
 
                                 </div>
                             </div>
@@ -128,9 +128,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Audit and Assurance') }}
-                                    </h4>
+                                    </a>
 
                                 </div>
                             </div>
@@ -144,9 +144,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Korean and Japanese Desk') }}
-                                    </h4>
+                                    </a>
 
                                 </div>
                             </div>
@@ -155,10 +155,10 @@ $nextTick(() => {
                     </x-nav-link>
 
                     <x-nav-link
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200
-                        {{ request()->routeIs('solution*') ? '!font-bold text-text-main' : '' }}"
-                        :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions">
-                        <div class="grid grid-cols-3 gap-4">
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200
+                        {{ request()->routeIs('solution*') ? '!font-bold text-border-main' : '' }}"
+                        :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions" :width="600">
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-6">
                             <div class="flex gap-4">
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
@@ -169,7 +169,8 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ route('solution.sapb1') }}">
+                                    <a href="/">
+                                    {{-- <a href="{{ route('solution.sapb1') }}"> --}}
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('SAP Business One') }}
                                         </h4>
@@ -186,7 +187,8 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ route('solution.netsuite') }}">
+                                    {{-- <a href="{{ route('solution.netsuite') }}"> --}}
+                                    <a href="/">
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Oracle NetSuite') }}
                                         </h4>
@@ -203,7 +205,8 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ route('solution.dashboard.bi') }}">
+                                    <a href="/">
+                                    {{-- <a href="{{ route('solution.dashboard.bi') }}"> --}}
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Business Intelligence') }}
                                         </h4>
@@ -220,7 +223,8 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ route('solution.travel.expense') }}">
+                                    <a href="/">
+                                    {{-- <a href="{{ route('solution.travel.expense') }}"> --}}
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Travel & Expense Management') }}
                                         </h4>
@@ -233,20 +237,20 @@ $nextTick(() => {
                         </div>
                     </x-nav-link>
                     <x-nav-link :href="route('about')"
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-text-main' : '' }}"
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('about')">
                         {{ __('About Us') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('blogs')"
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-text-main' : '' }}"
+                    {{-- <x-nav-link :href="route('blogs')"
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('blogs')">
                         {{ __('Blog') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('documents')"
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-text-main ease duration-200 {{ request()->routeIs('documents') ? '!font-bold text-text-main' : '' }}"
+                    </x-nav-link> --}}
+                    {{-- <x-nav-link :href="route('documents')"
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('documents') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('documents')">
                         {{ __('Document') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
                 </div>
 
                 <!-- Settings Dropdown -->
@@ -330,30 +334,30 @@ $nextTick(() => {
                                     stroke-width="2" d="m1 1 4 4 4-4" />
                             </svg>
                         </button>
-                        <ul id="ecommerce-menu" x-show="openService" class="py-2 space-y-2">
+                        <ul id="service-menu-mobile" x-show="openService" class="py-2 space-y-2">
                             <li>
-                                <a href="#"
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Process Solution') }}</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Technology Solutions Consulting') }}</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Advisory Services') }}</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Tax Services') }}</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Audit and Assurance') }}</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Korean and Japanese Desk') }}</a>
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Korean Desk') }}</a>
                             </li>
                         </ul>
                     </li>
@@ -375,21 +379,25 @@ $nextTick(() => {
                                     stroke-width="2" d="m1 1 4 4 4-4" />
                             </svg>
                         </button>
-                        <ul id="ecommerce-menu" x-show="openSolution" class="py-2 space-y-2">
+                        <ul id="solution-menu-mobile" x-show="openSolution" class="py-2 space-y-2">
                             <li>
-                                <a href="{{ route('solution.sapb1') }}"
+                                {{-- <a href="{{ route('solution.sapb1') }}" --}}
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SAP Business One') }}</a>
                             </li>
                             <li>
-                                <a href="{{ route('solution.netsuite') }}"
+                                {{-- <a href="{{ route('solution.netsuite') }}" --}}
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Oracle NetSuite') }}</a>
                             </li>
                             <li>
-                                <a href="{{ route('solution.dashboard.bi') }}"
+                                {{-- <a href="{{ route('solution.dashboard.bi') }}" --}}
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Intelligence') }}</a>
                             </li>
                             <li>
-                                <a href="{{ route('solution.travel.expense') }}"
+                                {{-- <a href="{{ route('solution.travel.expense') }}" --}}
+                                <a href="/"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Travel & Expense Management') }}</a>
                             </li>
                         </ul>
@@ -403,7 +411,7 @@ $nextTick(() => {
                             <span class="ms-3 text-text-primary">{{ __('About Us') }}</span>
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('blogs') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 100 100">
@@ -414,8 +422,8 @@ $nextTick(() => {
                             </svg>
                             <span class="ms-3 text-text-primary">{{ __('Blog') }}</span>
                         </a>
-                    </li>
-                    <li>
+                    </li> --}}
+                    {{-- <li>
                         <a href="{{ route('documents') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
@@ -423,7 +431,7 @@ $nextTick(() => {
                             </svg>
                             <span class="ms-3 text-text-primary">{{ __('Document') }}</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <div class="flex gap-4 items-center sm:ms-6 mt-4">
                     <div x-data="{ activeLang: '{{ app()->getLocale() }}' }" class="flex gap-2 items-center ml-4">
