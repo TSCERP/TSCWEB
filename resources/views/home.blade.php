@@ -246,7 +246,7 @@
                 </ul>
                 <div data-aos="fade-up" class="w-fit">
                     <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
+                        class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
                 </div>
 
             </div>
@@ -348,7 +348,7 @@
                     </p>
                     <div class="block mx-auto">
                         <button onclick="window.location.href='{{ route('solution.sapb1') }}'"
-                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Learn More') }}</button>
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
                 <div data-aos="zoom-in-down" data-aos-delay="200"
@@ -362,7 +362,7 @@
                         {{ __('Integrate and automate business processes to streamline operations, enhance efficiency, and support sustainable growth.') }}</p>
                     <div class="block mx-auto">
                         <button onclick="window.location.href='{{ route('solution.netsuite') }}'"
-                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Learn More') }}</button>
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
                 <div data-aos="zoom-in-left" data-aos-delay="400"
@@ -377,7 +377,7 @@
                     </p>
                     <div class="block mx-auto">
                         <button
-                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Learn More') }}</button>
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
             </div>
@@ -758,7 +758,6 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-
         </div>
 
     </section>

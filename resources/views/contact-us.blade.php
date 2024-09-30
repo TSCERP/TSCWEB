@@ -82,23 +82,20 @@
                             <b>{{__('Grant Thornton Vietnam')}}</b> {{__('was established in 1993 and became a 100% foreign-owned enterprise in 1997, with a branch in Ho Chi Minh City')}}.
                         </p>
                         <p class="text-lg text-gray-600 mb-4">
-                            <b>In 1998</b>, we officially became a full member of Grant Thornton International. The firm's name
-                            was changed to Grant Thornton (Vietnam) Limited in 1999.
+                            <b>{{__('In 1998')}}</b>, {{__('we officially became a full member of Grant Thornton International. The firm\'s name was changed to Grant Thornton (Vietnam) Limited in 1999')}}.
                         </p>
                         <p class="text-lg text-gray-600 mb-4">
-                            <b>In 2014</b>, Grant Thornton Vietnam merged with Nexia ACPA, creating a professional team of 14
-                            partners and over 220 staff in Hanoi and Ho Chi Minh City.
+                            <b>{{__('In 2014')}}</b>, {{__('Grant Thornton Vietnam merged with Nexia ACPA, creating a professional team of 14 partners and over 220 staff in Hanoi and Ho Chi Minh City')}}.
                         </p>
                         <p class="text-lg text-gray-600 mb-4">
-                            <b>In 2018</b>, we are very excited to celebrate our 25 years anniversary in Vietnam.
+                            <b>{{__('In 2018')}}</b>, {{__('we are very excited to celebrate our 25 years anniversary in Vietnam')}}.
                         </p>
                         <p class="text-lg text-gray-600 mb-8">
-                            <b>In 2019</b>, management board welcomed a female Partner; this aligned with the Grant Thornton
-                            global strategy in diversity in leadership.
+                            <b>{{__('In 2019')}}</b>, {{__('management board welcomed a female Partner; this aligned with the Grant Thornton global strategy in diversity in leadership')}}.
                         </p>
                         <div class="w-fit">
                             <button data-aos="fade-up" onclick="document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' });"
-                                class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Contact Us') }}</button>
+                                class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Contact Us') }}</button>
                         </div>
                     </div>
 

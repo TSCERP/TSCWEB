@@ -16,9 +16,10 @@
                     minim veniam, quis nostrud exercitation ullamco.</span>
                 <div class="flex gap-8">
                     <button data-aos="fade-right"
-                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Get Started') }}</button>
+                        onclick="document.getElementById('service-section').scrollIntoView({ behavior: 'smooth' });"
+                        class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Get Started') }}</button>
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                        class="rounded-full font-semibold px-6 py-4">{{ __('Demo') }} ›</button>
+                        class="rounded-full font-semibold px-6 py-4 border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200">{{ __('Demo') }} ›</button>
                 </div>
                 <div class="flex flex-col sm:flex-row justify-between w-full sm:py-10 relative h-[300px] sm:h-[450px]">
                     <div class="relative sm:static w-full flex justify-center">
@@ -88,7 +89,7 @@
                 </ul>
                 <div data-aos="fade-up" class="w-fit">
                     <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                        class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Demo</button>
+                        class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{__('Demo')}}</button>
                 </div>
             </div>
 
@@ -102,7 +103,7 @@
 
     <div class="bg-bg-main w-full h-24 -mb-2" style="clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0% 100%);">
     </div>
-    <section class="bg-bg-main w-full">
+    <section class="bg-bg-main w-full py-4">
         <div
             class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
             <div class="flex flex-col md:flex-row gap-8 md:gap-0 content-around justify-around w-full">
@@ -198,7 +199,7 @@
                         ullamcorper mattis, pulvinar dapibus leo.</span>
                     <div>
                         <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Demo') }}
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Demo') }}
                             ›</button>
                     </div>
                 </div>
@@ -217,7 +218,7 @@
                         </p>
                     </div>
                     <div class="block">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
+                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Learn
                             More</button>
                     </div>
                 </div>
@@ -235,7 +236,7 @@
                         </p>
                     </div>
                     <div class="block">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
+                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Learn
                             More</button>
                     </div>
                 </div>
@@ -254,7 +255,7 @@
                         </p>
                     </div>
                     <div class="block">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
+                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Learn
                             More</button>
                     </div>
                 </div>
@@ -271,7 +272,7 @@
                         </p>
                     </div>
                     <div class="block">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
+                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Learn
                             More</button>
                     </div>
                 </div>
@@ -289,7 +290,7 @@
                         </p>
                     </div>
                     <div class="block">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
+                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Learn
                             More</button>
                     </div>
                 </div>
@@ -308,7 +309,7 @@
                         </p>
                     </div>
                     <div class="block">
-                        <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Learn
+                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Learn
                             More</button>
                     </div>
                 </div>
@@ -331,7 +332,7 @@
                         ullamcorper mattis, pulvinar dapibus leo.</span>
                     <div>
                         <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                            class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">{{ __('Demo') }}
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Demo') }}
                             ›</button>
                     </div>
                 </div>
@@ -553,7 +554,7 @@
                 <div class="flex flex-row flex-wrap w-full justify-center gap-8 mt-8 sm:mt-12">
                     <article data-aos="fade-up" data-aos-delay="200" class="md:basis-[calc(33.33%-2rem)]">
                         <div
-                            class="group flex flex-col gap-8 items-center p-8 bg-border-main rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
+                            class="group flex flex-col gap-8 items-center p-8 bg-white shadow-[rgba(92,_60,_151,_0.1)_0px_5px_20px] rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem"
                                     viewBox="0 0 24 24">
@@ -619,7 +620,7 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Choose
+                                <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Choose
                                     Plan</button>
                             </div>
                         </div>
@@ -753,7 +754,7 @@
                                 </div>
                             </div>
                             <div class="block mx-auto">
-                                <button class="rounded-full text-white bg-text-primary font-semibold px-6 py-4">Choose
+                                <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Choose
                                     Plan</button>
                             </div>
                     </article>
