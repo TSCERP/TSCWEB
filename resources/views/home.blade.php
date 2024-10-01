@@ -8,8 +8,8 @@
                 </div>
                 <div class="flex my-auto md:mx-[10%]">
                     <h1 data-aos="zoom-in"
-                        class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-4 before:left-0 sm:before:left-4 before:bg-no-repeat before:bg-cover before:scale-75 before:z-0 z-10 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-2 after:right-0 sm:after:right-4 after:bg-no-repeat after:bg-cover after:scale-75 after:-z-1">
-                        {{ __('Unlocking your business with management solutions') }}</h1>
+                        class="text-5xl w-full sm:w-fit leading-snug md:!leading-tight text-center font-bold relative before:absolute before:w-[50px] before:h-[50px] before:bg-[url('../assets/images/banner-item-volumn.webp')] before:bottom-3 before:left-0 sm:before:left-3 before:bg-no-repeat before:bg-cover before:scale-75 before:z-0 z-10 after:absolute after:w-[46px] after:h-[74px] after:bg-[url('../assets/images/banner-item-lightning.webp')] after:bottom-0 after:right-0 sm:after:right-2 after:bg-no-repeat after:bg-cover after:scale-65 after:-z-1">
+                        {!! __('Unlocking your business with <br> management solutions') !!}</h1>
                 </div>
                 <span data-aos="fade-up"
                     class="text-xl font-medium text-center">{{ __('Discover how we can facilitate your digital transformation.') }}</span>
@@ -97,7 +97,7 @@
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Business process solution'),
-                        'description' => __("With this service, Grant Thornton can help you in increasing the company's time flexibility and direct quality control. We can help increasing the speed of..."),
+                        'description' => __("Grant Thornton can help you in increasing the company's time flexibility and direct quality control. We can help increasing the speed of..."),
                         'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/',
                     ],
                     [
@@ -154,7 +154,7 @@
                         '</p>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <a href="' .
                         $item['link'] .
-                        '" class="opacity-0 group-hover:opacity-100 text-icon-main duration-200 ease-in">
+                        '" target="_blank" class="opacity-0 group-hover:opacity-100 text-icon-main duration-200 ease-in">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em" viewBox="0 0 16 9">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
@@ -166,7 +166,7 @@
                 }
                 ?>
             </div>
-            <div class="flex flex-row flex-wrap justify-center gap-8 mt-8">
+            {{-- <div class="flex flex-row flex-wrap justify-center gap-8 mt-8">
                 <div class="flex flex-col basis-[calc(33.33%-2rem)] gap-4 justify-center items-center">
                     <h5 id="project-quantity" class="count-up text-icon-main font-semibold text-5xl">1</h5>
                     <span class="text-white text-lg">{{ __('Projects') }}</span>
@@ -179,7 +179,7 @@
                     <h5 id="expert-quantity" class="count-up text-icon-main font-semibold text-5xl">1</h5>
                     <span class="text-white text-lg">{{ __('Experts') }}</span>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </section>
@@ -286,7 +286,7 @@
                     </div>
                 </div>
                 <div data-aos="zoom-in-up" data-aos-delay="200"
-                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-2.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
+                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-3.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Dashboard Reporting') }}</h6>
                         <button class="text-white duration-200 ease-in">
@@ -303,7 +303,7 @@
                     </div>
                 </div>
                 <div data-aos="zoom-in-up" data-aos-delay="400"
-                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-3.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
+                    class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-2.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Business Process Solution') }}</h6>
                         <button class="text-white duration-200 ease-in">
@@ -383,7 +383,9 @@
             </div>
         </div>
     </section>
-    <section>
+
+    {{-- Pricing --}}
+    {{-- <section>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0">
             <div class="relative flex flex-col items-center py-12 sm:py-24">
                 <img data-aos="fade-down" class="w-12 absolute top-8 left-1 sm:top-24 sm:left-4"
@@ -616,8 +618,10 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section
+    </section> --}}
+
+    {{-- Testimonial --}}
+    {{-- <section
         class="bg-white relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:opacity-40 z-10 bg-no-repeat bg-center bg-[length:70%_auto] bg-[url('../assets/images/map.webp')]">
         <div class="relative max-w-7xl mx-auto flex flex-col gap-8 px-4 sm:px-2 xl:px-0 py-24 ">
             <div class="flex flex-col sm:flex-row gap-4">
@@ -635,7 +639,6 @@
                         type="button">{{ __('Show More') }} ›</button>
                 </div>
             </div>
-            {{-- <div class="flex flex-row flex-wrap justify-between gap-8 mt-12 items-end rounded-full bg-"> --}}
             <div class="testimonial-swiper-container w-full overflow-hidden">
                 <div class="swiper-wrapper">
                     @php
@@ -760,7 +763,8 @@
             </div>
         </div>
 
-    </section>
+    </section> --}}
+
     <section>
         <div class="relative max-w-7xl mx-auto flex flex-col px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
             <div
@@ -834,20 +838,20 @@
                 delay: 100,
             });
 
-            document.addEventListener('DOMContentLoaded', function() {
-                var options = {
-                    useEasing: true,
-                    useGrouping: true,
-                    separator: ',',
-                    decimal: '.',
-                    prefix: '',
-                    enableScrollSpy: true,
-                    scrollSpyOnce: true
-                };
-                var countUp = new CountUp("project-quantity", 10, options);
-                var countUp2 = new CountUp("country-quantity", 3, options);
-                var countUp3 = new CountUp("expert-quantity", 16, options);
-            });
+            // document.addEventListener('DOMContentLoaded', function() {
+            //     var options = {
+            //         useEasing: true,
+            //         useGrouping: true,
+            //         separator: ',',
+            //         decimal: '.',
+            //         prefix: '',
+            //         enableScrollSpy: true,
+            //         scrollSpyOnce: true
+            //     };
+            //     var countUp = new CountUp("project-quantity", 10, options);
+            //     var countUp2 = new CountUp("country-quantity", 3, options);
+            //     var countUp3 = new CountUp("expert-quantity", 16, options);
+            // });
         </script>
         <script>
             gsap.registerPlugin(ScrollTrigger);
@@ -861,7 +865,7 @@
                     trigger: "#slide-up-animation",
                     start: "top 90%",
                     end: "bottom 5%",
-                    // scrub: true         // Đồng bộ hóa hiệu ứng với vị trí cuộn
+                    // scrub: true       
                 }
             });
         </script>

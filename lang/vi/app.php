@@ -10,5 +10,6 @@ return
             "intro"=>"Hãy để chúng tôi hỗ trợ bạn kết nối với chuyên gia gần nhất cùng các dịch vụ liên quan của Grant Thornton",
 
         ],
-        "footerMessage"=>"Đội ngũ chuyên gia của chúng tôi mong muốn được cộng tác và mang đến các dự án tư vấn thực tiễn bên cạnh những giải pháp toàn diện về công nghệ cho khách hàng, thúc đẩy quản lý và vận hành doanh nghiệp trong sự chuyển mình nhanh chóng công nghệ trong thời đại 4.0 ngày nay"
+        "footerMessage1"=>"<b>Grant Thornton</b> là mạng lưới các công ty độc lập cung cấp dịch vụ <i>Kiểm toán</i>, <i>Tư vấn thuế</i>, <i>Tư vấn doanh nghiệp và Giải pháp doanh nghiệp</i>, gồm 73.000 nhân viên tại hơn 149 thị trường.",
+        "footerMessage2"=>"Chúng tôi luôn sẵn sàng hỗ trợ các doanh nghiệp năng động khai phá tiềm năng phát triển của mình."
     ];

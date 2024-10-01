@@ -100,6 +100,7 @@ export default {
             },
             scale: {
                 '115': '1.15',
+                '65': '0.65',
             },
             screens: {
                 'phone': '480px',

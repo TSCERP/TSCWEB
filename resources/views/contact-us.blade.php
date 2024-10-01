@@ -148,7 +148,7 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="font-semibold text-lg">{{ __('Phone Number') }}</p>
+                                <p class="font-semibold text-lg">{{ __('Hotline') }}</p>
                                 <a class="" href="tel:+84982232343">(+84) 24 3850 1686</a>
                             </div>
                         </div>
@@ -165,10 +165,10 @@
                             <div>
                                 <p class="font-semibold text-lg">{{ __('Office Address') }}</p>
                                 <p class="">
-                                    {{ __('HCMC: 14th Floor, Pearl Plaza Building, 561A Dien Bien Phu Street, Ward 25, Binh Thanh District, HCMC') }}
+                                    {!! __('<b>HCMC</b>: 14th Floor, Pearl Plaza Building, 561A Dien Bien Phu Street, Ward 25, Binh Thanh District, HCMC') !!}
                                 </p>
                                 <p>
-                                    {{ __('HN: 18th Floor, Hoa Binh International Office Building, 106 Hoang Quoc Viet Street, Nghia Do Ward, Cau Giay District, Hanoi') }}
+                                    {!! __('<b>HN</b>: 18th Floor, Hoa Binh International Office Building, 106 Hoang Quoc Viet Street, Nghia Do Ward, Cau Giay District, Hanoi') !!}
                                 </p>
                             </div>
                         </div>

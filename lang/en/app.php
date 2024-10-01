@@ -10,5 +10,6 @@ return
         "intro"=>"Whether you're interested in our services or you want to find one of our experts in your local area, we'll put you in touch with the right team",
 
     ],
-    "footerMessage"=>"Our team of experts looks forward to collaborating and providing practical consulting projects along with comprehensive technology solutions for customers, promoting business management and operations in the rapid technological transformation of today's 4.0 era."
+    "footerMessage1"=>"<b>Grant Thornton<b> is a network of independent firms providing Audit, Tax Advisory, Business Advisory and Business Solutions services, with 73,000 people in more than 149 markets.",
+    "footerMessage2"=>"We are always ready to support dynamic businesses to exploit their growth potential."
 ];
