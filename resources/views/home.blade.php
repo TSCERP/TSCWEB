@@ -126,7 +126,7 @@
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
-                        'text' => __('Korean Desk'),
+                        'text' => __('Japanese Desk'),
                         'description' => __('Grant Thornton is one of leading service providers in international incorporations in Vietnam with experience in helping our clients navigate jurisdictions...'),
                         'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/',
                     ],

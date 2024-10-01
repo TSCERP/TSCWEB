@@ -145,7 +145,7 @@ $nextTick(() => {
                                 </div>
                                 <div class="flex flex-col">
                                     <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('Korean and Japanese Desk') }}
+                                        {{ __('Japanese Desk') }}
                                     </a>
 
                                 </div>
@@ -357,7 +357,7 @@ $nextTick(() => {
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Korean Desk') }}</a>
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Japanese Desk') }}</a>
                             </li>
                         </ul>
                     </li>
