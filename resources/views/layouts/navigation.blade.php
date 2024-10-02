@@ -169,8 +169,8 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/">
-                                    {{-- <a href="{{ route('solution.sapb1') }}"> --}}
+                                    <a href="{{ route('solution.sapb1') }}">
+                                    {{-- <a href="/"> --}}
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('SAP Business One') }}
                                         </h4>
@@ -381,8 +381,8 @@ $nextTick(() => {
                         </button>
                         <ul id="solution-menu-mobile" x-show="openSolution" class="py-2 space-y-2">
                             <li>
-                                {{-- <a href="{{ route('solution.sapb1') }}" --}}
-                                <a href="/"
+                                <a href="{{ route('solution.sapb1') }}"
+                                {{-- <a href="/" --}}
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SAP Business One') }}</a>
                             </li>
                             <li>
