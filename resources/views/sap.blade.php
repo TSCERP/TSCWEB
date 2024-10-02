@@ -667,7 +667,7 @@
                                         <span class="font-bold text-5xl">299</span>
                                         {{-- <span class="font-bold">/month</span> --}}
                                     </div>
-                                    <div class="flex flex-col items-center gap-4">
+                                    <div class="flex flex-col gap-4">
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
@@ -751,7 +751,7 @@
                                         <span class="font-bold text-5xl">566</span>
                                         {{-- <span class="font-bold">/{{ __('month') }}</span> --}}
                                     </div>
-                                    <div class="flex flex-col items-center gap-4">
+                                    <div class="flex flex-col gap-4">
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
@@ -844,10 +844,10 @@
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="font-bold">USD</span>
-                                        <span class="font-bold text-5xl">3000</span>
+                                        <span class="font-bold text-5xl">3,000</span>
                                         {{-- <span class="font-bold">/month</span> --}}
                                     </div>
-                                    <div class="flex flex-col items-center gap-4">
+                                    <div class="flex flex-col gap-4">
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
@@ -874,9 +874,8 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
                                                 <g fill="#000" stroke="#fff" stroke-width="2">
-                                                    <circle cx="12" cy="12" r="9"></circle>
-                                                    <path d="M8 8L16 16"></path>
-                                                    <path d="M16 8L8 16"></path>
+                                                    <circle cx="12" cy="12" r="9" />
+                                                    <path d="m8 12l3 3l5-6" />
                                                 </g>
                                             </svg>
 
@@ -886,9 +885,8 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
                                                 <g fill="#000" stroke="#fff" stroke-width="2">
-                                                    <circle cx="12" cy="12" r="9"></circle>
-                                                    <path d="M8 8L16 16"></path>
-                                                    <path d="M16 8L8 16"></path>
+                                                    <circle cx="12" cy="12" r="9" />
+                                                    <path d="m8 12l3 3l5-6" />
                                                 </g>
                                             </svg>
                                             <span
@@ -896,20 +894,18 @@
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                                                viewBox="0 0 24 24" class="text-icon-main">
-                                                <g fill="#000" stroke="#fff" stroke-width="2">
-                                                    <circle cx="12" cy="12" r="9"></circle>
-                                                    <path d="M8 8L16 16"></path>
-                                                    <path d="M16 8L8 16"></path>
-                                                </g>
-                                            </svg>
+                                            viewBox="0 0 24 24" class="text-icon-main">
+                                            <g fill="#000" stroke="#fff" stroke-width="2">
+                                                <circle cx="12" cy="12" r="9" />
+                                                <path d="m8 12l3 3l5-6" />
+                                            </g>
+                                        </svg>
                                             <span class="text-sm font-medium">{{ __('Production and MRP') }}</span>
                                         </div>
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Choose
-                                            Plan</button>
+                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{__('Choose Plan')}}</button>
                                     </div>
                                 </div>
                             </article>
@@ -934,7 +930,7 @@
                                         <span class="font-bold text-5xl">5000</span>
                                         {{-- <span class="font-bold">/{{ __('month') }}</span> --}}
                                     </div>
-                                    <div class="flex flex-col items-center gap-4">
+                                    <div class="flex flex-col gap-4">
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
@@ -944,7 +940,7 @@
                                                 </g>
                                             </svg>
                                             <span
-                                                class="text-sm font-medium">{{ __('Fully Dashboard and Reporting') }}</span>
+                                                class="text-sm font-medium">{{ __('Accounting and Financials') }}</span>
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -955,7 +951,7 @@
                                                 </g>
                                             </svg>
                                             <span
-                                                class="text-sm font-medium">{{ __('Connect with more information system') }}</span>
+                                                class="text-sm font-medium">{{ __('Purchasing and Operations') }}</span>
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -965,7 +961,7 @@
                                                     <path d="m8 12l3 3l5-6" />
                                                 </g>
                                             </svg>
-                                            <span class="text-sm font-medium">{{ __('Customizations') }}</span>
+                                            <span class="text-sm font-medium">{{ __('Sales and Services') }}</span>
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
@@ -976,13 +972,23 @@
                                                 </g>
                                             </svg>
                                             <span
-                                                class="text-sm font-medium">{{ __('Best Offer Additional Services') }}</span>
+                                                class="text-sm font-medium">{{ __('Inventory and Distribution') }}</span>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                                viewBox="0 0 24 24" class="text-icon-main">
+                                                <g fill="#000" stroke="#fff" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="9" />
+                                                    <path d="m8 12l3 3l5-6" />
+                                                </g>
+                                            </svg>
+                                            <span
+                                                class="text-sm font-medium">{{ __('Production and MRP') }}</span>
                                         </div>
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">Choose
-                                            Plan</button>
+                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{__("Choose Plan")}}</button>
                                     </div>
                             </article>
                         </div>
