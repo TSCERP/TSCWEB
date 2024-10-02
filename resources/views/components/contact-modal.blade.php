@@ -140,7 +140,7 @@ $watch('show', value => {
     <div x-show="show"
         class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-2xl sm:mx-auto
                max-h-[calc(100vh-4rem)] max-w-full w-full mx-auto modal-container relative">
-        <div class="fixed top-0 left-0 flex justify-between items-center w-full h-fit bg-white px-4 py-2 z-10 shadow">
+        <div class="fixed top-0 left-0 flex justify-between items-center w-full h-fit bg-white px-4 py-2 z-[10001] shadow">
             <div class="flex gap-3 items-center justify-center">
                 <h2 class="text-lg font-semibold text-gray-800">{{ __('Get In Touch With Us') }}</h2>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
