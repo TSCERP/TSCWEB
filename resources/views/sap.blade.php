@@ -28,12 +28,12 @@
                     <span data-aos="fade-up"
                         class="md:text-xl font-medium text-center text-white leading-loose">{{ __('ERP solutions for small and medium-sized businesses') }}
                         <br> {{ __('Use the way +75,000 businesses around the world are using') }}.</span>
-                    <div class="flex gap-8">
+                    <div class="flex flex-col smallPhone:flex-row gap-4 smallPhone:gap-8">
                         <button data-aos="fade-right"
                             onclick="document.getElementById('popular-flatform-section').scrollIntoView({ behavior: 'smooth' });"
-                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Get Started') }}</button>
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4 text-nowrap">{{ __('Get Started') }}</button>
                         <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                            class="rounded-full font-semibold px-6 py-4 bg-white border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200">{{ __('Register Trial') }}
+                            class="rounded-full font-semibold px-6 py-4 bg-white border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200 text-nowrap">{{ __('Register Trial') }}
                             ›</button>
                     </div>
                     <div
@@ -53,7 +53,7 @@
             <div id="popular-flatform-section"
                 class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
                 <div
-                    class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
+                    class="relative flex-1 flex flex-col gap-8 before:absolute before:top-24 smallPhone:before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
                     <h3 data-aos="fade-up"
                         class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
                         {!! __("The world's most popular <br> management platform") !!}</h3>
@@ -113,7 +113,7 @@
                 </div>
 
                 <div id="slide-up-animation" class="w-full md:w-1/2 relative">
-                    <img class="h-full rounded-3xl object-cover md:absolute md:-bottom-[110px]"
+                    <img class="w-full rounded-3xl object-cover md:absolute md:-bottom-[110px]"
                         style="height: -webkit-fill-available"
                         src="{{ asset('assets/images/sap-dashboard-illustration.png') }}" alt="erp-solution">
                 </div>
@@ -298,7 +298,8 @@
                         class="text-4xl flex-1 md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
                         {{ __('User interface') }}</h1>
                     <div class="flex flex-col flex-start justify-evenly gap-4 flex-1">
-                        <span data-aos="fade-up" class="text-lg">{{ __('User-friendly and customizable interface for quick performance monitoring') }}.</span>
+                        <span data-aos="fade-up"
+                            class="text-lg">{{ __('User-friendly and customizable interface for quick performance monitoring') }}.</span>
                         <div>
                             <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
                                 class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Register Trial') }}
@@ -361,26 +362,36 @@
                         </span>
                         <span data-aos="fade-up" class="text-lg">
                             {{ __('The flexibility and integration capabilities of the system allow businesses to adapt quickly to changing markets. As a result, businesses not only operate efficiently but also develop sustainably in the future') }}.</span>
-                        <div class="flex gap-4 mt-3">
-                            <div>
-                                <a target="_blank" href="https://play.google.com/store/apps/developer?id=SAP+SE&hl=vi&pli=1">
-                                    <button data-aos="fade-up" 
-                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 h-[44.3px] flex gap-4 justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
-                                        <path fill="currentColor" d="M13.14 6.25c-.47 0-.86.39-.86.87v3.5c0 .48.39.88.86.88s.86-.39.86-.88v-3.5c0-.48-.39-.87-.86-.87m-10.29 0c-.47 0-.86.39-.86.87v3.5c0 .48.39.88.86.88s.86-.39.86-.88v-3.5c0-.48-.39-.87-.86-.87m1.29 4.81c0 .35.14.68.38.93s.57.38.91.38v1.75c0 .48.39.88.86.88s.86-.39.86-.88v-1.75h1.71v1.75c0 .48.39.88.86.88s.86-.39.86-.88v-1.75c.34 0 .67-.14.91-.38c.24-.25.38-.58.38-.93V6.25H4.14zm7.69-5.69c-.06-.58-.25-1.14-.55-1.63c-.3-.5-.7-.92-1.18-1.23l.43-.88c.05-.1.06-.22.02-.33a.42.42 0 0 0-.22-.25a.42.42 0 0 0-.33-.02c-.11.04-.2.12-.25.22l-.43.88l-.11-.05c-.79-.27-1.64-.27-2.43 0l-.11.05l-.43-.88a.45.45 0 0 0-.25-.22a.42.42 0 0 0-.33.02c-.1.05-.18.14-.22.25a.42.42 0 0 0 .02.33l.43.88c-.48.32-.88.74-1.18 1.23c-.3.5-.49 1.05-.55 1.63v.44h7.69v-.44zM6.71 4.5c-.11 0-.22-.05-.3-.13a.44.44 0 0 1-.13-.31c0-.12.04-.23.13-.31c.08-.08.19-.13.3-.13s.22.05.3.13s.13.19.13.31s-.05.23-.13.31s-.19.13-.3.13m2.57 0c-.11 0-.22-.05-.3-.13a.44.44 0 0 1-.13-.31c0-.12.04-.23.13-.31c.08-.08.19-.13.3-.13s.22.05.3.13s.13.19.13.31s-.05.23-.13.31s-.19.13-.3.13" />
-                                    </svg> Google Play</button>
+                        <div class="flex flex-col items-center md:items-start md:flex-row gap-4 mt-3">
+                            <div class="flex gap-4">
+                                <div>
+                                    <a target="_blank"
+                                        href="https://play.google.com/store/apps/developer?id=SAP+SE&hl=vi&pli=1">
+                                        <button data-aos="fade-up"
+                                            class="rounded-full text-white bg-bg-btn text-nowrap font-semibold px-6 h-[44.3px] flex gap-4 justify-center items-center"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                                viewBox="0 0 16 16">
+                                                <path fill="currentColor"
+                                                    d="M13.14 6.25c-.47 0-.86.39-.86.87v3.5c0 .48.39.88.86.88s.86-.39.86-.88v-3.5c0-.48-.39-.87-.86-.87m-10.29 0c-.47 0-.86.39-.86.87v3.5c0 .48.39.88.86.88s.86-.39.86-.88v-3.5c0-.48-.39-.87-.86-.87m1.29 4.81c0 .35.14.68.38.93s.57.38.91.38v1.75c0 .48.39.88.86.88s.86-.39.86-.88v-1.75h1.71v1.75c0 .48.39.88.86.88s.86-.39.86-.88v-1.75c.34 0 .67-.14.91-.38c.24-.25.38-.58.38-.93V6.25H4.14zm7.69-5.69c-.06-.58-.25-1.14-.55-1.63c-.3-.5-.7-.92-1.18-1.23l.43-.88c.05-.1.06-.22.02-.33a.42.42 0 0 0-.22-.25a.42.42 0 0 0-.33-.02c-.11.04-.2.12-.25.22l-.43.88l-.11-.05c-.79-.27-1.64-.27-2.43 0l-.11.05l-.43-.88a.45.45 0 0 0-.25-.22a.42.42 0 0 0-.33.02c-.1.05-.18.14-.22.25a.42.42 0 0 0 .02.33l.43.88c-.48.32-.88.74-1.18 1.23c-.3.5-.49 1.05-.55 1.63v.44h7.69v-.44zM6.71 4.5c-.11 0-.22-.05-.3-.13a.44.44 0 0 1-.13-.31c0-.12.04-.23.13-.31c.08-.08.19-.13.3-.13s.22.05.3.13s.13.19.13.31s-.05.23-.13.31s-.19.13-.3.13m2.57 0c-.11 0-.22-.05-.3-.13a.44.44 0 0 1-.13-.31c0-.12.04-.23.13-.31c.08-.08.19-.13.3-.13s.22.05.3.13s.13.19.13.31s-.05.23-.13.31s-.19.13-.3.13" />
+                                            </svg> Google Play</button>
                                     </a>
-                            </div>
-                            <div>
-                                <a target="_blank" href="https://apps.apple.com/vn/developer/sap-se/id391959547?l=vi">
-                                    <button data-aos="fade-up" 
-                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 h-[44.3px] flex gap-4 justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25" />
-                                    </svg> App Store</button>
+                                </div>
+                                <div>
+                                    <a target="_blank"
+                                        href="https://apps.apple.com/vn/developer/sap-se/id391959547?l=vi">
+                                        <button data-aos="fade-up"
+                                            class="rounded-full text-white bg-bg-btn text-nowrap font-semibold px-6 h-[44.3px] flex gap-4 justify-center items-center"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25" />
+                                            </svg> App Store</button>
                                     </a>
+                                </div>
                             </div>
                             <div data-aos="fade-up" class="w-fit">
                                 <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                                    class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn h-[44.3px]">{{ __('Register Trial') }}</button>
+                                    class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn h-[44.3px] text-nowrap">{{ __('Register Trial') }}</button>
                             </div>
                         </div>
                     </div>
@@ -656,8 +667,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="xl:w-auto w-8/12 self-start xl:self-auto">
-                        <div class="flex flex-row flex-nowrap -gap-2 w-full justify-center items-center mt-8 sm:mt-12 relative"
+                    <div class="xl:w-auto mx-auto md:mx-0 w-8/12 self-start xl:self-auto">
+                        <div class="flex flex-col items-center md:items-start gap-8 md:flex-row flex-nowrap md:-gap-2 w-full justify-center items-center mt-8 sm:mt-12 md:relative"
                             id="tabpanel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1"
                             x-show="activeTab === 1" x-transition:enter="transition ease duration-500 transform"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
@@ -734,12 +745,13 @@
                                         </div>
                                     </div>
                                     <div class="block mx-auto">
-                                        <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
+                                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4"
+                                            x-data
+                                            @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                                 </div>
                             </article>
-                            <article class="w-[350px] absolute left-[73%] xl:left-[98%] -top-8 transform">
+                            <article class="w-[350px] md:absolute md:left-[73%] md:xl:left-[98%] md:-top-8 md:transform">
                                 <div
                                     class="group flex flex-col gap-10 items-center p-8 bg-border-main text-white rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                                     <div>
@@ -816,16 +828,16 @@
                                         </div>
                                     </div>
                                     <div class="block mx-auto">
-                                        <button
-                                            class="rounded-full bg-white text-text-primary font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
+                                        <button class="rounded-full bg-white text-text-primary font-semibold px-6 py-4"
+                                            x-data
+                                            @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                             </article>
                         </div>
-                        <div class="flex flex-row flex-nowrap -gap-2 w-full justify-center gap-12 mt-8 sm:mt-12 relative"
+                        <div class="flex flex-col items-center md:items-start gap-8 md:flex-row flex-nowrap md:-gap-2 w-full justify-center gap-12 mt-8 sm:mt-12 md:relative"
                             id="tabpanel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2"
                             x-show="activeTab === 2" x-transition:enter="transition ease duration-500 transform"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-
                             <article class="w-[350px]">
                                 <div
                                     class="group flex flex-col gap-8 items-center p-8 bg-white shadow-[rgba(92,_60,_151,_0.1)_0px_5px_20px] rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
@@ -849,7 +861,7 @@
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="font-bold">USD</span>
-                                        <span class="font-bold text-5xl">3000</span>
+                                        <span class="font-bold text-5xl">3,000</span>
                                         {{-- <span class="font-bold">/month</span> --}}
                                     </div>
                                     <div class="flex flex-col gap-4">
@@ -899,12 +911,13 @@
                                         </div>
                                     </div>
                                     <div class="block mx-auto">
-                                        <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
+                                        <button class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4"
+                                            x-data
+                                            @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                                 </div>
                             </article>
-                            <article class="w-[350px] absolute left-[73%] xl:left-[98%] -top-8 transform">
+                            <article class="w-[350px] md:absolute md:left-[73%] md:xl:left-[98%] md:-top-8 transform">
                                 <div
                                     class="group flex flex-col gap-10 items-center p-8 bg-border-main text-white rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                                     <div>
@@ -922,7 +935,7 @@
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="font-bold">USD</span>
-                                        <span class="font-bold text-5xl">5000</span>
+                                        <span class="font-bold text-5xl">5,000</span>
                                         {{-- <span class="font-bold">/{{ __('month') }}</span> --}}
                                     </div>
                                     <div class="flex flex-col gap-4">
@@ -981,8 +994,9 @@
                                         </div>
                                     </div>
                                     <div class="block mx-auto">
-                                        <button
-                                            class="rounded-full bg-white text-text-primary font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
+                                        <button class="rounded-full bg-white text-text-primary font-semibold px-6 py-4"
+                                            x-data
+                                            @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                             </article>
                         </div>
@@ -1353,12 +1367,15 @@
                 x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
                 x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200"
                 x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-                x-on:keydown.escape.window="videoPopup = false; video?.pause(); video.currentTime = 0">>
+                x-on:keydown.escape.window="videoPopup = false; video?.pause(); video.currentTime = 0">
+                <button @click="videoPopup = false; video?.pause(); video.currentTime = 0"
+                        class="absolute px-2.5 rounded-full aspect-1 top-2 right-2 text-white bg-[#c9c8c892] text-xl block lg:hidden">
+                        &times;
+                    </button>
 
-                <div class="bg-white rounded-lg shadow-lg w-full max-w-3xl relative">
-
+                <div class="bg-white rounded-lg shadow-lg w-full max-w-3xl lg:relative">
                     <button @click="videoPopup = false; video?.pause(); video.currentTime = 0"
-                        class="absolute px-2.5 rounded-full aspect-1 -top-8 -right-6 text-white hover:bg-[#7b7b7b60] text-xl">
+                        class="absolute hidden lg:block px-2.5 rounded-full aspect-1 -top-8 -right-6 text-white hover:bg-[#7b7b7b60] text-xl">
                         &times;
                     </button>
                     <div class="p-1 md:p-4">

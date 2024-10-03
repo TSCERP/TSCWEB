@@ -104,6 +104,7 @@ export default {
             },
             screens: {
                 'phone': '480px',
+                'smallPhone': '400px',
                 'tablet2': '900px',
             },
         },
