@@ -48,11 +48,8 @@
                 <div class="flex flex-col gap-3">
                     <h5 class="uppercase font-bold text-lg md:font-semibold mb-0 mt-4 md:mt-0 md:mb-4">{{__('Company information')}}</h5>
                     <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Home page')}}</a>
+                    <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Service')}}</a>
                     <a href="/about-us" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Contact Us')}}</a>
-                    <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">SAP Business One</a>
-                    <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">Oracle Netsuite</a>
-                    <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Dashboard BI Reporting')}}</a>
-                    <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Career')}}</a>
                 </div>
             </div>
         </div>

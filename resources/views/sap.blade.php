@@ -30,10 +30,10 @@
                         <br> {{ __('Use the way +75,000 businesses around the world are using') }}.</span>
                     <div class="flex gap-8">
                         <button data-aos="fade-right"
-                            onclick="document.getElementById('service-section').scrollIntoView({ behavior: 'smooth' });"
+                            onclick="document.getElementById('popular-flatform-section').scrollIntoView({ behavior: 'smooth' });"
                             class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Get Started') }}</button>
                         <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                            class="rounded-full font-semibold px-6 py-4 bg-white border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200">{{ __('Demo') }}
+                            class="rounded-full font-semibold px-6 py-4 bg-white border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200">{{ __('Register Trial') }}
                             ›</button>
                     </div>
                     <div
@@ -50,7 +50,7 @@
         </section>
 
         <section>
-            <div
+            <div id="popular-flatform-section"
                 class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
                 <div
                     class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
@@ -108,7 +108,7 @@
                     </ul>
                     <div data-aos="fade-up" class="w-fit">
                         <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Demo') }}</button>
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Register Trial') }}</button>
                     </div>
                 </div>
 
@@ -281,8 +281,8 @@
                                 <p class="w-11/12 line-clamp-[9] h-[216px]">{{ $feature['content'] }}</p>
                             </div>
                             <div class="h-fit w-fit flex">
-                                <a href="{{ $feature['link'] }}"
-                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</a>
+                                <button @click="$dispatch('open-modal', 'contact-modal')"
+                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                             </div>
                         </div>
                     @endforeach
@@ -298,12 +298,10 @@
                         class="text-4xl flex-1 md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed">
                         {{ __('User interface') }}</h1>
                     <div class="flex flex-col flex-start justify-evenly gap-4 flex-1">
-                        <span data-aos="fade-up" class="text-lg">Giao diện trực quan, thân thiện, tương tác người dùng
-                            tối
-                            ưu.</span>
+                        <span data-aos="fade-up" class="text-lg">{{ __('User-friendly and customizable interface for quick performance monitoring') }}.</span>
                         <div>
                             <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                                class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Demo') }}
+                                class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Register Trial') }}
                                 ›</button>
                         </div>
                     </div>
@@ -363,6 +361,24 @@
                         </span>
                         <span data-aos="fade-up" class="text-lg">
                             {{ __('The flexibility and integration capabilities of the system allow businesses to adapt quickly to changing markets. As a result, businesses not only operate efficiently but also develop sustainably in the future') }}.</span>
+                        <div class="flex gap-4 mt-3">
+                            <div>
+                                <a href="https://play.google.com/store/apps/developer?id=SAP+SE&hl=vi&pli=1"><img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSv479P9YVGLOLcKO-lyUEOUTzgY44actorw&s"
+                                        width="150" height="60" alt="Get it on Google Play"
+                                        border="0"></a>
+                            </div>
+                            <div>
+                                <a href="https://apps.apple.com/vn/developer/sap-se/id391959547?l=vi"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+                                        width="150" height="60" alt="Get it on Google Play"
+                                        border="0"></a>
+                            </div>
+                            <div data-aos="fade-up" class="w-fit">
+                                <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
+                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 h-[44.3px]">{{ __('Register Trial') }}</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="basis-1/2" data-aos="fade-up">
                         <img src="{{ asset('assets/images/sap-diverse-application-env.png') }}"
@@ -498,7 +514,9 @@
                         class="text-4xl md:text-5xl font-bold leading-snug md:leading-normal lg:leading-relaxed text-white flex-1">
                         {{ __('Project implementation roadmap') }}</h1>
                     <div class="flex flex-col flex-start justify-evenly gap-4 flex-1">
-                        <span data-aos="fade-up" class="text-lg text-white">{!! "The <b>\"SAP Activate\"</b> deployment method provides a flexible, step-by-step approach to ensure an efficient and successful deployment" !!}.</span>
+                        <span data-aos="fade-up" class="text-lg text-white">{!! __(
+                            'The <b>"SAP Activate"</b> deployment method provides a flexible, step-by-step approach to ensure an efficient and successful deployment',
+                        ) !!}.</span>
                         <div>
                             <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
                                 class="rounded-full bg-white text-text-primary font-semibold px-6 py-4">{{ __('Register Consultation') }}
@@ -547,7 +565,7 @@
                 </div> --}}
 
                     <div
-                        class="rounded-2xl cursor-default flex flex-col gap-6 hover:bg-[#3D1473] px-4 py-6 duration-100 ease-linear">
+                        class="rounded-2xl cursor-default flex flex-col gap-6 hover:bg-[#3D1473] px-4 py-6 duration-100 delay-400 ease-linear">
                         <div class="flex justify-center md:block">
                             <div
                                 class="font-bold text-xl aspect-1 rounded-full w-12 h-12 p-3 bg-white flex items-center justify-center text-center">
@@ -559,7 +577,7 @@
                             {{ __('Conduct surveys of the needs of each category in each department') }}.</p>
                     </div>
                     <div
-                        class="rounded-2xl cursor-default flex flex-col gap-6 hover:bg-[#3D1473] px-4 py-6 duration-100 ease-linear">
+                        class="rounded-2xl cursor-default flex flex-col gap-6 hover:bg-[#3D1473] px-4 py-6 duration-100 delay-400 ease-linear">
                         <div class="flex justify-center md:block">
                             <div
                                 class="font-bold text-xl aspect-1 rounded-full w-12 h-12 p-3 bg-white flex items-center justify-center text-center">
@@ -601,47 +619,45 @@
 
         <section>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 mt-8 md:mt-12">
-                <div class="relative flex flex-col items-center pb-12 sm:pb-24 overflow-y-hidden">
-                    <img data-aos="fade-down" class="w-12 absolute top-8 left-1 sm:top-24 sm:left-4"
-                        src="{{ asset('assets/images/banner-item-chat.webp') }}" alt="chat-with-us">
-                    <img data-aos="fade-down" class="w-8 sm:w-10 absolute top-16 right-1 sm:top-24 sm:right-4"
-                        src="{{ asset('assets/images/banner-item-lightning.webp') }}" alt="fast-erp">
-                    <h1 data-aos="fade-down" class="text-4xl md:text-5xl font-bold mt-4 sm:mt-0">
-                        {{ __('Price List') }}
-                    </h1>
-                    <p data-aos="fade-down" class="max-w-1/2 text-center text-wrap mt-8 font-medium">
-                        {{ __('Let us help you access SAP solutions more easily') }}.</p>
-                    <div x-data="{ activeTab: 1 }">
-                        <div class="flex justify-center">
+                <div class="relative flex flex-col xl:flex-row items-center gap-8 md:gap-16 lg:gap-28 pb-12 sm:pb-24 overflow-y-hidden mt-4"
+                    x-data="{ activeTab: 1 }">
+                    <div class="flex flex-col items-center xl:items-start gap-6">
+                        <div>
+                            <span id="feature"
+                                class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Best offer on the market') }}</span>
+                        </div>
+                        <h1 data-aos="fade-down" class="text-4xl md:text-5xl font-bold mt-4">
+                            {{ __('Price List') }}
+                        </h1>
+                        <p data-aos="fade-down" class="max-w-1/2 text-wrap font-medium">
+                            {{ __('Let us help you access SAP solutions more easily') }}.</p>
+                        <div class="flex justify-start">
                             <div role="tablist"
-                                class=" inline-flex flex-wrap justify-center bg-slate-200 rounded-[20px] p-1 mt-4"
+                                class="inline-flex flex-wrap justify-center bg-white rounded-[40px] px-3 py-1.5 mt-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
                                 @keydown.right.prevent.stop="$focus.wrap().next()"
                                 @keydown.left.prevent.stop="$focus.wrap().prev()"
                                 @keydown.home.prevent.stop="$focus.first()" @keydown.end.prevent.stop="$focus.last()">
                                 <button id="tab-1"
-                                    class="flex-1 text-lg font-medium h-10 px-4 rounded-2xl whitespace-nowrap focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150 ease-in-out"
-                                    :class="activeTab === 1 ? 'bg-white text-slate-900' : 'text-slate-600 hover:text-slate-900'"
+                                    class="flex-1 text-lg font-medium h-10 px-6 py-1 rounded-3xl whitespace-nowrap focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150 ease-in-out"
+                                    :class="activeTab === 1 ? 'bg-bg-btn text-white' : 'text-slate-600 hover:text-slate-900'"
                                     :tabindex="activeTab === 1 ? 0 : -1" :aria-selected="activeTab === 1"
                                     aria-controls="tabpanel-1" @click="activeTab = 1"
                                     @focus="activeTab = 1">{{ __('Per month') }}</button>
                                 <button id="tab-2"
-                                    class="flex-1 text-lg font-medium h-10 px-4 rounded-2xl whitespace-nowrap focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150 ease-in-out"
-                                    :class="activeTab === 2 ? 'bg-white text-slate-900' : 'text-slate-600 hover:text-slate-900'"
+                                    class="flex-1 text-lg font-medium h-10 px-6 py-1 rounded-3xl whitespace-nowrap focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150 ease-in-out"
+                                    :class="activeTab === 2 ? 'bg-bg-btn text-white' : 'text-slate-600 hover:text-slate-900'"
                                     :tabindex="activeTab === 2 ? 0 : -1" :aria-selected="activeTab === 2"
                                     aria-controls="tabpanel-2" @click="activeTab = 2"
                                     @focus="activeTab = 2">{{ __('Yearly') }}</button>
                             </div>
                         </div>
-                        <div class="flex flex-row flex-wrap w-full justify-center gap-12 mt-8 sm:mt-12"
+                    </div>
+                    <div class="xl:w-auto w-8/12 self-start xl:self-auto">
+                        <div class="flex flex-row flex-nowrap -gap-2 w-full justify-center items-center mt-8 sm:mt-12 relative"
                             id="tabpanel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1"
-                            x-show="activeTab === 1"
-                            x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 transform"
-                            x-transition:enter-start="opacity-0 -translate-x-8"
-                            x-transition:enter-end="opacity-100 translate-x-0"
-                            x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-300 transform absolute"
-                            x-transition:leave-start="opacity-100 translate-x-0"
-                            x-transition:leave-end="opacity-0 translate-x-8">
-                            <article data-aos="fade-up" data-aos-delay="200" class="w-[350px]">
+                            x-show="activeTab === 1" x-transition:enter="transition ease duration-500 transform"
+                            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                            <article class="w-[350px]">
                                 <div
                                     class="group flex flex-col gap-8 items-center p-8 bg-white shadow-[rgba(92,_60,_151,_0.1)_0px_5px_20px] rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                                     <div>
@@ -657,7 +673,7 @@
                                         </svg>
                                     </div>
                                     <div class="flex flex-col justify-center items-center gap-8">
-                                        <h2 class="text-3xl font-bold text-center">{{ __('Personal') }}</h2>
+                                        <h2 class="text-3xl font-bold text-center">{{ __('Basic') }}</h2>
                                         <p class="text-lg font-semibol text-center">
                                             5 {{ __('users') }}.
                                         </p>
@@ -712,17 +728,6 @@
                                             <span
                                                 class="text-sm font-medium">{{ __('Inventory and Distribution') }}</span>
                                         </div>
-                                        <div class="flex items-center gap-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                                                viewBox="0 0 24 24" class="text-icon-main">
-                                                <g fill="#000" stroke="#fff" stroke-width="2">
-                                                    <circle cx="12" cy="12" r="9"></circle>
-                                                    <path d="M8 8L16 16"></path>
-                                                    <path d="M16 8L8 16"></path>
-                                                </g>
-                                            </svg>
-                                            <span class="text-sm font-medium">{{ __('Production and MRP') }}</span>
-                                        </div>
                                     </div>
                                     <div class="block mx-auto">
                                         <button
@@ -730,9 +735,9 @@
                                     </div>
                                 </div>
                             </article>
-                            <article data-aos="fade-up" data-aos-delay="400" class="w-[350px]">
+                            <article class="w-[350px] absolute left-[73%] xl:left-[98%] -top-8 transform">
                                 <div
-                                    class="group flex flex-col gap-8 items-center p-8 bg-border-main text-white rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
+                                    class="group flex flex-col gap-10 items-center p-8 bg-border-main text-white rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem"
                                             viewBox="0 0 24 24">
@@ -795,7 +800,7 @@
                                             <span
                                                 class="text-sm font-medium">{{ __('Inventory and Distribution') }}</span>
                                         </div>
-                                        <div class="flex items-center gap-4">
+                                        {{-- <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
                                                 <g fill="#000" stroke="#fff" stroke-width="2">
@@ -804,7 +809,7 @@
                                                 </g>
                                             </svg>
                                             <span class="text-sm font-medium">{{ __('Production and MRP') }}</span>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <div class="block mx-auto">
                                         <button
@@ -812,16 +817,12 @@
                                     </div>
                             </article>
                         </div>
-                        <div class="flex flex-row flex-wrap w-full justify-center gap-12 mt-8 sm:mt-12"
+                        <div class="flex flex-row flex-nowrap -gap-2 w-full justify-center gap-12 mt-8 sm:mt-12 relative"
                             id="tabpanel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2"
-                            x-show="activeTab === 2"
-                            x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 transform"
-                            x-transition:enter-start="opacity-0 translate-x-8"
-                            x-transition:enter-end="opacity-100 translate-x-0"
-                            x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-300 transform absolute"
-                            x-transition:leave-start="opacity-100 translate-x-0"
-                            x-transition:leave-end="opacity-0 -translate-x-8">
-                            <article data-aos="fade-up" data-aos-delay="200" class="w-[350px]">
+                            x-show="activeTab === 2" x-transition:enter="transition ease duration-500 transform"
+                            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+
+                            <article class="w-[350px]">
                                 <div
                                     class="group flex flex-col gap-8 items-center p-8 bg-white shadow-[rgba(92,_60,_151,_0.1)_0px_5px_20px] rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                                     <div>
@@ -837,14 +838,14 @@
                                         </svg>
                                     </div>
                                     <div class="flex flex-col justify-center items-center gap-8">
-                                        <h2 class="text-3xl font-bold text-center">{{ __('Personal') }}</h2>
+                                        <h2 class="text-3xl font-bold text-center">{{ __('Basic') }}</h2>
                                         <p class="text-lg font-semibol text-center">
                                             5 {{ __('users') }}.
                                         </p>
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="font-bold">USD</span>
-                                        <span class="font-bold text-5xl">3,000</span>
+                                        <span class="font-bold text-5xl">3000</span>
                                         {{-- <span class="font-bold">/month</span> --}}
                                     </div>
                                     <div class="flex flex-col gap-4">
@@ -892,26 +893,16 @@
                                             <span
                                                 class="text-sm font-medium">{{ __('Inventory and Distribution') }}</span>
                                         </div>
-                                        <div class="flex items-center gap-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                                            viewBox="0 0 24 24" class="text-icon-main">
-                                            <g fill="#000" stroke="#fff" stroke-width="2">
-                                                <circle cx="12" cy="12" r="9" />
-                                                <path d="m8 12l3 3l5-6" />
-                                            </g>
-                                        </svg>
-                                            <span class="text-sm font-medium">{{ __('Production and MRP') }}</span>
-                                        </div>
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{__('Choose Plan')}}</button>
+                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                                     </div>
                                 </div>
                             </article>
-                            <article data-aos="fade-up" data-aos-delay="600" class="w-[350px]">
+                            <article class="w-[350px] absolute left-[73%] xl:left-[98%] -top-8 transform">
                                 <div
-                                    class="group flex flex-col gap-8 items-center p-8 bg-border-main text-white rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
+                                    class="group flex flex-col gap-10 items-center p-8 bg-border-main text-white rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem"
                                             viewBox="0 0 24 24">
@@ -974,7 +965,7 @@
                                             <span
                                                 class="text-sm font-medium">{{ __('Inventory and Distribution') }}</span>
                                         </div>
-                                        <div class="flex items-center gap-4">
+                                        {{-- <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
                                                 <g fill="#000" stroke="#fff" stroke-width="2">
@@ -982,13 +973,12 @@
                                                     <path d="m8 12l3 3l5-6" />
                                                 </g>
                                             </svg>
-                                            <span
-                                                class="text-sm font-medium">{{ __('Production and MRP') }}</span>
-                                        </div>
+                                            <span class="text-sm font-medium">{{ __('Production and MRP') }}</span>
+                                        </div> --}}
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{__("Choose Plan")}}</button>
+                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
                                     </div>
                             </article>
                         </div>
@@ -1315,9 +1305,9 @@
             <div
                 class="relative max-w-7xl mx-auto flex flex-col gap-12 md:flex-row md:gap-44 items-center px-4 sm:px-2 xl:px-0 py-12 sm:py-24">
                 <div class="flex flex-col gap-4 text-white">
-                    <h4 class="text-lg font-medium">{{ __('Xem Video') }}</h4>
-                    <h3 class="text-4xl md:text-5xl font-semibold">{{ __('Giới thiệu SAP Business One') }}</h3>
-                    <p class="">{{ __('Giải pháp ERP toàn diện dành cho doanh nghiệp vừa và nhỏ') }}</p>
+                    <h4 class="text-lg font-medium">{{ __('Watch Video') }}</h4>
+                    <h3 class="text-4xl md:text-5xl font-semibold">{{ __('Introducing SAP Business One') }}</h3>
+                    <p class="">{{ __('Comprehensive ERP solution for small and medium enterprises') }}</p>
                 </div>
                 <div @click="videoPopup = true; $nextTick(() => video = $refs.myVideo); video?.play()">
                     <span

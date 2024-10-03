@@ -5,7 +5,7 @@ return
     "key1"=>"Time-saving, immediate application",
     "key2"=>"Comprehensive management information",
     "key3"=>"Process optimization",
-    "key4"=>"For executives and chief accountants",
+    "key4"=>"Helping businesses operate more effectively and systematically",
     "module1"=>[
         "intro"=>"Whether you're interested in our services or you want to find one of our experts in your local area, we'll put you in touch with the right team",
 

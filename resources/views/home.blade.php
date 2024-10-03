@@ -18,7 +18,7 @@
                         onclick="document.getElementById('service-section').scrollIntoView({ behavior: 'smooth' });"
                         class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Get Started') }}</button>
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
-                        class="rounded-full font-semibold px-6 py-4 border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200">{{ __('Demo') }} ›</button>
+                        class="rounded-full font-semibold px-6 py-4 border border-transparent hover:border hover:border-bg-btn ease-linear transition-all duration-200">{{ __('Register Consultation') }} ›</button>
                 </div>
                 {{-- <div class="flex flex-col sm:flex-row justify-between w-full sm:py-10 relative"> --}}
                 <div class="flex flex-col sm:flex-row justify-center w-full sm:pb-10 relative">
@@ -274,7 +274,7 @@
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-1.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Enterprise Resource Planning') }}</h6>
-                        <button class="text-white duration-200 ease-in">
+                        <button @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
                                 <path fill="currentColor"
@@ -289,7 +289,7 @@
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-3.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Dashboard Reporting') }}</h6>
-                        <button class="text-white duration-200 ease-in">
+                        <button @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
                             <a href="{{ route('solution.dashboard.bi') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                     viewBox="0 0 16 9">
@@ -306,7 +306,7 @@
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-2.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Business Process Solution') }}</h6>
-                        <button class="text-white duration-200 ease-in">
+                        <button @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
                                 <path fill="currentColor"
@@ -361,7 +361,8 @@
                     <p class="text-center w-11/12">
                         {{ __('Integrate and automate business processes to streamline operations, enhance efficiency, and support sustainable growth.') }}</p>
                     <div class="block mx-auto">
-                        <button onclick="window.location.href='{{ route('solution.netsuite') }}'"
+                        {{-- <button onclick="window.location.href='{{ route('solution.netsuite') }}'" --}}
+                        <button @click="$dispatch('open-modal', 'contact-modal')"
                             class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
@@ -376,7 +377,7 @@
                         {{ __('Streamline manufacturing processes and project management to increase productivity and reduce costs.') }}
                     </p>
                     <div class="block mx-auto">
-                        <button
+                        <button @click="$dispatch('open-modal', 'contact-modal')"
                             class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>

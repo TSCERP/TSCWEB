@@ -5,7 +5,7 @@ return
         "key1"=>"Tiết kiệm thời gian, ứng dụng ngay lập tức",
         "key2"=>"Thông tin quản lý toàn diện",
         "key3"=>"Tối ưu hóa quy trình",
-        "key4"=>"Dành cho giám đốc điều hành và kế toán trưởng",
+        "key4"=>"Giúp doanh nghiệp vận hành chặt chẽ hơn",
         "module1"=>[
             "intro"=>"Hãy để chúng tôi hỗ trợ bạn kết nối với chuyên gia gần nhất cùng các dịch vụ liên quan của Grant Thornton",
 

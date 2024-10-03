@@ -50,6 +50,7 @@ $nextTick(() => {
                         $services = __('Services');
                         $solutions = __('Solutions');
                     @endphp
+
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200"
                         :active="request()->routeIs('service')" :dropdown="true" :title="$services" :width="700">
@@ -65,9 +66,10 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('Business Process Solution') }}
-                                    </a>
+                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                         {{ __('Business Process Solution') }}
+                                     </a>
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -75,12 +77,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="{{route('home')}}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Technology Solutions Consulting') }}
                                     </a>
 
@@ -91,12 +92,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Advisory Services') }}
                                     </a>
 
@@ -107,12 +107,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Tax Services') }}
                                     </a>
 
@@ -123,12 +122,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Audit and Assurance') }}
                                     </a>
 
@@ -139,22 +137,26 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Japanese Desk') }}
                                     </a>
 
                                 </div>
                             </div>
-                            <!-- Repeat similar content for other services -->
                         </div>
                     </x-nav-link>
 
                     <x-nav-link
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('home') ? '!font-bold text-border-main' : '' }}"
+                        :href="route('solution.sapb1')" :active="request()->routeIs('solution*')">
+                        {{ __('Solutions') }}
+                    </x-nav-link>
+
+                    {{-- <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200
                         {{ request()->routeIs('solution*') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions" :width="600">
@@ -164,13 +166,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
                                     <a href="{{ route('solution.sapb1') }}">
-                                    {{-- <a href="/"> --}}
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('SAP Business One') }}
                                         </h4>
@@ -182,13 +182,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    {{-- <a href="{{ route('solution.netsuite') }}"> --}}
-                                    <a href="/">
+                                    <a href="{{ route('solution.netsuite') }}">
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Oracle NetSuite') }}
                                         </h4>
@@ -200,13 +198,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/">
-                                    {{-- <a href="{{ route('solution.dashboard.bi') }}"> --}}
+                                    <a href="{{ route('solution.dashboard.bi') }}">
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Business Intelligence') }}
                                         </h4>
@@ -218,13 +214,11 @@ $nextTick(() => {
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="/">
-                                    {{-- <a href="{{ route('solution.travel.expense') }}"> --}}
+                                    <a href="{{ route('solution.travel.expense') }}">
                                         <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                             {{ __('Travel & Expense Management') }}
                                         </h4>
@@ -233,9 +227,9 @@ $nextTick(() => {
 
                                 </div>
                             </div>
-                            <!-- Repeat similar content for other services -->
                         </div>
-                    </x-nav-link>
+                    </x-nav-link> --}}
+
                     <x-nav-link :href="route('about')"
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('about')">
@@ -362,6 +356,15 @@ $nextTick(() => {
                         </ul>
                     </li>
                     <li>
+                        <a href="{{ route('solution.sapb1') }}"
+                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z" />
+                            </svg>
+                            <span class="ms-3 text-text-primary">{{ __('Solutions') }}</span>
+                        </a>
+                    </li>
+                    {{-- <li>
                         <button @click="openSolution = !openSolution"
                             class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                             aria-controls="ecommerce-menu">
@@ -382,26 +385,22 @@ $nextTick(() => {
                         <ul id="solution-menu-mobile" x-show="openSolution" class="py-2 space-y-2">
                             <li>
                                 <a href="{{ route('solution.sapb1') }}"
-                                {{-- <a href="/" --}}
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SAP Business One') }}</a>
                             </li>
                             <li>
-                                {{-- <a href="{{ route('solution.netsuite') }}" --}}
-                                <a href="/"
+                                <a href="{{ route('solution.netsuite') }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Oracle NetSuite') }}</a>
                             </li>
                             <li>
-                                {{-- <a href="{{ route('solution.dashboard.bi') }}" --}}
-                                <a href="/"
+                                <a href="{{ route('solution.dashboard.bi') }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Intelligence') }}</a>
                             </li>
                             <li>
-                                {{-- <a href="{{ route('solution.travel.expense') }}" --}}
-                                <a href="/"
+                                <a href="{{ route('solution.travel.expense') }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Travel & Expense Management') }}</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{ route('about') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
