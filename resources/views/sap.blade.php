@@ -281,7 +281,7 @@
                                 <p class="w-11/12 line-clamp-[9] h-[216px]">{{ $feature['content'] }}</p>
                             </div>
                             <div class="h-fit w-fit flex">
-                                <button @click="$dispatch('open-modal', 'contact-modal')"
+                                <button x-data @click="$dispatch('open-modal', 'contact-modal')"
                                     class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                             </div>
                         </div>
@@ -363,20 +363,24 @@
                             {{ __('The flexibility and integration capabilities of the system allow businesses to adapt quickly to changing markets. As a result, businesses not only operate efficiently but also develop sustainably in the future') }}.</span>
                         <div class="flex gap-4 mt-3">
                             <div>
-                                <a href="https://play.google.com/store/apps/developer?id=SAP+SE&hl=vi&pli=1"><img
-                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSv479P9YVGLOLcKO-lyUEOUTzgY44actorw&s"
-                                        width="150" height="60" alt="Get it on Google Play"
-                                        border="0"></a>
+                                <a target="_blank" href="https://play.google.com/store/apps/developer?id=SAP+SE&hl=vi&pli=1">
+                                    <button data-aos="fade-up" 
+                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 h-[44.3px] flex gap-4 justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
+                                        <path fill="currentColor" d="M13.14 6.25c-.47 0-.86.39-.86.87v3.5c0 .48.39.88.86.88s.86-.39.86-.88v-3.5c0-.48-.39-.87-.86-.87m-10.29 0c-.47 0-.86.39-.86.87v3.5c0 .48.39.88.86.88s.86-.39.86-.88v-3.5c0-.48-.39-.87-.86-.87m1.29 4.81c0 .35.14.68.38.93s.57.38.91.38v1.75c0 .48.39.88.86.88s.86-.39.86-.88v-1.75h1.71v1.75c0 .48.39.88.86.88s.86-.39.86-.88v-1.75c.34 0 .67-.14.91-.38c.24-.25.38-.58.38-.93V6.25H4.14zm7.69-5.69c-.06-.58-.25-1.14-.55-1.63c-.3-.5-.7-.92-1.18-1.23l.43-.88c.05-.1.06-.22.02-.33a.42.42 0 0 0-.22-.25a.42.42 0 0 0-.33-.02c-.11.04-.2.12-.25.22l-.43.88l-.11-.05c-.79-.27-1.64-.27-2.43 0l-.11.05l-.43-.88a.45.45 0 0 0-.25-.22a.42.42 0 0 0-.33.02c-.1.05-.18.14-.22.25a.42.42 0 0 0 .02.33l.43.88c-.48.32-.88.74-1.18 1.23c-.3.5-.49 1.05-.55 1.63v.44h7.69v-.44zM6.71 4.5c-.11 0-.22-.05-.3-.13a.44.44 0 0 1-.13-.31c0-.12.04-.23.13-.31c.08-.08.19-.13.3-.13s.22.05.3.13s.13.19.13.31s-.05.23-.13.31s-.19.13-.3.13m2.57 0c-.11 0-.22-.05-.3-.13a.44.44 0 0 1-.13-.31c0-.12.04-.23.13-.31c.08-.08.19-.13.3-.13s.22.05.3.13s.13.19.13.31s-.05.23-.13.31s-.19.13-.3.13" />
+                                    </svg> Google Play</button>
+                                    </a>
                             </div>
                             <div>
-                                <a href="https://apps.apple.com/vn/developer/sap-se/id391959547?l=vi"><img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
-                                        width="150" height="60" alt="Get it on Google Play"
-                                        border="0"></a>
+                                <a target="_blank" href="https://apps.apple.com/vn/developer/sap-se/id391959547?l=vi">
+                                    <button data-aos="fade-up" 
+                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 h-[44.3px] flex gap-4 justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25" />
+                                    </svg> App Store</button>
+                                    </a>
                             </div>
                             <div data-aos="fade-up" class="w-fit">
                                 <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                                    class="rounded-full text-white bg-bg-btn font-semibold px-6 h-[44.3px]">{{ __('Register Trial') }}</button>
+                                    class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn h-[44.3px]">{{ __('Register Trial') }}</button>
                             </div>
                         </div>
                     </div>
@@ -619,7 +623,7 @@
 
         <section>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 mt-8 md:mt-12">
-                <div class="relative flex flex-col xl:flex-row items-center gap-8 md:gap-16 lg:gap-28 pb-12 sm:pb-24 overflow-y-hidden mt-4"
+                <div class="relative flex flex-col xl:flex-row items-center gap-8 md:gap-16 pb-12 sm:pb-24 mt-4"
                     x-data="{ activeTab: 1 }">
                     <div class="flex flex-col items-center xl:items-start gap-6">
                         <div>
@@ -633,7 +637,7 @@
                             {{ __('Let us help you access SAP solutions more easily') }}.</p>
                         <div class="flex justify-start">
                             <div role="tablist"
-                                class="inline-flex flex-wrap justify-center bg-white rounded-[40px] px-3 py-1.5 mt-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+                                class="inline-flex flex-wrap justify-center bg-white rounded-[40px] p-3 mt-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
                                 @keydown.right.prevent.stop="$focus.wrap().next()"
                                 @keydown.left.prevent.stop="$focus.wrap().prev()"
                                 @keydown.home.prevent.stop="$focus.first()" @keydown.end.prevent.stop="$focus.last()">
@@ -731,7 +735,7 @@
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
+                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                                 </div>
                             </article>
@@ -800,7 +804,7 @@
                                             <span
                                                 class="text-sm font-medium">{{ __('Inventory and Distribution') }}</span>
                                         </div>
-                                        {{-- <div class="flex items-center gap-4">
+                                        <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
                                                 <g fill="#000" stroke="#fff" stroke-width="2">
@@ -809,11 +813,11 @@
                                                 </g>
                                             </svg>
                                             <span class="text-sm font-medium">{{ __('Production and MRP') }}</span>
-                                        </div> --}}
+                                        </div>
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
+                                            class="rounded-full bg-white text-text-primary font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                             </article>
                         </div>
@@ -896,7 +900,7 @@
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
+                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                                 </div>
                             </article>
@@ -965,7 +969,7 @@
                                             <span
                                                 class="text-sm font-medium">{{ __('Inventory and Distribution') }}</span>
                                         </div>
-                                        {{-- <div class="flex items-center gap-4">
+                                        <div class="flex items-center gap-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                                 viewBox="0 0 24 24" class="text-icon-main">
                                                 <g fill="#000" stroke="#fff" stroke-width="2">
@@ -974,11 +978,11 @@
                                                 </g>
                                             </svg>
                                             <span class="text-sm font-medium">{{ __('Production and MRP') }}</span>
-                                        </div> --}}
+                                        </div>
                                     </div>
                                     <div class="block mx-auto">
                                         <button
-                                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Choose Plan') }}</button>
+                                            class="rounded-full bg-white text-text-primary font-semibold px-6 py-4" x-data @click="$dispatch('open-modal', 'contact-modal')">{{ __('Register Trial') }}</button>
                                     </div>
                             </article>
                         </div>

@@ -4,10 +4,10 @@
             class="flex flex-col sm:grid sm:grid-cols-[35%_1fr] gap-8 sm:gap-8 md:gap-16 py-6 sm:py-14 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:opacity-25 before:z-0 before:bg-no-repeat before:bg-center sm:before:bg-top before:bg-[length:85%_auto] sm:before:bg-[length:65%_auto] before:bg-[url('../assets/images/service-pattern.webp')]">
             <div class="flex flex-col gap-4 x-10">
                 <x-application-logo class="w-44" />
-                <p class="text-base text-justify">{!! __('app.footerMessage1') !!}</p>
-                <p class="text-base text-justify">{!! __('app.footerMessage2') !!}</p>
+                <p class="text-base font-normal text-justify">{!! __('app.footerMessage1') !!}</p>
+                <p class="text-base font-normal text-justify">{!! __('app.footerMessage2') !!}</p>
                 <div class="flex flex-col gap-3">
-                    <h5 class="uppercase font-bold text-lg md:font-semibold mb-0 mt-4 md:mt-0">{{ __('Connect with us') }}</h5>
+                    <h5 class="uppercase font-bold text-lg md:font-semibold mb-0 mt-4">{{ __('Connect with us') }}</h5>
                     <div class="flex gap-4">
                         <a href="https://www.grantthornton.com.vn" target="_blank"
                             class="ease duration-150 hover:cursor-pointer rounded-full p-1.5 aspect-square bg-bg-secondary text-text-secondary">
@@ -36,19 +36,20 @@
             <div class="flex flex-col sm:grid sm:grid-cols-2 gap-6 sm:gap-12 md:gap-16 z-10">
                 <div class="flex flex-col gap-3">
                     <h5 class="uppercase font-bold text-lg md:font-semibold mb-0 mt-4 md:mt-0 md:mb-4">{{__('Contact')}}</h5>
-                    <p>
+                    <p class="font-normal">
                         {!! __('<b>HCMC</b>: 14th Floor, Pearl Plaza Building, 561A Dien Bien Phu Street, Ward 25, Binh Thanh District, HCMC') !!}
                     </p>
-                    <p>
+                    <p class="font-normal">
                         {!! __('<b>HN</b>: 18th Floor, Hoa Binh International Office Building, 106 Hoang Quoc Viet Street, Nghia Do Ward, Cau Giay District, Hanoi') !!}
                     </p>
-                    <p><b>{{__('Hotline')}}</b>: <a class="" href="tel:+84982232343">(+84) 24 3850 1686</a></p>
-                    <p><b>Email</b>: <a class="" href="mailto:Grant.Thornton@vn.gt.com">Grant.Thornton@vn.gt.com</a></p>
+                    <p><b>{{__('Hotline')}}</b>: <a class="font-normal" href="tel:+84982232343">(+84) 24 3850 1686</a></p>
+                    <p><b>Email</b>: <a class="font-normal" href="mailto:Grant.Thornton@vn.gt.com">Grant.Thornton@vn.gt.com</a></p>
                 </div>
                 <div class="flex flex-col gap-3">
                     <h5 class="uppercase font-bold text-lg md:font-semibold mb-0 mt-4 md:mt-0 md:mb-4">{{__('Company information')}}</h5>
-                    <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Home page')}}</a>
-                    <a href="#" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Service')}}</a>
+                    <a href="/" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Home page')}}</a>
+                    <a href="/" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Services')}}</a>
+                    <a href="/solution/sap-business-one" target="_blank" class="font-medium duration-150 ease hover:text-text-main">SAP Business One</a>
                     <a href="/about-us" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Contact Us')}}</a>
                 </div>
             </div>

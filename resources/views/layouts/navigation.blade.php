@@ -17,8 +17,8 @@ $nextTick(() => {
         class="notification-nav relative flex items-center justify-center px-4 py-[0.9375rem] space-x-4 bg-no-repeat bg-center bg-cover z-0 before:absolute before:inset-0 before:opacity-[0.85] before:bg-bg-main before:z-10"
         style="background-image: url('{{ asset('assets/images/banner-bg.webp') }}');">
         <div class="relative flex items-center space-x-2 z-10">
-            <span class="text-white text-sm font-light">{{ __('Start') }} <a href="#"
-                    class="pb-[0.05rem] border-b border-[#ffffff9d]">{{ __('a trial session') }}</a> {{ __('to get an overview') }}</span>
+            <span class="text-white text-sm font-light">{{ __('Start') }} <a x-data @click="$dispatch('open-modal', 'contact-modal')"
+                    class="pb-[0.05rem] border-b border-[#ffffff9d] cursor-pointer">{{ __('a trial session') }}</a> {{ __('to get an overview') }}</span>
             <a class="hidden sm:block text-white font-medium text-sm">{{ __('Learn More') }}</a>
         </div>
     </div>

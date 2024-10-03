@@ -107,13 +107,13 @@
                         'link' => route('home'),
                     ],
                     [
-                        'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
+                        'svg' => '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10.5 2.5a3 3 0 0 1 3 3v2a3 3 0 1 1-6 0v-2a3 3 0 0 1 3-3m7 14v-.728c0-3.187-3.686-5.272-7-5.272s-7 2.085-7 5.272v.728a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1" />',
                         'text' => __('Advisory services'),
                         'description' => __('If you are seeking to acquire or merge, divest or dispose, restructure or raise capital, equitise or list, or you are looking at identifying and mitigating...'),
                         'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/',
                     ],
                     [
-                        'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
+                        'svg' => '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10.5 2.5a3 3 0 0 1 3 3v2a3 3 0 1 1-6 0v-2a3 3 0 0 1 3-3m7 14v-.728c0-3.187-3.686-5.272-7-5.272s-7 2.085-7 5.272v.728a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1" />',
                         'text' => __('Tax services'),
                         'description' => __('Our tax professionals are dedicated to creating distinctive, and often innovative, tax solutions. Our approach starts by developing an in-depth understanding...'),
                         'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/',
@@ -122,13 +122,13 @@
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Audit and Assurance'),
                         'description' => __("Grant Thornton's audit services focus on client service quality and building long-lasting relationships. We pride ourselves on having a Partner-led service for..."),
-                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/',
+                        'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/',
                     ],
                     [
                         'svg' => '<path fill="currentColor" d="M3 20V7h6V4h6v3h6v13zm7-13h4V5h-4zm10 7.5h-6V16h-4v-1.5H4V19h16zm-9 .5h2v-2h-2zm-7-1.5h6V12h4v1.5h6V8H4zm8 .5" />',
                         'text' => __('Japanese Desk'),
                         'description' => __('Grant Thornton is one of leading service providers in international incorporations in Vietnam with experience in helping our clients navigate jurisdictions...'),
-                        'link' => app()->getLocale() == 'vi' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/',
+                        'link' => app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/',
                     ],
                 ];
                 
@@ -274,7 +274,7 @@
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-1.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Enterprise Resource Planning') }}</h6>
-                        <button @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
+                        <button x-data @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
                                 <path fill="currentColor"
@@ -289,8 +289,7 @@
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-3.png')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Dashboard Reporting') }}</h6>
-                        <button @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
-                            <a href="{{ route('solution.dashboard.bi') }}">
+                        <button x-data @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                     viewBox="0 0 16 9">
                                     <path fill="currentColor"
@@ -298,7 +297,6 @@
                                     <path fill="currentColor"
                                         d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
                                 </svg>
-                            </a>
                         </button>
                     </div>
                 </div>
@@ -306,7 +304,7 @@
                     class="flex flex-col gap-8 items-center justify-end text-white p-8 bg-cover bg-no-repeat bg-[url('../assets/images/stategy-img-2.webp')] rounded-3xl cursor-default duration-200 ease-in w-full sm:basis-[calc(50%-1rem)] md:basis-[calc(33.33%-1rem)] aspect-[2/3] relative before:absolute before:w-full before:h-full before:bg-transparent before:top-0 before:left-0 before:rounded-3xl before:bg-custom-gradient before:z-0 before:bg-no-repeat before:bg-cover before:opacity-50">
                     <div class="flex flex-col gap-8 z-10 w-full">
                         <h6 class="text-white text-2xl font-semibold">{{ __('Business Process Solution') }}</h6>
-                        <button @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
+                        <button x-data @click="$dispatch('open-modal', 'contact-modal')" class="text-white duration-200 ease-in">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2.14em" height="1.2em"
                                 viewBox="0 0 16 9">
                                 <path fill="currentColor"
@@ -362,7 +360,7 @@
                         {{ __('Integrate and automate business processes to streamline operations, enhance efficiency, and support sustainable growth.') }}</p>
                     <div class="block mx-auto">
                         {{-- <button onclick="window.location.href='{{ route('solution.netsuite') }}'" --}}
-                        <button @click="$dispatch('open-modal', 'contact-modal')"
+                        <button x-data @click="$dispatch('open-modal', 'contact-modal')"
                             class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
@@ -377,7 +375,7 @@
                         {{ __('Streamline manufacturing processes and project management to increase productivity and reduce costs.') }}
                     </p>
                     <div class="block mx-auto">
-                        <button @click="$dispatch('open-modal', 'contact-modal')"
+                        <button x-data @click="$dispatch('open-modal', 'contact-modal')"
                             class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
