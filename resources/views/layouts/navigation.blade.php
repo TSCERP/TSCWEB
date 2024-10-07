@@ -66,7 +66,7 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
+                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                          {{ __('Business Process Solution') }}
                                      </a>
@@ -81,7 +81,7 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{route('home')}}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank" href="{{route('home')}}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Technology Solutions Consulting') }}
                                     </a>
 
@@ -96,7 +96,7 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Advisory Services') }}
                                     </a>
 
@@ -111,7 +111,7 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Tax Services') }}
                                     </a>
 
@@ -126,7 +126,7 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Audit and Assurance') }}
                                     </a>
 
@@ -141,7 +141,7 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Japanese Desk') }}
                                     </a>
 
@@ -330,27 +330,27 @@ $nextTick(() => {
                         </button>
                         <ul id="service-menu-mobile" x-show="openService" class="py-2 space-y-2">
                             <li>
-                                <a href="/"
+                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Process Solution') }}</a>
                             </li>
                             <li>
-                                <a href="/"
+                                <a target="_blank" href="{{route('home')}}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Technology Solutions Consulting') }}</a>
                             </li>
                             <li>
-                                <a href="/"
+                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Advisory Services') }}</a>
                             </li>
                             <li>
-                                <a href="/"
+                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Tax Services') }}</a>
                             </li>
                             <li>
-                                <a href="/"
+                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Audit and Assurance') }}</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Japanese Desk') }}</a>
                             </li>
                         </ul>
@@ -402,7 +402,7 @@ $nextTick(() => {
                         </ul>
                     </li> --}}
                     <li>
-                        <a href="{{ route('about') }}"
+                        <a  href="{{ route('about') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />

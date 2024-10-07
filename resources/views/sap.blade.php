@@ -391,7 +391,7 @@
                             </div>
                             <div data-aos="fade-up" class="w-fit">
                                 <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                                    class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn h-[44.3px] text-nowrap">{{ __('Register Trial') }}</button>
+                                    class="navigation-trial-button text-nowrap transition-all duration-200 main-btn h-[44.3px] text-nowrap">{{ __('Register Trial') }}</button>
                             </div>
                         </div>
                     </div>
@@ -1383,7 +1383,7 @@
                             <source
                                 src="https://www.tasman.site/clientes/sapb1/videos/sapb1-trailer/video/video_01.mp4"
                                 type="video/mp4">
-                            Your browser does not support the video tag.
+                            Trình duyệt không hỗ trợ.
                         </video>
                     </div>
                 </div>
