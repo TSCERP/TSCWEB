@@ -204,13 +204,13 @@
         <div
             class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 py-12 sm:py-16 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
             <div id="slide-up-animation" class="w-full md:w-1/3 relative overflow-hidden">
-                <img class="h-full rounded-3xl" src="{{ asset('assets/images/tu-van-giai-phap-cong-nghe.png') }}"
+                <img class="self-start rounded-3xl" src="{{ asset('assets/images/tu-van-giai-phap-cong-nghe.png') }}"
                     alt="erp-solution">
                 <img class="absolute w-5/6 bottom-4 right-3 p-4 rounded-3xl"
                     src="{{ asset('assets/images/feature-statistics.png') }}" alt="statistics-solution">
             </div>
             <div
-                class="relative flex-1 flex flex-col gap-8 before:absolute before:top-0 before:right-0 before:w-[60px] before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')]">
+                class="relative flex-1 flex flex-col gap-8 z-10 before:absolute before:top-8 sm:before:top-0 before:right-0 before:w-[40px] before:h-[41px] sm:before:w-[60px] sm:before:h-[61px] before:bg-contain before:bg-[url('../assets/images/feature-item-sun.webp')] before:z-0">
                 <div>
                     <span id="feature"
                         class="uppercase text-xl font-semibold mt-16 py-1 px-4 rounded-full bg-bg-gray">{{ __('Technology Solutions Consulting') }}</span>

@@ -113,8 +113,8 @@
                 </div>
 
                 <div id="slide-up-animation" class="w-full md:w-1/2 relative">
-                    <img class="w-full rounded-3xl object-cover md:absolute md:-bottom-[110px]"
-                        style="height: -webkit-fill-available"
+                    <img class="w-full self-start rounded-3xl object-cover md:absolute md:-bottom=[110px]"
+                        style=""
                         src="{{ asset('assets/images/sap-dashboard-illustration.png') }}" alt="erp-solution">
                 </div>
             </div>
@@ -126,7 +126,7 @@
         <section class="bg-bg-main w-full py-4">
             <div
                 class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16">
-                <div class="flex flex-col md:flex-row gap-8 md:gap-0 content-around justify-around w-full">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-0 content-around justify-around w-full text-white">
                     <div class="flex flex-col gap-4 items-center">
                         <img class="w-16 h-16" src="{{ asset('assets/images/sap-client.png') }}" alt="client">
                         <span class="text-xl font-semibold text-white">75.000+</span>
@@ -160,7 +160,7 @@
                 class="relative max-w-7xl mx-auto px-4 sm:px-2 xl:px-0 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-16 py-14 md:py-24">
                 <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-4 w-full">
                     <div class="w-full md:w-1/2">
-                        <img class="h-full rounded-3xl object-cover"
+                        <img class="rounded-3xl object-cover self-start"
                             src="{{ asset('assets/images/erp-solution-sap-illustration.png') }}"
                             alt="erp-solution-sap">
                     </div>
