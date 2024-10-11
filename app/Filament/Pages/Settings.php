@@ -23,6 +23,10 @@ class Settings extends Page implements HasForms
     protected  SettingsModel $settings;
     public ?array $data = [];
     protected $site_name;
+    public static function canAccess(): bool
+    {
+        return auth()->user()->is_admin;
+    }
     public function mount(): void
     {
         $this->data = SettingsModel::first()?->toArray() ?: [];

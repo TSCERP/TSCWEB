@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactInfo;
 use App\Models\ContactReason;
 use App\Mail\ContactThankYou;
+use App\Mail\NewRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
@@ -18,20 +19,20 @@ class ContactController extends Controller
     {
         $locale = $request->header('X-Locale', App::getLocale());
 
-        App::setLocale($locale); 
+        App::setLocale($locale);
 
         $ipAddress = $request->ip();
-    
+
         $key = Str::lower($ipAddress);
 
         if (RateLimiter::tooManyAttempts($key, 5)) {
             $secondsRemaining = RateLimiter::availableIn($key);
-            $minutesRemaining = ceil($secondsRemaining / 60); 
-    
+            $minutesRemaining = ceil($secondsRemaining / 60);
+
             return response()->json([
                 'message' => __('You have exceeded the maximum number of requests. Please try again in :minutes minutes', ['minutes' => $minutesRemaining]),
                 'retry_after' => $minutesRemaining,
-            ], 429); 
+            ], 429);
         }
 
         $validator = Validator::make($request->all(), [
@@ -61,7 +62,7 @@ class ContactController extends Controller
         ]);
 
         Mail::to($contactInfo->email)->send(new ContactThankYou($contactInfo));
-
+        Mail::to("tien.le@vn.gt.com")->send(new NewRequest($contactInfo));
         return response()->json([
             'message' => __('Your information has been sent successfully.')
         ], 200);
