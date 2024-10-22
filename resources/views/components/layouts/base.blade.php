@@ -60,7 +60,7 @@
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <!-- Page Navigation -->
         @include('layouts.navigation')
-        <main class="mt-[130px]">
+        <main class="md:mt-[130px]">
             {{ $slot }}
         </main>
         @include('layouts.top')

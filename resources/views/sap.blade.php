@@ -391,7 +391,7 @@
                             </div>
                             <div data-aos="fade-up" class="w-fit">
                                 <button data-aos="fade-up" x-data @click="$dispatch('open-modal', 'contact-modal')"
-                                    class="navigation-trial-button text-nowrap transition-all duration-200 main-btn h-[44.3px] text-nowrap">{{ __('Register Trial') }}</button>
+                                    class="navigation-trial-button rounded-full text-nowrap font-semibold px-6 h-[44.3px] flex gap-4 justify-center items-center border-2 border-border-main">{{ __('Register Trial') }}</button>
                             </div>
                         </div>
                     </div>
