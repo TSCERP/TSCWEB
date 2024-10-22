@@ -31,7 +31,7 @@ Route::get('/about-us', function () {
 Route::get('/documents', function () {
     return view('document');
 })->name('documents');
-
+Route::get('/sap-business-one',['App\Http\Controllers\SolutionController','sap'])->name('sapb12');
 Route::get('/language/{locale}', function (string $locale) {
     if (! in_array($locale, ['en','vi'])) {
         abort(404);

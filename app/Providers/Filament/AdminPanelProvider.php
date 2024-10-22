@@ -19,6 +19,8 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
+//use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
+use Jeffgreco13\FilamentBreezy\BreezyCore;
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -54,6 +56,17 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+            ])
+            ->plugins([
+//                FilamentEditProfilePlugin::make()
+                BreezyCore::make()
+                    ->myProfile(
+                        shouldRegisterUserMenu: true, // Sets the 'account' link in the panel User Menu (default = true)
+                        shouldRegisterNavigation: false, // Adds a main navigation item for the My Profile page (default = false)
+                        navigationGroup: 'Group Profile', // Sets the navigation group for the My Profile page (default = null)
+                        hasAvatars: false, // Enables the avatar upload form component (default = false)
+                        slug: 'my-profile' // Sets the slug for the profile page (default = 'my-profile')
+                    )
             ])
             ->authMiddleware([
                 Authenticate::class,

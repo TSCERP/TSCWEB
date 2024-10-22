@@ -128,7 +128,7 @@
                         <div style="display: none; visibility: hidden; overflow: hidden; opacity: 0; font-size: 1px; line-height: 1px; height: 0; max-height: 0; max-width: 0;
 			color: #F0F0F0;"
                              class="preheader">
-                          </div>
+                            </div>
 
                         <!-- LOGO -->
                         <a target="_blank" style="text-decoration: none;"
@@ -162,7 +162,7 @@
 			color: #000000;
 			font-family: sans-serif;"
                         class="header">
-                        {{ __('Thank you') }} {{ $fullname }} {{ __('for contacting us') }}!
+                        Dear Admin,
                     </td>
                 </tr>
 
@@ -175,7 +175,7 @@
 			color: #000000;
 			font-family: sans-serif;"
                         class="subheader">
-                        {{ __('We will reach to you as soon as possible') }}
+                        I would like to inform you that a new request has been submitted by  {{ $fullname }}
                     </td>
                 </tr>
 
@@ -204,7 +204,7 @@
 			color: #000000;
 			font-family: sans-serif;"
                         class="paragraph">
-                        {{ __('Your information is fully secured by us.') }}
+{{--                        {{ __('Please check .') }}--}}
                     </td>
                 </tr>
 
