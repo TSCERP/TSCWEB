@@ -221,6 +221,7 @@ body {
         transform: translateX(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -233,6 +234,7 @@ body {
         transform: translateX(0);
         opacity: 1;
     }
+
     100% {
         transform: translateX(100%);
         opacity: 0;
@@ -240,7 +242,7 @@ body {
 }
 
 .toast-fadein {
-    animation: fadeInRight 0.25s forwards; 
+    animation: fadeInRight 0.25s forwards;
 }
 
 .toast-fadeout {
@@ -269,6 +271,7 @@ body {
         @apply relative overflow-hidden;
     }
 }
+
 .btn-call {
     background: #10b418;
     border: 2px solid #10b418;
@@ -310,9 +313,11 @@ body {
 }
 
 .btn-call::after {
-    content: "+84 962 888 048"; /* Số điện thoại */
+    content: "+84 962 888 048";
+    /* Số điện thoại */
     position: absolute;
-    left: 60px; /* Điều chỉnh khoảng cách theo nhu cầu */
+    left: 60px;
+    /* Điều chỉnh khoảng cách theo nhu cầu */
     top: 50%;
     transform: translateY(-50%);
     background-color: white;
@@ -507,12 +512,23 @@ body {
 }
 
 @keyframes glowing {
-    0% { box-shadow: 0 0 -5px #0068ff; }
-    40% { box-shadow: 0 0 10px #0068ff; }
-    60% { box-shadow: 0 0 10px #0068ff; }
-    100% { box-shadow: 0 0 -5px #0068ff; }
-  }
-  
-  .button-glow {
+    0% {
+        box-shadow: 0 0 -5px #0068ff;
+    }
+
+    40% {
+        box-shadow: 0 0 10px #0068ff;
+    }
+
+    60% {
+        box-shadow: 0 0 10px #0068ff;
+    }
+
+    100% {
+        box-shadow: 0 0 -5px #0068ff;
+    }
+}
+
+.button-glow {
     animation: glowing 5000ms infinite;
-  }
+}

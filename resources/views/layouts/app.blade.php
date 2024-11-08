@@ -14,7 +14,7 @@
     <meta name="referrer" content="no-referrer">
     <meta name="format-detection" content="telephone=no">
     <x-seo::meta />
-    <title>@yield('title', 'Grant Thornton TSC (SAP B1)')</title>
+    <title>@yield('title', 'Grant Thornton TSC')</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased dark:bg-black dark:text-white/50">
+<body class="antialiased dark:bg-black dark:text-white/50 overflow-x-hidden">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <!-- Page Navigation -->
         @include('layouts.navigation')
@@ -55,7 +55,8 @@
         const toastContainer = document.getElementById('toast-container');
 
         const toast = document.createElement('div');
-        toast.className = `flex items-center w-full max-w-xs px-4 py-3 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800 ${type} toast-fadein`;
+        toast.className =
+            `flex items-center w-full max-w-xs px-4 py-3 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800 ${type} toast-fadein`;
 
         let iconHTML;
         switch (type) {

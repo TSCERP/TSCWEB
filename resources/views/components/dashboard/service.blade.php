@@ -7,7 +7,7 @@
                     <div class="section-title text-center ">
                         <div>
                             <h6
-                                class="rounded-[30px] w-fit mx-auto shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-2">
+                                class="rounded-[30px] w-fit mx-auto shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-4">
                                 CREATIVE SERVICES
                             </h6>
                         </div>
@@ -24,11 +24,12 @@
                     </div>
                     <div class="details text-center mt-8">
                         <h5 class="text-2xl font-semibold mb-2"><a href="service-details.html"
-                                class="hover:text-blue-600">Only the best</a></h5>
-                        <p class="text-lg text-gray-600 mb-4">You can access SaaS applications through a web browser or
-                            mobile app, as long as you have an internet connection</p>
-                        <a class="read-more-text text-blue-600 hover:underline inline-flex items-center"
-                            href="service-details.html">Touch More <i class="fa fa-plus ml-1"></i></a>
+                                class="hover:text-blue-600">{{ __('Finance') }}</a></h5>
+                        <p class="text-lg text-gray-600 mb-4">
+                            {{ __('Streamlines financial processes with intuitive solutions, enabling accurate planning, reporting, and analysis for informed decision-making') }}.
+                        </p>
+                        {{-- <a class="read-more-text text-blue-600 hover:underline inline-flex items-center"
+                            href="service-details.html">Touch More <i class="fa fa-plus ml-1"></i></a> --}}
                     </div>
                 </div>
                 <div class="single-service-inner style-3 bg-white p-6 rounded-lg shadow-lg relative">
@@ -38,11 +39,12 @@
                     </div>
                     <div class="details text-center mt-8">
                         <h5 class="text-2xl font-semibold mb-2"><a href="service-details.html"
-                                class="hover:text-blue-600">Focusing on details</a></h5>
-                        <p class="text-lg text-gray-600 mb-4">You can access SaaS applications through a web browser or
-                            mobile app, as long as you have an internet connection</p>
-                        <a class="read-more-text text-blue-600 hover:underline inline-flex items-center"
-                            href="service-details.html">Touch More <i class="fa fa-plus ml-1"></i></a>
+                                class="hover:text-blue-600">{{ __('Accounting') }}</a></h5>
+                        <p class="text-lg text-gray-600 mb-4">
+                            {{ __('Our solutions give you reliability and up-to-date visibility to support compliance and strategic decisions on everything from your day-to-day accounting needs to developing long-term financial strategy and policies') }}.
+                        </p>
+                        {{-- <a class="read-more-text text-blue-600 hover:underline inline-flex items-center"
+                            href="service-details.html">Touch More <i class="fa fa-plus ml-1"></i></a> --}}
                     </div>
                 </div>
                 <div class="single-service-inner style-3 bg-white p-6 rounded-lg shadow-lg relative">
@@ -52,11 +54,12 @@
                     </div>
                     <div class="details text-center mt-8">
                         <h5 class="text-2xl font-semibold mb-2"><a href="service-details.html"
-                                class="hover:text-blue-600">No flaws here</a></h5>
-                        <p class="text-lg text-gray-600 mb-4">You can access SaaS applications through a web browser or
-                            mobile app, as long as you have an internet connection</p>
-                        <a class="read-more-text text-blue-600 hover:underline inline-flex items-center"
-                            href="service-details.html">Touch More <i class="fa fa-plus ml-1"></i></a>
+                                class="hover:text-blue-600">{{ __('Data & Analytics') }}</a></h5>
+                        <p class="text-lg text-gray-600 mb-4">
+                            {{ __('Gain actionable insights with our BI, embedded analytics, data integration, and data management solutions that unleash the power of data and analytics for everyone, anywhere') }}.
+                        </p>
+                        {{-- <a class="read-more-text text-blue-600 hover:underline inline-flex items-center"
+                            href="service-details.html">Touch More <i class="fa fa-plus ml-1"></i></a> --}}
                     </div>
                 </div>
             </div>

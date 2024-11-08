@@ -17,8 +17,10 @@ $nextTick(() => {
         class="notification-nav relative flex items-center justify-center px-4 py-[0.9375rem] space-x-4 bg-no-repeat bg-center bg-cover z-0 before:absolute before:inset-0 before:opacity-[0.85] before:bg-bg-main before:z-10"
         style="background-image: url('{{ asset('assets/images/banner-bg.webp') }}');">
         <div class="relative flex items-center space-x-2 z-10">
-            <span class="text-white text-sm font-light">{{ __('Start') }} <a x-data @click="$dispatch('open-modal', 'contact-modal')"
-                    class="pb-[0.05rem] border-b border-[#ffffff9d] cursor-pointer">{{ __('a trial session') }}</a> {{ __('to get an overview') }}</span>
+            <span class="text-white text-sm font-light">{{ __('Start') }} <a x-data
+                    @click="$dispatch('open-modal', 'contact-modal')"
+                    class="pb-[0.05rem] border-b border-[#ffffff9d] cursor-pointer">{{ __('a trial session') }}</a>
+                {{ __('to get an overview') }}</span>
             <a class="hidden sm:block text-white font-medium text-sm">{{ __('Learn More') }}</a>
         </div>
     </div>
@@ -66,10 +68,11 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
+                                    <a target="_blank"
+                                        href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                         {{ __('Business Process Solution') }}
-                                     </a>
+                                        {{ __('Business Process Solution') }}
+                                    </a>
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -81,7 +84,8 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a target="_blank" href="{{route('home')}}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank" href="{{ route('home') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Technology Solutions Consulting') }}
                                     </a>
 
@@ -96,7 +100,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank"
+                                        href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Advisory Services') }}
                                     </a>
 
@@ -111,7 +117,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank"
+                                        href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Tax Services') }}
                                     </a>
 
@@ -126,7 +134,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank"
+                                        href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Audit and Assurance') }}
                                     </a>
 
@@ -141,7 +151,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}" class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                    <a target="_blank"
+                                        href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Japanese Desk') }}
                                     </a>
 
@@ -151,7 +163,7 @@ $nextTick(() => {
                     </x-nav-link>
 
                     <x-nav-link
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('home') ? '!font-bold text-border-main' : '' }}"
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('solution*') ? '!font-bold text-border-main' : '' }}"
                         :href="route('solution.sapb1')" :active="request()->routeIs('solution*')">
                         {{ __('Solutions') }}
                     </x-nav-link>
@@ -307,7 +319,8 @@ $nextTick(() => {
                     <li>
                         <a href="{{ route('home') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                                viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z" />
                             </svg>
                             <span class="ms-3 text-text-primary">{{ __('Home') }}</span>
@@ -317,40 +330,47 @@ $nextTick(() => {
                         <button @click="openService = !openService"
                             class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                             aria-controls="ecommerce-menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm6-16h4V4h-4zm1 9v2q0 .425.288.713T12 18t.713-.288T13 17v-2h2q.425 0 .713-.288T16 14t-.288-.712T15 13h-2v-2q0-.425-.288-.712T12 10t-.712.288T11 11v2H9q-.425 0-.712.288T8 14t.288.713T9 15z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                                viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm6-16h4V4h-4zm1 9v2q0 .425.288.713T12 18t.713-.288T13 17v-2h2q.425 0 .713-.288T16 14t-.288-.712T15 13h-2v-2q0-.425-.288-.712T12 10t-.712.288T11 11v2H9q-.425 0-.712.288T8 14t.288.713T9 15z" />
                             </svg>
                             <span
                                 class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-text-primary">{{ __('Services') }}</span>
-                            <svg class="w-3 h-3 text-text-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
+                            <svg class="w-3 h-3 text-text-primary" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m1 1 4 4 4-4" />
                             </svg>
                         </button>
                         <ul id="service-menu-mobile" x-show="openService" class="py-2 space-y-2">
                             <li>
-                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
+                                <a target="_blank"
+                                    href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Process Solution') }}</a>
                             </li>
                             <li>
-                                <a target="_blank" href="{{route('home')}}"
+                                <a target="_blank" href="{{ route('home') }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Technology Solutions Consulting') }}</a>
                             </li>
                             <li>
-                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}"
+                                <a target="_blank"
+                                    href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/advisory/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Advisory Services') }}</a>
                             </li>
                             <li>
-                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}"
+                                <a target="_blank"
+                                    href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/tax/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-tu-van-thue/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Tax Services') }}</a>
                             </li>
                             <li>
-                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}"
+                                <a target="_blank"
+                                    href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/assurance/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-kiem-toan/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Audit and Assurance') }}</a>
                             </li>
                             <li>
-                                <a target="_blank" href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}"
+                                <a target="_blank"
+                                    href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Japanese Desk') }}</a>
                             </li>
                         </ul>
@@ -358,7 +378,8 @@ $nextTick(() => {
                     <li>
                         <a href="{{ route('solution.sapb1') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                                viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z" />
                             </svg>
                             <span class="ms-3 text-text-primary">{{ __('Solutions') }}</span>
@@ -402,10 +423,12 @@ $nextTick(() => {
                         </ul>
                     </li> --}}
                     <li>
-                        <a  href="{{ route('about') }}"
+                        <a href="{{ route('about') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                                viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />
                             </svg>
                             <span class="ms-3 text-text-primary">{{ __('About Us') }}</span>
                         </a>
@@ -471,24 +494,24 @@ $nextTick(() => {
             let showNotification;
 
             gsap.to(".notification-nav", {
-                y: -51, 
-                ease: "power2.out", 
+                y: -51,
+                ease: "power2.out",
                 scrollTrigger: {
                     trigger: ".primary-nav",
-                    start: "top top", 
-                    end: "+=50", 
-                    scrub: 0.5, 
-                    markers: false 
+                    start: "top top",
+                    end: "+=50",
+                    scrub: 0.5,
+                    markers: false
                 }
             });
 
             gsap.to(".primary-nav", {
-                y: -51, 
-                ease: "power2.out", 
+                y: -51,
+                ease: "power2.out",
                 scrollTrigger: {
                     trigger: ".primary-nav",
                     start: "top top",
-                    end: "+=50", 
+                    end: "+=50",
                     scrub: 0.5,
                     markers: false
                 }
@@ -497,11 +520,11 @@ $nextTick(() => {
             gsap.to(".primary-container", {
                 // y: -51, 
                 height: "50px",
-                ease: "power2.out", 
+                ease: "power2.out",
                 scrollTrigger: {
                     trigger: ".primary-nav",
                     start: "top top",
-                    end: "+=50", 
+                    end: "+=50",
                     scrub: 0.2,
                     markers: false
                 }

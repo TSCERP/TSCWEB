@@ -3,6 +3,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Alpine from 'alpinejs';
+import Plyr from 'plyr';
+import 'plyr/dist/plyr.css';
 import { CountUp } from 'countup.js';
 
 Alpine.start()
@@ -11,6 +13,7 @@ Alpine.start()
 window.Alpine = Alpine
 window.Swiper = Swiper;
 window.CountUp = CountUp;
+window.Plyr = Plyr;
 
 function showToast(type, message) {
     const toastContainer = document.getElementById('toast-container');

@@ -1,9 +1,8 @@
 <x-app-layout>
-    @section('title', 'Grant Thornton | SAP Business One')
+    @section('title', 'SAP Business One | Grant Thornton TSC')
     <div x-data="{ videoPopup: false, video: null }" x-init="$nextTick(() => {
         document.getElementById('sap-video-modal').classList.remove('hidden');
-        video = $refs.myVideo;
-        console.log('video', $refs)
+        video = $refs.sap - video;
     });
     $watch('videoPopup', value => {
         if (value) {
@@ -61,47 +60,57 @@
                         '<b>SAP Business One</b> – comprehensive business management ERP solution for small and medium-sized businesses',
                     ) !!}</p>
                     <ul class="list-disc list-inside space-y-4">
-                        <li data-aos="fade-up" data-aos-delay="100" class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                                class="text-icon-main">
-                                <g fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="9" />
-                                    <path d="m8 12l3 3l5-6" />
-                                </g>
-                            </svg>
+                        <li data-aos="fade-up" data-aos-delay="100" class="grid grid-cols-[32px_1fr] items-center">
+                            <div class="w-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                            </div>
                             <span
                                 class="text-lg font-semibold">{{ __('Integrate and automate processes from finance to inventory management') }}.</span>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="300" class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                                class="text-icon-main">
-                                <g fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="9" />
-                                    <path d="m8 12l3 3l5-6" />
-                                </g>
-                            </svg>
+                        <li data-aos="fade-up" data-aos-delay="300" class="grid grid-cols-[32px_1fr] items-center">
+                            <div class="w-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                            </div>
                             <span
                                 class="text-lg font-semibold">{{ __('User-friendly and customizable interface for quick performance monitoring') }}.</span>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="500" class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                                class="text-icon-main">
-                                <g fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="9" />
-                                    <path d="m8 12l3 3l5-6" />
-                                </g>
-                            </svg>
+                        <li data-aos="fade-up" data-aos-delay="500"
+                            class="grid grid-cols-[32px_1fr] items-center">
+                            <div class="w-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                            </div>
                             <span
                                 class="text-lg font-semibold">{{ __('Save time and money, while gaining insight into your business operations') }}.</span>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="700" class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
-                                class="text-icon-main">
-                                <g fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="9" />
-                                    <path d="m8 12l3 3l5-6" />
-                                </g>
-                            </svg>
+                        <li data-aos="fade-up" data-aos-delay="700"
+                            class="grid grid-cols-[32px_1fr] items-center">
+                            <div class="w-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24" class="text-icon-main">
+                                    <g fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="m8 12l3 3l5-6" />
+                                    </g>
+                                </svg>
+                            </div>
                             <span
                                 class="text-lg font-semibold">{{ __('Easy system expansion for specific businesses') }}.</span>
                         </li>
@@ -114,8 +123,8 @@
 
                 <div id="slide-up-animation" class="w-full md:w-1/2 relative">
                     <img class="w-full self-start rounded-3xl object-cover md:absolute md:-bottom=[110px]"
-                        style=""
-                        src="{{ asset('assets/images/sap-dashboard-illustration.png') }}" alt="erp-solution">
+                        style="" src="{{ asset('assets/images/sap-dashboard-illustration.png') }}"
+                        alt="erp-solution">
                 </div>
             </div>
         </section>
@@ -751,7 +760,8 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="w-[350px] md:absolute md:left-[73%] md:xl:left-[98%] md:-top-8 md:transform">
+                            <article
+                                class="w-[350px] md:absolute md:left-[73%] md:xl:left-[98%] md:-top-8 md:transform">
                                 <div
                                     class="group flex flex-col gap-10 items-center p-8 bg-border-main text-white rounded-3xl cursor-default duration-200 hover:scale-95 ease-linear">
                                     <div>
@@ -1327,7 +1337,7 @@
                     <h3 class="text-4xl md:text-5xl font-semibold">{{ __('Introducing SAP Business One') }}</h3>
                     <p class="">{{ __('Comprehensive ERP solution for small and medium enterprises') }}</p>
                 </div>
-                <div @click="videoPopup = true; $nextTick(() => video = $refs.myVideo); video?.play()">
+                <div @click="videoPopup = true; $nextTick(() => { window.videoPlayer.play(); })">
                     <span
                         class="bg-white text-[#040039] flex justify-center items-center cursor-pointer text-center text-[25px] w-[100px] h-[100px] leading-[100px] transition-[0.3s] duration-[ease] shadow-[0px_0px_0px_10px_rgba(255,255,255,0.1),0px_0px_0px_20px_rgba(255,255,255,0.06)] rounded-full hover:text-[#9125dc] hover:shadow-[0px_0px_0px_15px_rgba(255,255,255,0.1),0px_0px_0px_25px_rgba(255,255,255,0.06)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
@@ -1368,18 +1378,19 @@
                 x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200"
                 x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
                 x-on:keydown.escape.window="videoPopup = false; video?.pause(); video.currentTime = 0">
-                <button @click="videoPopup = false; video?.pause(); video.currentTime = 0"
-                        class="absolute px-2.5 rounded-full aspect-1 top-2 right-2 text-white bg-[#c9c8c892] text-xl block lg:hidden">
-                        &times;
-                    </button>
+                <button @click="videoPopup = false; window.videoPlayer?.pause(); window.videoPlayer.currentTime = 0"
+                    class="absolute px-2.5 rounded-full aspect-1 top-2 right-2 text-white bg-[#c9c8c892] text-xl block lg:hidden">
+                    &times;
+                </button>
 
                 <div class="bg-white rounded-lg shadow-lg w-full max-w-3xl lg:relative">
-                    <button @click="videoPopup = false; video?.pause(); video.currentTime = 0"
+                    <button
+                        @click="videoPopup = false; window.videoPlayer?.pause(); window.videoPlayer.currentTime = 0"
                         class="absolute hidden lg:block px-2.5 rounded-full aspect-1 -top-8 -right-6 text-white hover:bg-[#7b7b7b60] text-xl">
                         &times;
                     </button>
                     <div class="p-1 md:p-4">
-                        <video x-ref="myVideo" controls class="w-full rounded-lg">
+                        <video id='sap-player' x-ref="sap-video" controls class="w-full rounded-lg">
                             <source
                                 src="https://www.tasman.site/clientes/sapb1/videos/sapb1-trailer/video/video_01.mp4"
                                 type="video/mp4">
@@ -1391,71 +1402,73 @@
         </div>
 
 
-        @push('scripts')
-            <!-- Import Swiper and initialize -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-            <script type="module">
-                const Swipes = new Swiper('.partner-swiper-container', {
-                    loop: true,
-                    // slidesPerView: 2,
-                    watchOverflow: false,
-                    breakpoints: {
-                        1024: {},
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        480: {
-                            slidesPerView: 1,
-                        },
-                    },
-                });
-
-                const swiper = new Swiper('.screenshot-swiper-container', {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    autoplay: {
-                        delay: 2500,
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                        renderBullet: function(index, className) {
-                            return '<span class="' + className + '"></span>';
-                        },
-                    },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        0: {
-                            slidesPerView: 1,
-                        },
-                    },
-                });
-
-                AOS.init({
-                    once: true,
-                    duration: 500,
-                    easing: 'ease-in-out',
-                    delay: 100,
-                });
-            </script>
-            <script>
-                gsap.registerPlugin(ScrollTrigger);
-
-                gsap.from("#slide-up-animation", {
-                    y: 300,
-                    opacity: 0,
-                    duration: 0.5,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: "#slide-up-animation",
-                        start: "top 90%",
-                        end: "bottom 5%",
-                    }
-                });
-            </script>
-        @endpush
     </div>
+    @push('scripts')
+        <!-- Import Swiper and initialize -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <script type="module">
+            const Swipes = new Swiper('.partner-swiper-container', {
+                loop: true,
+                // slidesPerView: 2,
+                watchOverflow: false,
+                breakpoints: {
+                    1024: {},
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    480: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+
+            const swiper = new Swiper('.screenshot-swiper-container', {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 2500,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    renderBullet: function(index, className) {
+                        return '<span class="' + className + '"></span>';
+                    },
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+
+            AOS.init({
+                once: true,
+                duration: 500,
+                easing: 'ease-in-out',
+                delay: 100,
+            });
+        </script>
+        <script type="module">
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from("#slide-up-animation", {
+                y: 300,
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#slide-up-animation",
+                    start: "top 90%",
+                    end: "bottom 5%",
+                }
+            });
+
+            window.videoPlayer = new Plyr('#sap-player');
+        </script>
+    @endpush
 </x-app-layout>
