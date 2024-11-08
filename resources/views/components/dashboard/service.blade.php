@@ -1,22 +1,20 @@
-<section class="pt-10 pb-4">
-    <!-- service area start -->
+<section class="py-4">
     <div class="py-8 mx-auto max-w-screen-xl lg:py-16 px-4 sm:px-2 xl:px-0 service-area relative bg-gray-100">
         <div class="container mx-auto">
             <div class="row justify-center">
                 <div class="col-xl-8 col-lg-10 mx-auto">
                     <div class="section-title text-center ">
-                        <div>
+                        {{-- <div>
                             <h6
                                 class="rounded-[30px] w-fit mx-auto shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-4">
                                 CREATIVE SERVICES
                             </h6>
-                        </div>
-                        <h2 class="title text-4xl font-bold">Best Destination To Get Your Own <span
-                                class="text-blue-600">Application</span> Developed</h2>
+                        </div> --}}
+                        <h2 class="title text-4xl font-bold leading-normal">{{ __('Actionable Business Strategy Begins & Ends With Accessible Financial Business Operational Data') }}</h2>
                     </div>
                 </div>
             </div>
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-14">
                 <div class="single-service-inner style-3 bg-white p-6 rounded-lg shadow-lg relative">
                     <div
                         class="thumb absolute top-[-20px] left-[-20px] flex items-center justify-center w-20 h-20 rounded-full border border-blue-400">

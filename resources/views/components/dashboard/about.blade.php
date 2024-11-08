@@ -14,8 +14,8 @@
                     <div class="section-title mb-0">
                         <div>
                             <h6
-                                class="rounded-[30px] w-fit shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-4">
-                                ABOUT US
+                                class="uppercase rounded-[30px] w-fit shadow-[0_4.4px_30px_rgba(19,16,34,0.1)] bg-white py-2 px-5 text-sm font-semibold text-gray-500 mb-4">
+                                {{ __('Feature') }}
                             </h6>
                         </div>
                         {{-- <h6 class="text-base font-semibold text-gray-500 uppercase mb-2">ABOUT US</h6> --}}
@@ -26,26 +26,56 @@
                         <div class="flex flex-wrap -mx-4">
                             <div class="w-full px-4">
                                 <ul class="list-none space-y-2 mb-4">
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-                                        <span>{{ __('Translate complex ERP data into clear reports and dashboards') }}</span>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                            viewBox="0 0 24 24" class="text-icon-main">
+                                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="9" />
+                                                <path d="m8 12l3 3l5-6" />
+                                            </g>
+                                        </svg>
+                                        <span class="font-semibold">{{ __('Translate complex ERP data into clear reports and dashboards') }}</span>
                                     </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-                                        <span>{{ __('Share insights from your finance, accounting, and operations applications') }}</span>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                            viewBox="0 0 24 24" class="text-icon-main">
+                                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="9" />
+                                                <path d="m8 12l3 3l5-6" />
+                                            </g>
+                                        </svg>
+                                        <span class="font-semibold">{{ __('Share insights from your finance, accounting, and operations applications') }}</span>
                                     </li>
 
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-                                        <span>{{ __('Analyze data faster and make smarter decisions') }}</span>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                            viewBox="0 0 24 24" class="text-icon-main">
+                                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="9" />
+                                                <path d="m8 12l3 3l5-6" />
+                                            </g>
+                                        </svg>
+                                        <span class="font-semibold">{{ __('Analyze data faster and make smarter decisions') }}</span>
                                     </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-                                        <span>{{ __('Free your IT team') }}</span>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                            viewBox="0 0 24 24" class="text-icon-main">
+                                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="9" />
+                                                <path d="m8 12l3 3l5-6" />
+                                            </g>
+                                        </svg>
+                                        <span class="font-semibold">{{ __('Free your IT team') }}</span>
                                     </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-                                        <span>{{ __('Unlock new possibilities') }}</span>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                            viewBox="0 0 24 24" class="text-icon-main">
+                                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="9" />
+                                                <path d="m8 12l3 3l5-6" />
+                                            </g>
+                                        </svg>
+                                        <span class="font-semibold">{{ __('Unlock new possibilities') }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -62,14 +92,18 @@
                                     </ul>
                                 </div> --}}
                         </div>
-                        <a class="inline-flex items-center btn btn-blue border border-blue-600 text-blue-600 font-semibold py-2 px-4 rounded hover:bg-blue-600 hover:text-white transition-colors animate__animated animate__fadeInLeft animate__duration-[1.5s] animate__delay-[0.6s]"
+                        {{-- <a class="inline-flex items-center btn btn-blue border border-blue-600 text-blue-600 font-semibold py-2 px-4 rounded hover:bg-blue-600 hover:text-white transition-colors animate__animated animate__fadeInLeft animate__duration-[1.5s] animate__delay-[0.6s]"
                             href="#">
                             {{ __('Learn More') }}
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="size-5 ml-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                             </svg>
-                        </a>
+                        </a> --}}
+                        <div class="h-fit w-fit flex">
+                            <button x-data @click="$dispatch('open-modal', 'contact-modal')"
+                                class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
+                        </div>
                     </div>
                 </div>
             </div>
