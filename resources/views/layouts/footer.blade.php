@@ -50,6 +50,7 @@
                     <a href="/" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Home page')}}</a>
                     <a href="/" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Services')}}</a>
                     <a href="/solution/sap-business-one" target="_blank" class="font-medium duration-150 ease hover:text-text-main">SAP Business One</a>
+                    <a href="/solution/dashboard-bi" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Dashboard BI reporting')}}</a>
                     <a href="/about-us" target="_blank" class="font-medium duration-150 ease hover:text-text-main">{{__('Contact Us')}}</a>
                 </div>
             </div>

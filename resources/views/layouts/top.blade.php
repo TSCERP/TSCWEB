@@ -1,6 +1,6 @@
 @push('scripts')
     <div class="fixed left-8 bottom-[5.5rem] z-[10000] flex flex-col gap-4">
-        <a href="https://zalo.me/84962888048" rel="nofollow"
+        <a href="https://zalo.me/84903927282" rel="nofollow"
             class="w-[50px] h-[50px] pt-[-8px] rounded-full overflow-hidden button-glow bg-white flex" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="52px" height="52px" id="Layer_1" viewBox="0 0 460.1 436.6">
                 <style>
@@ -42,7 +42,7 @@
         </a>
     </div>
     <div class="fixed left-8 bottom-6 z-[10000] flex flex-col gap-4">
-        <a href="tel:+84962888048" rel="nofollow" class="btn-call">
+        <a href="tel:+84903927282" rel="nofollow" class="btn-call">
             <div class="btn-call__ico">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 24 24">
                     <path fill="currentColor"

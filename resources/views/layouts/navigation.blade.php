@@ -163,10 +163,50 @@ $nextTick(() => {
                     </x-nav-link>
 
                     <x-nav-link
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200"
+                        :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions" :width="300">
+                        <!-- Dropdown Content -->
+                        <div class="flex flex-col gap-x-4 gap-y-6">
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.sapb1') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('SAP Business One') }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.dashboard.bi') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Dashboard BI Reporting') }}
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </x-nav-link>
+
+                    {{-- <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('solution*') ? '!font-bold text-border-main' : '' }}"
                         :href="route('solution.sapb1')" :active="request()->routeIs('solution*')">
                         {{ __('Solutions') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
 
                     {{-- <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200

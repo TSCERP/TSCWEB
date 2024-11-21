@@ -86,8 +86,7 @@
                             <span
                                 class="text-lg font-semibold">{{ __('User-friendly and customizable interface for quick performance monitoring') }}.</span>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="500"
-                            class="grid grid-cols-[32px_1fr] items-center">
+                        <li data-aos="fade-up" data-aos-delay="500" class="grid grid-cols-[32px_1fr] items-center">
                             <div class="w-8">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                     viewBox="0 0 24 24" class="text-icon-main">
@@ -100,8 +99,7 @@
                             <span
                                 class="text-lg font-semibold">{{ __('Save time and money, while gaining insight into your business operations') }}.</span>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="700"
-                            class="grid grid-cols-[32px_1fr] items-center">
+                        <li data-aos="fade-up" data-aos-delay="700" class="grid grid-cols-[32px_1fr] items-center">
                             <div class="w-8">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
                                     viewBox="0 0 24 24" class="text-icon-main">
