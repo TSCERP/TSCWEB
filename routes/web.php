@@ -20,10 +20,29 @@ Route::name('solution.')->prefix('solution')->group(function () {
     Route::get('/sap-business-one', function () {
         return view('sap');
     })->name('sapb1');
+    Route::get('/erp-preimplementation', function () {
+        return view('solution.erp-preimplementation');
+    })->name('erp-preimplementation');
+    Route::get('/erp-maintenance', function () {
+        return view('solution.erp-maintenance');
+    })->name('erp-maintenance');
+    Route::get('/japanese-it-hub', function () {
+        return view('solution.japanese-it-hub');
+    })->name('japanese-it-hub');
+    Route::get('/ai-coach-build', function () {
+        return view('solution.ai-coach-build');
+    })->name('ai-coach-build');
+    Route::get('/saas-product', function () {
+        return view('solution.saas-product');
+    })->name('saas-product');
     Route::get('/oracle-netsuite', function () {
         return view('netsuite');
     })->name('netsuite');
-
+});
+Route::name('course.')->prefix('course')->group(function () {
+    Route::get('/ai-course-sme', function () {
+        return view('course.ai-course-sme');
+    })->name('ai-coach-sme');
 });
 Route::get('/about-us', function () {
     return view('contact-us');
@@ -31,9 +50,9 @@ Route::get('/about-us', function () {
 Route::get('/documents', function () {
     return view('document');
 })->name('documents');
-Route::get('/sap-business-one',['App\Http\Controllers\SolutionController','sap'])->name('sapb12');
+Route::get('/sap-business-one', ['App\Http\Controllers\SolutionController', 'sap'])->name('sapb12');
 Route::get('/language/{locale}', function (string $locale) {
-    if (! in_array($locale, ['en','vi'])) {
+    if (! in_array($locale, ['en', 'vi'])) {
         abort(404);
     }
     App::setLocale($locale);
@@ -55,5 +74,3 @@ Route::prefix('/blogs')->group(function () {
 Route::name('admin.')->prefix('/{blogs:slug}')->group(function () {
     Route::get('/', ViewArticleController::class)->name('post.show');
 });
-
-

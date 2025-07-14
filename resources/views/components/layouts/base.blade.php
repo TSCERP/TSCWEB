@@ -35,6 +35,7 @@
     <!-- Fonts -->
     @googlefonts
 
+    @filamentStyles
     <!-- Styles -->
     <style>
         [x-cloak] {

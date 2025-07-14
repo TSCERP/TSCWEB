@@ -290,7 +290,6 @@
                     </div>
                     <div x-show="!filteredArticles.length">
                         <div class="text-sm text-gray-700">
-                            {{ __('No results found') }}
                         </div>
                     </div>
                     <x-ui.pagination />
@@ -320,11 +319,10 @@
                             d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48ZM38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74Z" />
                     </svg>
                     <div class="pt-2 font-semibold text-evening/70">
-                        No Results Found
+                        {{ __('No results found') }}
                     </div>
                     <div class="pt-0.5 text-sm text-evening/50">
-                        Sorry we couldn't find any articles matching your
-                        search.
+                        {{ __('Sorry we couldn\'t find any articles matching your search') }}.
                     </div>
                 </div>
             </div>

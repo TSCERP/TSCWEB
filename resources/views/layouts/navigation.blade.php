@@ -167,7 +167,7 @@ $nextTick(() => {
                         :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions" :width="300">
                         <!-- Dropdown Content -->
                         <div class="flex flex-col gap-x-4 gap-y-6">
-                            <div class="flex gap-4">
+                            {{-- <div class="flex gap-4">
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
@@ -182,116 +182,106 @@ $nextTick(() => {
                                         {{ __('SAP Business One') }}
                                     </a>
                                 </div>
+                            </div> --}}
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.erp-preimplementation') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('ERP Pre-implementation') }}
+                                    </a>
+                                </div>
                             </div>
                             <div class="flex gap-4">
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
                                         </svg>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ route('solution.dashboard.bi') }}"
+                                    <a href="{{ route('solution.erp-maintenance') }}"
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('Dashboard BI Reporting') }}
+                                        {{ __('ERP Maintenance') }}
                                     </a>
-
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.japanese-it-hub') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Japanese IT Hub') }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.saas-product') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('SaaS Product') }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Add SVG icon here -->
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.ai-coach-build') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('AI Coach & Build') }}
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </x-nav-link>
 
-                    {{-- <x-nav-link
+                    <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('solution*') ? '!font-bold text-border-main' : '' }}"
-                        :href="route('solution.sapb1')" :active="request()->routeIs('solution*')">
-                        {{ __('Solutions') }}
-                    </x-nav-link> --}}
-
-                    {{-- <x-nav-link
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200
-                        {{ request()->routeIs('solution*') ? '!font-bold text-border-main' : '' }}"
-                        :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions" :width="600">
-                        <div class="grid grid-cols-2 gap-x-4 gap-y-6">
-                            <div class="flex gap-4">
-                                <div>
-                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
-                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col">
-                                    <a href="{{ route('solution.sapb1') }}">
-                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                            {{ __('SAP Business One') }}
-                                        </h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div>
-                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
-                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col">
-                                    <a href="{{ route('solution.netsuite') }}">
-                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                            {{ __('Oracle NetSuite') }}
-                                        </h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div>
-                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
-                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col">
-                                    <a href="{{ route('solution.dashboard.bi') }}">
-                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                            {{ __('Business Intelligence') }}
-                                        </h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div>
-                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
-                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col">
-                                    <a href="{{ route('solution.travel.expense') }}">
-                                        <h4 class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                            {{ __('Travel & Expense Management') }}
-                                        </h4>
-                                    </a>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </x-nav-link> --}}
-
+                        :href="route('course.ai-coach-sme')" :active="request()->routeIs('course*')">
+                        {{ __('Course') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('about')"
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('about') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('about')">
                         {{ __('About Us') }}
                     </x-nav-link>
-                    {{-- <x-nav-link :href="route('blogs')"
+
+                    <x-nav-link :href="route('blogs')"
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('blogs') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('blogs')">
                         {{ __('Blog') }}
-                    </x-nav-link> --}}
+                    </x-nav-link>
                     {{-- <x-nav-link :href="route('documents')"
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('documents') ? '!font-bold text-border-main' : '' }}"
                         :active="request()->routeIs('documents')">
@@ -317,7 +307,7 @@ $nextTick(() => {
 
 
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')"
-                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('Register Trial') }}</button>
+                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('Register Consultation') }}</button>
                 </div>
 
                 <!-- Hamburger -->
@@ -358,11 +348,10 @@ $nextTick(() => {
                 <ul class="space-y-2 font-medium">
                     <li>
                         <a href="{{ route('home') }}"
-                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z" />
-                            </svg>
+                            class="flex items-center text-primary-500 focus:bg-primary-100 p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
+                            <div class="w-4 h-4 flex items-center justify-center -mt-1">
+                                <i class="fas fa-home text-lg"></i>
+                            </div>
                             <span class="ms-3 text-text-primary">{{ __('Home') }}</span>
                         </a>
                     </li>
@@ -370,11 +359,9 @@ $nextTick(() => {
                         <button @click="openService = !openService"
                             class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                             aria-controls="ecommerce-menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm6-16h4V4h-4zm1 9v2q0 .425.288.713T12 18t.713-.288T13 17v-2h2q.425 0 .713-.288T16 14t-.288-.712T15 13h-2v-2q0-.425-.288-.712T12 10t-.712.288T11 11v2H9q-.425 0-.712.288T8 14t.288.713T9 15z" />
-                            </svg>
+                            <div class="w-4 h-4 flex items-center justify-center -mt-1">
+                                <i class="fas fa-gears"></i>
+                            </div>
                             <span
                                 class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-text-primary">{{ __('Services') }}</span>
                             <svg class="w-3 h-3 text-text-primary" aria-hidden="true"
@@ -416,13 +403,50 @@ $nextTick(() => {
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('solution.sapb1') }}"
-                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z" />
+                        <button @click="openSolution = !openSolution"
+                            class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            aria-controls="ecommerce-menu">
+                            <div class="w-4 h-4 flex items-center justify-center -mt-1">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span
+                                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-text-primary">{{ __('Solutions') }}</span>
+                            <svg class="w-3 h-3 text-text-primary" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
                             </svg>
-                            <span class="ms-3 text-text-primary">{{ __('Solutions') }}</span>
+                        </button>
+                        <ul id="service-menu-mobile" x-show="openSolution" class="py-2 space-y-2">
+                            <li>
+                                <a href="{{ route('solution.erp-preimplementation') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('ERP Pre-implementation') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.erp-maintenance') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('ERP Maintenance') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.japanese-it-hub') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Japanese IT Hub') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.ai-coach-build') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('AI Coach & Build') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.saas-product') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SaaS Product') }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ route('course.ai-coach-sme') }}"
+                            class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white dark:hover:bg-gray-700 group">
+                            <div class="w-4 h-4 flex items-center justify-center -mt-1">
+                                <i class="fas fa-pen-to-square"></i>
+                            </div>
+                            <span class="ms-3 text-text-primary">{{ __('Course') }}</span>
                         </a>
                     </li>
                     {{-- <li>
@@ -465,11 +489,9 @@ $nextTick(() => {
                     <li>
                         <a href="{{ route('about') }}"
                             class="flex text-primary-500 focus:bg-primary-100 items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
-                                viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />
-                            </svg>
+                            <div class="w-4 h-4 flex items-center justify-center -mt-1">
+                                <i class="fas fa-circle-info"></i>
+                            </div>
                             <span class="ms-3 text-text-primary">{{ __('About Us') }}</span>
                         </a>
                     </li>
@@ -512,7 +534,7 @@ $nextTick(() => {
                         <span class="ms-3">Dùng Thử</span>
                     </button> --}}
                     <button x-data @click="$dispatch('open-modal', 'contact-modal')"
-                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('Register Trial') }}</button>
+                        class="navigation-trial-button text-nowrap transition-all duration-200 !text-base main-btn">{{ __('Register Consultation') }}</button>
                 </div>
             </div>
         </aside>

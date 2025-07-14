@@ -22,8 +22,21 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16815148678"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16815148678');
+    </script>
+    @stack('styles')
 </head>
 
 <body class="antialiased dark:bg-black dark:text-white/50 overflow-x-hidden">
@@ -104,13 +117,12 @@
         }, 3000);
     }
 
-    // Function xóa toast
     function removeToast(button) {
         const toast = button.closest('div');
         toast.classList.add('toast-fadeout');
         setTimeout(() => {
             toast.remove();
-        }, 500); // Khớp với thời gian fade-out
+        }, 500);
     }
 </script>
 

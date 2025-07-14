@@ -51,16 +51,16 @@
                                 <div class="swiper-slide">
                                     <figure
                                         class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-                                        <img src="{{ asset('assets/images/logo-oracle-netsuite.png') }}"
-                                            alt="oracle-netsuite-logo">
+                                        <img src="{{ asset('assets/images/logo-boyum-IT.png') }}"
+                                            alt="beas-boyum-IT-logo">
                                     </figure>
                                 </div>
 
                                 <div class="swiper-slide">
                                     <figure
                                         class="bg-white h-28 w-52 sm:h-22 sm:w-40 lg:h-28 lg:w-52 rounded-lg p-2 inline-flex m-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-                                        <img src="{{ asset('assets/images/logo-boyum-IT.png') }}"
-                                            alt="beas-boyum-IT-logo">
+                                        <img src="{{ asset('assets/images/logo-insight-software.png') }}"
+                                            alt="insight-software-logo">
                                     </figure>
                                 </div>
                             </div>
@@ -367,7 +367,7 @@
                         type="button">{{__('Show More')}} ›</button> --}}
                 </div>
             </div>
-            <div class="flex flex-row flex-wrap justify-between gap-8 mt-12 items-end rounded-full bg-">
+            <div class="flex flex-row flex-wrap justify-center gap-8 mt-12 items-end rounded-full bg-">
                 <div data-aos="zoom-in-right" data-aos-delay="0"
                     class="group flex flex-col gap-8 justify-end cursor-default duration-300 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
                     <figure class="rounded-3xl overflow-hidden">
@@ -384,23 +384,6 @@
                             class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
                     </div>
                 </div>
-                <div data-aos="zoom-in-down" data-aos-delay="200"
-                    class="group flex flex-col gap-8 justify-end cursor-default duration-300 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
-                    <figure class="rounded-3xl overflow-hidden">
-                        <img class="group-hover:scale-90 scale-75 ease-linear duration-300"
-                            src="{{ asset('assets/images/logo-oracle-netsuite.png') }}"
-                            alt="oracle-netsuite-illustration">
-                    </figure>
-                    <h6 class="text-center font-semibold text-2xl">Oracle Netsuite</h6>
-                    <p class="text-center w-11/12">
-                        {{ __('Integrate and automate business processes to streamline operations, enhance efficiency, and support sustainable growth.') }}
-                    </p>
-                    <div class="block mx-auto">
-                        {{-- <button onclick="window.location.href='{{ route('solution.netsuite') }}'" --}}
-                        <button x-data @click="$dispatch('open-modal', 'contact-modal')"
-                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
-                    </div>
-                </div>
                 <div data-aos="zoom-in-left" data-aos-delay="400"
                     class="group flex flex-col gap-8 justify-end cursor-default duration-300 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
                     <figure class="rounded-3xl overflow-hidden">
@@ -410,6 +393,21 @@
                     <h6 class="text-center font-semibold text-2xl">Boyum IT - Beas Manufacturing</h6>
                     <p class="text-center w-11/12">
                         {{ __('Streamline manufacturing processes and project management to increase productivity and reduce costs.') }}
+                    </p>
+                    <div class="block mx-auto">
+                        <button x-data @click="$dispatch('open-modal', 'contact-modal')"
+                            class="rounded-full text-white bg-bg-btn font-semibold px-6 py-4">{{ __('Learn More') }}</button>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400"
+                    class="group flex flex-col gap-8 justify-end cursor-default duration-300 ease-in sm:basis-[calc(50%-2rem)] md:basis-[calc(33.33%-2rem)]">
+                    <figure class="rounded-3xl overflow-hidden">
+                        <img class="group-hover:scale-90 scale-75 ease-linear duration-300"
+                            src="{{ asset('assets/images/logo-insight-software.png') }}" alt="insight-software-solution">
+                    </figure>
+                    <h6 class="text-center font-semibold text-2xl">Insight Software</h6>
+                    <p class="text-center w-11/12">
+                        {{ __('Reporting solutions and management tools for accounting and finance.') }}
                     </p>
                     <div class="block mx-auto">
                         <button x-data @click="$dispatch('open-modal', 'contact-modal')"

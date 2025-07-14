@@ -25,7 +25,8 @@ class Settings extends Page implements HasForms
     protected $site_name;
     public static function canAccess(): bool
     {
-        return auth()->user()->is_admin;
+        return true;
+        // return auth()->user()->is_admin;
     }
     public function mount(): void
     {

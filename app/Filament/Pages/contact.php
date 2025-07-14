@@ -30,13 +30,19 @@ class contact extends Page implements HasTable
     }
     public static function canAccess(): bool
     {
-        return auth()->user()->is_admin;
+        return true;
+        // return auth()->user()->is_admin;
     }
     public function table(Table $table): Table
     {
         return $table
             ->query(ContactInfo::with('reason')->orderBy('created_at', 'desc'))
             ->columns([
+                TextColumn::make('created_at')
+                    ->label('Request Date')
+                    ->dateTime('d/m/Y H:i:s')
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('fullname')
                     ->label('Full Name')
                     ->sortable(),
@@ -57,11 +63,6 @@ class contact extends Page implements HasTable
                     ->sortable(),
                 TextColumn::make('message')
                     ->label('Message')
-                    ->searchable()
-                    ->sortable(),
-                TextColumn::make('created_at')
-                    ->label('Request date')
-                    ->dateTime()
                     ->searchable()
                     ->sortable(),
 

@@ -88,7 +88,7 @@
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#85D1A0] transition duration-300 will-change-transform group-hover/stat:scale-x-110"></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Articles</div>
+                    <div class="pt-4 text-sm text-dolphin">{{ __('Articles') }}</div>
                 </div>
 
                 {{-- Authors --}}
@@ -98,7 +98,7 @@
                         <span
                             class="absolute -bottom-2 left-0 h-1 w-full origin-left rounded-full bg-[#897AD7] transition duration-300 will-change-transform group-hover/stat:scale-x-110"></span>
                     </div>
-                    <div class="pt-4 text-sm text-dolphin">Stars</div>
+                    <div class="pt-4 text-sm text-dolphin">{{ __('Views') }}</div>
                 </div>
 
                 {{-- Stars --}}

@@ -42,7 +42,7 @@
         <span class="inline-block w-full rounded-md shadow-sm">
             <button x-ref="button" @click="onButtonClick()" type="button" aria-haspopup="listbox" :aria-expanded="open"
                 aria-labelledby="assigned-to-label"
-                class="cursor-default relative w-full rounded-md border border-border-gray bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                class="cursor-default relative w-full rounded-md border border-border-gray bg-white pl-3 pr-10 py-2.5 text-left focus:outline-none focus:ring-2 focus:ring-primary-gt focus:border-transparent transition-all duration-200 leading-snug">
                 <div class="flex items-center space-x-3">
                     <span x-text="purposeOptions.find(option => option.id === value)?.description"
                         class="block truncate"></span>

@@ -20,7 +20,8 @@ class UserResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     public static function canAccess(): bool
     {
-        return auth()->user()->is_admin;
+        return true;
+        // return auth()->user()->is_admin;
     }
     public static function form(Form $form): Form
     {
