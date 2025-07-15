@@ -1053,7 +1053,7 @@
                                     <label class="block text-white text-sm font-medium mb-2">Số điện thoại *</label>
                                     <input id="phone-number-input" type="tel"
                                         class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:border-blue-300 text-white placeholder-gray-300"
-                                        placeholder="0123 456 789">
+                                        placeholder="+84 903 927 282">
                                 </div>
                                 <div>
                                     <label class="block text-white text-sm font-medium mb-2">Tên công ty *</label>

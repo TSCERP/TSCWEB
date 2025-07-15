@@ -898,15 +898,15 @@
                             <div class="space-y-3">
                                 <div class="flex items-center text-white">
                                     <img src="https://flagcdn.com/w20/jp.png" alt="Japan" class="w-5 h-3 mr-3">
-                                    <span>Văn phòng Tokyo: +81-3-XXXX-XXXX</span>
+                                    <span>Văn phòng Tokyo: +84 903 927 282 </span>
                                 </div>
                                 <div class="flex items-center text-white">
                                     <img src="https://flagcdn.com/w20/vn.png" alt="Vietnam" class="w-5 h-3 mr-3">
-                                    <span>Văn phòng HCM: +84-123-456-789</span>
+                                    <span>Văn phòng HCM: +84 903 927 282 </span>
                                 </div>
                                 <div class="flex items-center text-white">
                                     <i class="fas fa-envelope mr-3"></i>
-                                    <span>japan.hub@tsc.com.vn</span>
+                                    <span>tien.le@vn.gt.com</span>
                                 </div>
                             </div>
                         </div>
@@ -919,7 +919,7 @@
                             <div class="space-y-2 text-white text-sm">
                                 <div>Giờ Nhật: 9:00-18:00 (Thứ 2 - Thứ 6)</div>
                                 <div>Giờ Việt Nam: 9:00-18:00 (Thứ 2 - Thứ 6)</div>
-                                <div class="text-kin font-bold">Hỗ trợ khẩn cấp: 24/7</div>
+                                <!-- <div class="text-kin font-bold">Hỗ trợ khẩn cấp: 24/7</div> -->
                             </div>
                         </div>
 
@@ -937,8 +937,8 @@
                             </div>
                             <div
                                 class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center border border-white border-opacity-20">
-                                <div class="text-2xl font-bold text-kin">24/7</div>
-                                <div class="text-sm text-gray-300">Hỗ trợ khẩn cấp</div>
+                                <div class="text-2xl font-bold text-kin">Hỗ trợ nhanh</div>
+                                <div class="text-sm text-gray-300">Phản hồi trong giờ hành chính</div>
                             </div>
                             <div
                                 class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center border border-white border-opacity-20">

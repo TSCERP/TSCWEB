@@ -441,15 +441,15 @@
                         <div class="space-y-4 w-full">
                             <div class="flex items-center">
                                 <i class="fas fa-phone text-primary-gt mr-4"></i>
-                                <span>+84 (0) 123 456 789</span>
+                                <span>+84 903 927 282</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-envelope text-primary-gt mr-4"></i>
-                                <span>contact@tsc-saas.com</span>
+                                <span>tien.le@vn.gt.com</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-map-marker-alt text-primary-gt mr-4"></i>
-                                <span>Tầng 10, Tòa nhà ABC, Quận 1, TP.HCM</span>
+                                <span>Pearl Plaza 561A Điện Biên Phủ, Phường Thạnh Mỹ Tây,TP.HCM </span>
                             </div>
                         </div>
                         <div class="w-full flex justify-center lg:justify-start mt-10">

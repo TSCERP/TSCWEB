@@ -755,12 +755,12 @@
                     <div class="text-center">
                         <i class="fas fa-phone text-2xl mb-2"></i>
                         <div class="font-bold">Hotline</div>
-                        <div>0123 456 789</div>
+                        <div>+84 903 927 282</div>
                     </div>
                     <div class="text-center">
                         <i class="fas fa-envelope text-2xl mb-2"></i>
                         <div class="font-bold">Email</div>
-                        <div>contact@tsc.com.vn</div>
+                        <div>tien.le@vn.gt.com</div>
                     </div>
                     <div class="text-center">
                         <i class="fas fa-clock text-2xl mb-2"></i>
