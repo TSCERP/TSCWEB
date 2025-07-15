@@ -175,7 +175,14 @@
 			color: #000000;
 			font-family: sans-serif;"
                         class="subheader">
-                        I would like to inform you that a new request has been submitted by  {{ $fullname }}
+                        I would like to inform you that a new request has been submitted by 
+                        <strong>{{ $fullname }}</strong> from <strong>{{ $company }}</strong>.<br><br>
+                        Phone: <strong>{{ $phone }}</strong><br>
+                        <br><br>
+                        Email: <strong>{{ $email }}</strong><br>
+                        <br><br>
+        <em>Message:</em><br>
+        {{ $userMessage }}
                     </td>
                 </tr>
 

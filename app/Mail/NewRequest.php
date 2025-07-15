@@ -36,6 +36,10 @@ class NewRequest extends Mailable
             ->subject('[TSC-WEB]New request contact')
             ->with([
                 'fullname' => $this->contactInfo->fullname,
+                'company_name' => $this->contactInfo->company_name,
+                'userMessage' => $this->contactInfo->message,
+                'phone' => $this->contactInfo->phone,
+                'email' => $this->contactInfo->email,
             ]);
     }
 
