@@ -58,6 +58,8 @@ $nextTick(() => {
                         :active="request()->routeIs('service')" :dropdown="true" :title="$services" :width="700">
                         <!-- Dropdown Content -->
                         <div class="grid grid-cols-3 gap-x-4 gap-y-6">
+                            {{-- Các service cũ đã được comment lại --}}
+                            {{--
                             <div class="flex gap-4">
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
@@ -88,7 +90,6 @@ $nextTick(() => {
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Technology Solutions Consulting') }}
                                     </a>
-
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -105,7 +106,6 @@ $nextTick(() => {
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Advisory Services') }}
                                     </a>
-
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -122,7 +122,6 @@ $nextTick(() => {
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Tax Services') }}
                                     </a>
-
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -139,7 +138,6 @@ $nextTick(() => {
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Audit and Assurance') }}
                                     </a>
-
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -156,18 +154,90 @@ $nextTick(() => {
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
                                         {{ __('Japanese Desk') }}
                                     </a>
-
                                 </div>
                             </div>
+                            --}}
+                              <!-- Các dịch vụ mới chuyển từ Solutions sang Service -->
+                              <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"></svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.erp-preimplementation') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('ERP Pre-implementation') }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"></svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.erp-maintenance') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('ERP Maintenance') }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"></svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.japanese-it-hub') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('Japanese IT Hub') }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"></svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.saas-product') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('SaaS Product') }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div>
+                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
+                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"></svg>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="{{ route('solution.ai-coach-build') }}"
+                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
+                                        {{ __('AI Coach & Build') }}
+                                    </a>
+                                </div>
+                            </div>
+                        
                         </div>
                     </x-nav-link>
 
                     <x-nav-link
                         class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200"
-                        :active="request()->routeIs('solution*')" :dropdown="true" :title="$solutions" :width="300">
+                        :active="request()->routeIs('solution')" :dropdown="true" :title="$solutions" :width="700">
                         <!-- Dropdown Content -->
-                        <div class="flex flex-col gap-x-4 gap-y-6">
-                            {{-- <div class="flex gap-4">
+                        <div class="grid grid-cols-3 gap-x-4 gap-y-6">
+                        <div class="flex gap-4">
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
                                         <svg class="w-6 h-6 text-yellow-500" fill="none"
@@ -182,7 +252,7 @@ $nextTick(() => {
                                         {{ __('SAP Business One') }}
                                     </a>
                                 </div>
-                            </div> --}}
+                            </div>
                             <div class="flex gap-4">
                                 <div>
                                     <div class="bg-yellow-200 p-2 rounded aspect-square">
@@ -193,9 +263,9 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ route('solution.erp-preimplementation') }}"
+                                    <a href="{{ route('solution.dashboard.bi') }}"
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('ERP Pre-implementation') }}
+                                        {{ __('Business Intelligence') }}
                                     </a>
                                 </div>
                             </div>
@@ -209,65 +279,18 @@ $nextTick(() => {
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <a href="{{ route('solution.erp-maintenance') }}"
+                                    <a href="{{ route('solution.travel.expense') }}"
                                         class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('ERP Maintenance') }}
+                                        {{ __('Travel & Expense Management') }}
                                     </a>
                                 </div>
                             </div>
-                            <div class="flex gap-4">
-                                <div>
-                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
-                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col">
-                                    <a href="{{ route('solution.japanese-it-hub') }}"
-                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('Japanese IT Hub') }}
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div>
-                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
-                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col">
-                                    <a href="{{ route('solution.saas-product') }}"
-                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('SaaS Product') }}
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div>
-                                    <div class="bg-yellow-200 p-2 rounded aspect-square">
-                                        <svg class="w-6 h-6 text-yellow-500" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <!-- Add SVG icon here -->
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col">
-                                    <a href="{{ route('solution.ai-coach-build') }}"
-                                        class="text-gray-900 dark:text-gray-100 text-sm font-semibold">
-                                        {{ __('AI Coach & Build') }}
-                                    </a>
-                                </div>
-                            </div>
+                        
                         </div>
                     </x-nav-link>
 
                     <x-nav-link
-                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('solution*') ? '!font-bold text-border-main' : '' }}"
+                        class="navigation-link transition-all text-nowrap !text-base font-semibold hover:cursor-pointer hover:text-border-main ease duration-200 {{ request()->routeIs('course*') ? '!font-bold text-border-main' : '' }}"
                         :href="route('course.ai-coach-sme')" :active="request()->routeIs('course*')">
                         {{ __('Course') }}
                     </x-nav-link>
@@ -371,6 +394,8 @@ $nextTick(() => {
                             </svg>
                         </button>
                         <ul id="service-menu-mobile" x-show="openService" class="py-2 space-y-2">
+                            {{-- Các service cũ đã được comment lại --}}
+                            {{--
                             <li>
                                 <a target="_blank"
                                     href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/outsourcing/' : 'https://www.grantthornton.com.vn/vi/dich-vu/dich-vu-giai-phap-doanh-nghiep/' }}"
@@ -400,24 +425,8 @@ $nextTick(() => {
                                     href="{{ app()->getLocale() == 'en' ? 'https://www.grantthornton.com.vn/services/japan-desk/' : 'https://www.grantthornton.com.vn/services/international-corporate-structuring-services/' }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Japanese Desk') }}</a>
                             </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button @click="openSolution = !openSolution"
-                            class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                            aria-controls="ecommerce-menu">
-                            <div class="w-4 h-4 flex items-center justify-center -mt-1">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <span
-                                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-text-primary">{{ __('Solutions') }}</span>
-                            <svg class="w-3 h-3 text-text-primary" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <ul id="service-menu-mobile" x-show="openSolution" class="py-2 space-y-2">
+                            --}}
+                            <!-- Các dịch vụ mới chuyển từ Solutions sang Service -->
                             <li>
                                 <a href="{{ route('solution.erp-preimplementation') }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('ERP Pre-implementation') }}</a>
@@ -431,12 +440,43 @@ $nextTick(() => {
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Japanese IT Hub') }}</a>
                             </li>
                             <li>
+                                <a href="{{ route('solution.saas-product') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SaaS Product') }}</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('solution.ai-coach-build') }}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('AI Coach & Build') }}</a>
                             </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button @click="openSolution = !openSolution"
+                            class="flex text-primary-500 focus:bg-primary-100 items-center w-full p-2 text-base
+                             transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            aria-controls="ecommerce-menu">
+                            <div class="w-4 h-4 flex items-center justify-center -mt-1">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span
+                                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-text-primary">{{ __('Solutions') }}</span>
+                            <svg class="w-3 h-3 text-text-primary" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <ul id="solution-menu-mobile" x-show="openSolution" class="py-2 space-y-2">
                             <li>
-                                <a href="{{ route('solution.saas-product') }}"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SaaS Product') }}</a>
+                                <a href="{{ route('solution.sapb1') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('SAP Business One') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.dashboard.bi') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Business Intelligence') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solution.travel.expense') }}"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">{{ __('Travel & Expense Management') }}</a>
                             </li>
                         </ul>
                     </li>
