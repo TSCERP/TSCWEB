@@ -43,7 +43,7 @@
                         </div>
 
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                            {{ __("ERP Maintenance")}}
+                            {{ __('ERP Maintenance') }}
                             <span
                                 class="block pb-1 text-4xl lg:text-5xl !leading-snug bg-gradient-to-r from-primary-gt via-blue-600 to-secondary-gt bg-clip-text text-transparent mt-2">
                                 Đảm Bảo Hệ Thống Luôn Tối Ưu
@@ -337,7 +337,7 @@
                         <div class="absolute top-0 -right-4 bg-white rounded-lg shadow-lg p-3 animate-float">
                             <div class="flex items-center gap-2">
                                 <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                <span class="font-medium text-gray-700">Live System</span>
+                                <span class="font-medium text-gray-700">{{ __('Live System') }}</span>
                             </div>
                         </div>
 
@@ -345,7 +345,7 @@
                             style="animation-delay: 1s">
                             <div class="flex items-center gap-2">
                                 <i class="fas fa-shield-alt text-primary"></i>
-                                <span class="font-medium text-gray-700">Secured</span>
+                                <span class="font-medium text-gray-700">{{ __('Secured') }}</span>
                             </div>
                         </div>
                     </div>

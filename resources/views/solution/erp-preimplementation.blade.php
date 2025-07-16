@@ -190,7 +190,7 @@
                     </h1>
                 @endif
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    {{  __("Comprehensive solutions for the ERP preparation phase to ensure success from the very first step") }}
+                    {{ __('Comprehensive solutions for the ERP preparation phase to ensure success from the very first step') }}
                 </p>
             </div>
             <div class="flex flex-row flex-wrap  gap-8 mt-12 items-end rounded-full">
@@ -205,8 +205,8 @@
                                     class="w-20 h-20 bg-gradient-to-br from-primary-gt to-secondary-gt rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                                     <i class="fas fa-sitemap text-3xl text-white"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold text-gray-800 mb-2">{{  __("Process analysis") }}</h3>
-                                <h4 class="text-lg font-semibold text-primary-gt">{{  __("& ERP consulting") }}</h4>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ __('Process analysis') }}</h3>
+                                <h4 class="text-lg font-semibold text-primary-gt">{{ __('& ERP consulting') }}</h4>
                             </div>
                             <ul class="space-y-4 text-gray-600">
                                 <li class="flex items-start">
@@ -214,33 +214,34 @@
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Mapping current business processes") }}</span>
+                                    <span>{{ __('Mapping current business processes') }}</span>
                                 </li>
                                 <li class="flex items-start">
                                     <div
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Gap analysis and improvement proposal") }}</span>
+                                    <span>{{ __('Gap analysis and improvement proposal') }}</span>
                                 </li>
                                 <li class="flex items-start">
                                     <div
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Consulting on selecting the right ERP system") }}</span>
+                                    <span>{{ __('Consulting on selecting the right ERP system') }}</span>
                                 </li>
                                 <li class="flex items-start">
                                     <div
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Implementation blueprint design") }}</span>
+                                    <span>{{ __('Implementation blueprint design') }}</span>
                                 </li>
                             </ul>
                             <div class="mt-8 pt-6 border-t border-purple-100">
                                 <div class="text-center">
-                                    <span class="text-2xl font-bold text-primary">4-6 {{ lcfirst(__('Weeks')) }}</span>
+                                    <span class="text-2xl font-bold text-primary">4-6
+                                        {{ lcfirst(__('Weeks')) }}</span>
                                     <div class="text-sm text-gray-500">{{ lcfirst(__('Implementation time')) }}</div>
                                 </div>
                             </div>
@@ -254,8 +255,9 @@
                                     class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                                     <i class="fas fa-broom text-3xl text-white"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold text-gray-800 mb-2">{{  __("Data cleansing") }}</h3>
-                                <h4 class="text-lg font-semibold text-blue-600">{{  __("& migration preparation") }}</h4>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ __('Data cleansing') }}</h3>
+                                <h4 class="text-lg font-semibold text-blue-600">{{ __('& migration preparation') }}
+                                </h4>
                             </div>
                             <ul class="space-y-4 text-gray-600">
                                 <li class="flex items-start">
@@ -263,33 +265,34 @@
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Data audit and quality assessment") }}</span>
+                                    <span>{{ __('Data audit and quality assessment') }}</span>
                                 </li>
                                 <li class="flex items-start">
                                     <div
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Removing duplicate and inconsistent data") }}</span>
+                                    <span>{{ __('Removing duplicate and inconsistent data') }}</span>
                                 </li>
                                 <li class="flex items-start">
                                     <div
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Standardizing format and structure") }}</span>
+                                    <span>{{ __('Standardizing format and structure') }}</span>
                                 </li>
                                 <li class="flex items-start">
                                     <div
                                         class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                                         <i class="fas fa-check text-xs text-green-600"></i>
                                     </div>
-                                    <span>{{  __("Migration strategy design") }}</span>
+                                    <span>{{ __('Migration strategy design') }}</span>
                                 </li>
                             </ul>
                             <div class="mt-8 pt-6 border-t border-blue-100">
                                 <div class="text-center">
-                                    <span class="text-2xl font-bold text-blue-600">3-4 {{ lcfirst(__('Weeks')) }}</span>
+                                    <span class="text-2xl font-bold text-blue-600">3-4
+                                        {{ lcfirst(__('Weeks')) }}</span>
                                     <div class="text-sm text-gray-500">{{ lcfirst(__('Implementation time')) }}</div>
                                 </div>
                             </div>
@@ -359,7 +362,7 @@
                 <div class="flex flex-col flex-start justify-evenly gap-4 flex-1">
                     <span data-aos="fade-up" class="text-lg text-white">{!! __(
                         'Lộ trình <b>"12 tuần"</b> phù hợp và đảm bảo hành trình chuyển đổi số của doanh nghiệp diễn ra suôn sẻ và đạt
-                                                                                                                                                                                                                                                                                             hiệu quả tối đa.',
+                                                                                                                                                                                                                                                                                                                 hiệu quả tối đa.',
                     ) !!}.</span>
                     <div>
                         <button x-data @click="$dispatch('open-modal', 'contact-modal')" data-aos="fade-left"
@@ -485,7 +488,7 @@
                     </div>
                     <div class="text-4xl md:text-5xl font-bold text-bg-btn mb-4">60%</div>
                     <div class="text-xl font-semibold mb-2">Tăng hiệu quả</div>
-                    <div class="opacity-80">Productivity boost</div>
+                    <div class="opacity-80">{{ __('Productivity boost') }}</div>
                 </div>
             </div>
         </div>
